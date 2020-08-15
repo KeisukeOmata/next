@@ -16,6 +16,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
     @IBOutlet weak var mapMKMapVIew: MKMapView!
     //長押しのジェスチャー
     @IBOutlet var pressUILongPressGestureRecognizer: UILongPressGestureRecognizer!
+    //住所を表示するラベル
+    @IBOutlet weak var addressUILabel: UILabel!
+    //緯度経度から取得した住所を格納
+    var addressString: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +27,49 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
     }
 
     //画面を長押ししたとき
-    //TypeをAnyからUILongPressGestureRecognizerに変える
+    //IBAction作成時、TypeをAnyからUILongPressGestureRecognizerに変える
     @IBAction func pressAction(_ sender: UILongPressGestureRecognizer) {
+        
+        //画面を長押しした時
+        if sender.state == .began {
+        //画面を離したとき
+        } else if sender.state == .ended {
+            //長押しした地点
+            let tapPoint = sender.location(in: view)
+            //緯度経度に変換
+            let center = mapMKMapVIew.convert(tapPoint, toCoordinateFrom: mapMKMapVIew)
+            let lat = center.latitude
+            let log = center.longitude
+            //緯度経度を取得
+            getLatLog(lat: lat, log: log)
+        }
+    }
+    
+    //緯度経度を取得
+    func getLatLog(lat: CLLocationDegrees, log: CLLocationDegrees) {
+        //CLGeocoderクラスのインスタンス
+        let geocoder = CLGeocoder()
+        //CLLocationクラスのインスタンス
+        //緯度経度
+        let location = CLLocation(latitude: lat, longitude: log)
+        
+        //CLGeocoderクラスのreverseGeocodeLocationメソッドに緯度経度を渡す
+        geocoder.reverseGeocodeLocation(location) { (placeMarks, error) in
+            //placeMarksがnilでなければ、placeMarksの1番目をplaceMarkに格納
+            if let placeMark = placeMarks?.first {
+                //administrativeArea => state
+                //locality => city
+                //県か市区町村がnilでない場合
+                if placeMark.administrativeArea != nil || placeMark.locality != nil {
+                    //nameは建物名
+                    self.addressString = placeMark.name! + placeMark.administrativeArea! + placeMark.locality!
+                } else {
+                    self.addressString = placeMark.name!
+                }
+                //取得した住所をラベルに表示
+                self.addressUILabel.text = self.addressString
+            }
+        }
     }
     
 }

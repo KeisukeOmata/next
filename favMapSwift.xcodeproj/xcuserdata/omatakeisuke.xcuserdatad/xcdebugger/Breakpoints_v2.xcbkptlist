@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "FDE74148-B07F-46FD-A984-31F34B0EF4B3"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2FF3D22C-F08E-4063-9E39-24590080DD3D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "favMapSwift/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "getLatLog(lat:log:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2FF3D22C-F08E-4063-9E39-24590080DD3D - 663e56975bdf6ab2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "favMapSwift.ViewController.getLatLog(lat: Swift.Double, log: Swift.Double) -&gt; ()"
+                  moduleName = "favMapSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omatakeisuke/vagrant/favMapSwift/favMapSwift/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "194">
+               </Location>
+               <Location
+                  uuid = "2FF3D22C-F08E-4063-9E39-24590080DD3D - a450649ed8d5f8b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;__C.CLPlacemark&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in favMapSwift.ViewController.getLatLog(lat: Swift.Double, log: Swift.Double) -&gt; ()"
+                  moduleName = "favMapSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omatakeisuke/vagrant/favMapSwift/favMapSwift/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "149">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
