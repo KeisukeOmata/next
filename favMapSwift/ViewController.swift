@@ -37,9 +37,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
             //長押しした地点
             let tapPoint = sender.location(in: view)
             //緯度経度に変換
-            let center = mapMKMapVIew.convert(tapPoint, toCoordinateFrom: mapMKMapVIew)
-            let lat = center.latitude
-            let log = center.longitude
+            let latlog = mapMKMapVIew.convert(tapPoint, toCoordinateFrom: mapMKMapVIew)
+            let lat = latlog.latitude
+            let log = latlog.longitude
             //緯度経度を取得
             getLatLog(lat: lat, log: log)
         }
