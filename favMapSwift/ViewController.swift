@@ -10,8 +10,8 @@ import CoreLocation
 //地図で利用するデリゲートプロトコル
 //CLLocationManagerDelegate
 //UIGestureRecognizerDelegate
-class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureRecognizerDelegate {
-
+class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureRecognizerDelegate, SearchLocationDelegate {
+    
     //地図
     @IBOutlet weak var mapMKMapVIew: MKMapView!
     //長押しのジェスチャー
@@ -29,7 +29,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
     //画面を長押ししたとき
     //IBAction作成時、TypeをAnyからUILongPressGestureRecognizerに変える
     @IBAction func pressAction(_ sender: UILongPressGestureRecognizer) {
-        
         //画面を長押しした時
         if sender.state == .began {
         //画面を離したとき
@@ -72,5 +71,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
         }
     }
     
+    //画面遷移
+//    @IBAction func show(_ sender: Any) {
+//        performSegue(withIdentifier: "show", sender: nil)
+//    }
+    //値を受け渡す
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "show" {
+//            let showVC = segue.destination as! ShowViewController
+//            showVC.delegate = self
+//        }
+//    }
+    
+    //デリゲートメソッド
+    //緯度、経度から住所を取得する
+    func searchLocation(lat: String, log: String) {
+        <#code#>
+    }
+
 }
 
