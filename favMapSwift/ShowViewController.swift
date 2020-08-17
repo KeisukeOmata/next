@@ -1,22 +1,28 @@
 import UIKit
 
+//緯度経度から地図を表示する
+protocol SearchLocationDelegate {
+    func searchLocation(lat: String, log: String)
+}
+
 class ShowViewController: UIViewController {
 
+    //緯度
+    var lat: String = ""
+    //経度
+    var log: String = ""
+    //プロトコル
+    var delegate: SearchLocationDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func searchLocation(_ sender: Any) {
+        //プロトコルを呼び出す
+        delegate?.searchLocation(lat: lat, log: log)
+        //前の画面に戻る
+        dismiss(animated: true, completion: nil)
     }
-    */
 
 }

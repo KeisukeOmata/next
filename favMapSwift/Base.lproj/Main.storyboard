@@ -45,7 +45,7 @@
                         <outlet property="addressUILabel" destination="vMn-oX-JZi" id="x61-Ig-DBs"/>
                         <outlet property="mapMKMapVIew" destination="rtV-op-atG" id="iWw-UV-FgN"/>
                         <outlet property="pressUILongPressGestureRecognizer" destination="gb1-dm-LLB" id="hkv-yK-yjy"/>
-                        <segue destination="aN6-dk-LDQ" kind="presentation" id="hRI-IB-R8u"/>
+                        <segue destination="aN6-dk-LDQ" kind="presentation" identifier="show" id="hRI-IB-R8u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
