@@ -12,7 +12,7 @@ import CoreLocation
 //UIGestureRecognizerDelegate
 //別のViewから緯度経度を渡される場合 => SearchLocationDelegate
 class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureRecognizerDelegate {
-    
+
     //地図
     @IBOutlet weak var mapMKMapVIew: MKMapView!
     //長押しのジェスチャー
@@ -44,7 +44,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
             getLatLog(lat: lat, log: log)
         }
     }
-    
+
     //住所を表示する
     func getLatLog(lat: CLLocationDegrees, log: CLLocationDegrees) {
         //CLGeocoderクラスのインスタンス
@@ -72,19 +72,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
             }
         }
     }
-    
+
 //    //画面遷移
 //    @IBAction func show(_ sender: Any) {
 //        performSegue(withIdentifier: "show", sender: nil)
 //    }
 //    //値を受け渡す
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        //segueのidentifierで分岐させる
 //        if segue.identifier == "show" {
 //            let showVC = segue.destination as! ShowViewController
 //            showVC.delegate = self
 //        }
 //    }
-    
+
 //    //デリゲートメソッド
 //    //別のViewで取得した緯度、経度から住所を表示する想定
 //    func searchLocation(lat: String, log: String) {
