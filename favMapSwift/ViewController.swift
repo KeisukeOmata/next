@@ -10,7 +10,8 @@ import CoreLocation
 //地図で利用するデリゲートプロトコル
 //CLLocationManagerDelegate
 //UIGestureRecognizerDelegate
-class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureRecognizerDelegate, SearchLocationDelegate {
+//別のViewから緯度経度を渡される場合 => SearchLocationDelegate
+class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureRecognizerDelegate {
     
     //地図
     @IBOutlet weak var mapMKMapVIew: MKMapView!
@@ -44,7 +45,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
         }
     }
     
-    //緯度経度を取得
+    //住所を表示する
     func getLatLog(lat: CLLocationDegrees, log: CLLocationDegrees) {
         //CLGeocoderクラスのインスタンス
         let geocoder = CLGeocoder()
@@ -55,6 +56,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
         //CLGeocoderクラスのreverseGeocodeLocationメソッドに緯度経度を渡す
         geocoder.reverseGeocodeLocation(location) { (placeMarks, error) in
             //placeMarksがnilでなければ、placeMarksの1番目をplaceMarkに格納
+            //オプショナルバインディング
             if let placeMark = placeMarks?.first {
                 //administrativeArea => state
                 //locality => city
@@ -71,11 +73,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
         }
     }
     
-    //画面遷移
+//    //画面遷移
 //    @IBAction func show(_ sender: Any) {
 //        performSegue(withIdentifier: "show", sender: nil)
 //    }
-    //値を受け渡す
+//    //値を受け渡す
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "show" {
 //            let showVC = segue.destination as! ShowViewController
@@ -83,11 +85,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
 //        }
 //    }
     
-    //デリゲートメソッド
-    //緯度、経度から住所を取得する
-    func searchLocation(lat: String, log: String) {
-        <#code#>
-    }
+//    //デリゲートメソッド
+//    //別のViewで取得した緯度、経度から住所を表示する想定
+//    func searchLocation(lat: String, log: String) {
+//        //緯度、経度から中央値を作成
+//        let center = CLLocationCoordinate2DMake(Double(lat)!, Double(log)!)
+//        //表示する範囲を指定
+//        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+//        //領域を指定
+//        let region = MKCoordinateRegion(center: center, span: span)
+//        //地図に領域を設定
+//        mapMKMapVIew.setRegion(region, animated: true)
+//        //住所を表示
+//        getLatLog(lat: Double(lat)!, log: Double(log)!)
+//        addressUILabel.text = addressString
+//    }
 
 }
 
