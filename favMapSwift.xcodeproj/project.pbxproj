@@ -82,16 +82,40 @@
 		E92C3A4C24E55E8300F50642 /* favMapSwift */ = {
 			isa = PBXGroup;
 			children = (
+				E95C793424F25E21005B7392 /* View */,
+				E95C793324F25E10005B7392 /* Controller */,
+				E95C793224F25E06005B7392 /* Model */,
+				E92C3A5B24E55E8400F50642 /* Info.plist */,
+			);
+			path = favMapSwift;
+			sourceTree = "<group>";
+		};
+		E95C793224F25E06005B7392 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E95C793324F25E10005B7392 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				E92C3A4D24E55E8300F50642 /* AppDelegate.swift */,
 				E92C3A4F24E55E8300F50642 /* SceneDelegate.swift */,
 				E92C3A5124E55E8300F50642 /* ViewController.swift */,
 				E92C3A6124E55EC700F50642 /* ShowViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E95C793424F25E21005B7392 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E92C3A5824E55E8400F50642 /* LaunchScreen.storyboard */,
 				E92C3A5324E55E8300F50642 /* Main.storyboard */,
 				E92C3A5624E55E8400F50642 /* Assets.xcassets */,
-				E92C3A5824E55E8400F50642 /* LaunchScreen.storyboard */,
-				E92C3A5B24E55E8400F50642 /* Info.plist */,
 			);
-			path = favMapSwift;
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
