@@ -3,6 +3,8 @@ import 'firebase/analytics'
 import 'firebase/auth'
 import 'firebase/firestore'
 
+// typeof window !== 'undefined'でブラウザでの読み込みの場合
+// firebase.apps.length === 0で初回の初期化時の場合
 if (typeof window !== 'undefined' && firebase.apps.length === 0) {
   const firebaseConfig = {
     apiKey: "AIzaSyC153dApxFJGKp0YGKYwAGBerHw5GNgaoM",
