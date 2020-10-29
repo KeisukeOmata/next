@@ -1,7 +1,11 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import { useAuthentication } from '../hooks/authentication'
 
 export default function Home() {
+  // useAuthenticationフック
+  const { user } = useAuthentication()
+
   return (
     <div className={styles.container}>
       <Head>
@@ -10,6 +14,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        {/* userがnullでなければuidを表示 */}
+        <p>{user?.uid || '未ログイン'}</p>
+
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
