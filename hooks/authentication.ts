@@ -16,6 +16,7 @@ export function useAuthentication() {
 
   // domがマウントされたタイミングで呼ばれる
   useEffect(() => {
+    // userの値が設定されていればreturn
     if (user !== null) {
       return
     }
