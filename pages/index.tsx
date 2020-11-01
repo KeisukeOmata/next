@@ -1,4 +1,5 @@
 import Head from 'next/head'
+// 任意のURLにアクセス
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import { useAuthentication } from '../hooks/authentication'
@@ -18,6 +19,7 @@ export default function Home() {
         {/* userがnullでなければuidを表示 */}
         <p>{user?.uid || '未ログイン'}</p>
 
+        {/* 任意のURLにアクセス */}
         <Link href="page2">
           <a>page2</a>
         </Link>

@@ -12,8 +12,20 @@ const userState = atom<User>({
 // useAuthenticationフック
 export function useAuthentication() {
   // useStateの代わりにuseRecoilStateを使う
+  // グローバルなstate管理
   const [user, setUser] = useRecoilState(userState)
 
+  async function createUserIfNotFound(user: User) {
+    const userRef = firebase.firestore().collection('users').doc(user.uid)
+    const doc = await userRef.get()
+    if (doc.exists) {
+      return
+    }
+  
+    await userRef.set({
+      name: 'taro' + new Date().getTime(),
+    })
+  }
   // domがマウントされたタイミングで呼ばれる
   useEffect(() => {
     // userの値が設定されていればreturn
@@ -32,11 +44,13 @@ export function useAuthentication() {
 
     firebase.auth().onAuthStateChanged(function (firebaseUser) {
       if (firebaseUser) {
-        // stateを設定
-        setUser({
+        const loginUser: User = {
           uid: firebaseUser.uid,
           isAnonymous: firebaseUser.isAnonymous,
-        })
+          name: '',
+        }
+        setUser(loginUser)
+        createUserIfNotFound(loginUser)
       } else {
         // User is signed out.
         setUser(null)
