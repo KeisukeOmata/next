@@ -7,6 +7,7 @@ import Layout from '../../components/Layout'
 // import * as dayjs from 'dayjs'
 const dayjs = require('dayjs');
 import 'dayjs/locale/ja'
+import Link from 'next/link'
 
 // 日本時間対応
 dayjs.locale('ja')
@@ -151,16 +152,24 @@ export default function QuestionsReceived() {
         {/* 質問一覧を囲んでいるコンテナを参照 */}
         <div className="col-12 col-md-6" ref={scrollContainerRef}>
           {questions.map((question) => (
-            <div className="card my-3" key={question.id}>
-              <div className="card-body">
-                {/* text-truncateではみ出る部分を省略 */}
-                <div className="text-truncate">{question.body}</div>
-                <div className="text-muted text-right">
-                  {/* createdAtをdayjsで日本時間表示 */}
-                  <small>{dayjs(question.createdAt.toDate()).format('YYYY/MM/DD HH:mm')}</small>
+            <Link
+              href="/questions/[id]"
+              as={`/questions/${question.id}`}
+              key={question.id}
+            >
+              <a>
+                <div className="card my-3" key={question.id}>
+                  <div className="card-body">
+                    {/* text-truncateではみ出る部分を省略 */}
+                    <div className="text-truncate">{question.body}</div>
+                    <div className="text-muted text-right">
+                      {/* createdAtをdayjsで日本時間表示 */}
+                      <small>{dayjs(question.createdAt.toDate()).format('YYYY/MM/DD HH:mm')}</small>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </a>
+            </Link>
           ))}
         </div>
       </div>

@@ -83,7 +83,7 @@ export default function UserShow() {
 
   return (
     <Layout>
-      {user && (
+      {user && firebase.auth().currentUser && (
         <div className="text-center">
           <h1 className="h4">{user.name}さんのページ</h1>
           <div className="m-5">{user.name}さんに質問しよう！</div>
@@ -92,29 +92,33 @@ export default function UserShow() {
           <div className="row justify-content-center mb-3">
             {/* モバイルは横幅いっぱい、PCはcontainerの半分 */}
             <div className="col-12 col-md-6">
-              <form onSubmit={onSubmit}>
-              <textarea
-                className="form-control"
-                placeholder="おげんきですか？"
-                rows={6}
-                // formの入力値でstateを更新
-                value={body}
-                onChange={(e) => setBody(e.target.value)}
-                required
-              ></textarea>
-              <div className="m-3">
-                {isSending ? (
-                  // ボタンのstateがtrueの場合アニメーションを表示する
-                  <div className="spinner-border text-secondary" role="status">
+              {user.uid === firebase.auth().currentUser.uid ? (
+                <div>自分には送信できません。</div>
+              ) : (
+                <form onSubmit={onSubmit}>
+                  <textarea
+                    className="form-control"
+                    placeholder="おげんきですか？"
+                    rows={6}
+                    // formの入力値でstateを更新
+                    value={body}
+                    onChange={(e) => setBody(e.target.value)}
+                    required
+                  ></textarea>
+                  <div className="m-3">
+                    {isSending ? (
+                      // ボタンのstateがtrueの場合アニメーションを表示する
+                      <div className="spinner-border text-secondary" role="status">
+                      </div>
+                    ) : (
+                      // ボタンのstateがfalseの場合ボタンを表示する
+                      <button type="submit" className="btn btn-primary">
+                        質問を送信する
+                      </button>
+                    )}
                   </div>
-                ) : (
-                  // ボタンのstateがfalseの場合ボタンを表示する
-                  <button type="submit" className="btn btn-primary">
-                    質問を送信する
-                  </button>
-                )}
-              </div>
-              </form>
+                </form>
+              )}
             </div>
           </div>
         </div>
