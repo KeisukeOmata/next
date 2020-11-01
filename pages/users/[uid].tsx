@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { User } from '../../types/User'
 import { Query } from '../../types/Query'
+import Layout from '../../components/Layout'
 
 export default function UserShow() {
   const router = useRouter()
@@ -38,8 +39,13 @@ export default function UserShow() {
   }, [query.uid])
   
   return (
-    <div>
-      {user ? user.name : 'ロード中…'}
-    </div>
+    <Layout>
+      {user && (
+        <div className="text-center">
+          <h1 className="h4">{user.name}さんのページ</h1>
+          <div className="m-5">{user.name}さんに質問しよう！</div>
+        </div>
+      )}
+    </Layout>
   )
 }

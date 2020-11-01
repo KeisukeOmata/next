@@ -1,6 +1,6 @@
 import { RecoilRoot } from 'recoil'
 import '../lib/firebase'
-import '../styles/globals.css'
+import '../styles/globals.scss'
 
 function MyApp({ Component, pageProps }) {
   return (
