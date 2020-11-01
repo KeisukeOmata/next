@@ -4,6 +4,12 @@ import firebase from 'firebase/app'
 import { useAuthentication } from '../../hooks/authentication'
 import { Question } from '../../types/Question'
 import Layout from '../../components/Layout'
+// import * as dayjs from 'dayjs'
+const dayjs = require('dayjs');
+import 'dayjs/locale/ja'
+
+// 日本時間対応
+dayjs.locale('ja')
 
 export default function QuestionsReceived() {
   // Question型の配列を持つ質問state
@@ -62,6 +68,8 @@ export default function QuestionsReceived() {
                 {/* text-truncateではみ出る部分を省略 */}
                 <div className="text-truncate">{question.body}</div>
                 <div className="text-muted text-right">
+                  {/* createdAtをdayjsで日本時間表示 */}
+                  <small>{dayjs(question.createdAt.toDate()).format('YYYY/MM/DD HH:mm')}</small>
                 </div>
               </div>
             </div>
