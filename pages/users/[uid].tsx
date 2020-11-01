@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import { User } from '../../types/User'
 import { Query } from '../../types/Query'
 import Layout from '../../components/Layout'
+import { ToastContainer, toast } from 'react-toastify';
 
 export default function UserShow() {
   const router = useRouter()
@@ -27,6 +28,7 @@ export default function UserShow() {
 
     // firebaseからユーザーの読み込みを行う
     async function loadUser() {
+      // 複数の値を取得する場合はdocではなくsnapshot
       const doc = await firebase
         .firestore()
         .collection('users')
@@ -65,9 +67,18 @@ export default function UserShow() {
     // ボタンのstateを戻す
     setIsSending(false)
   
+    toast.success('質問を送信しました。', {
+      position: 'bottom-left',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    })
+    
     // フォームのstateを初期化
     setBody('')
-    alert('質問を送信しました。')
   }
 
   return (
@@ -108,6 +119,7 @@ export default function UserShow() {
           </div>
         </div>
       )}
+      <ToastContainer />
     </Layout>
   )
 }
