@@ -34,6 +34,7 @@ export default function QuestionsReceived() {
         // userのuidに紐づくデータをfirebaseから取得
         // currentUser.uidではリロードでエラーになるため、既に作成済みのuseAuthenticationから取得する
         .where('receiverUid', '==', user.uid)
+        // indexを作成していない場合、エラー画面からindex作成のリンクが表示される
         .orderBy('createdAt', 'desc')
         .get()
 
