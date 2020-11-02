@@ -7,6 +7,7 @@ import { User } from '../../types/User'
 import { Query } from '../../types/Query'
 import Layout from '../../components/Layout'
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function UserShow() {
   const router = useRouter()
