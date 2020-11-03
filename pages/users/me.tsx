@@ -13,7 +13,7 @@ export default function UsersMe() {
     )
   }
 
-  const url = `https://next-smoky.vercel.app/users/${user.uid}`
+  const url = `${process.env.NEXT_PUBLIC_WEB_URL}/users/${user.uid}`
 
   return (
     <Layout>

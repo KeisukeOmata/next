@@ -5,7 +5,7 @@ export default function Layout({ children }) {
   const title = 'question'
   const description = 'question service'
   // twitter共有用の画像
-  const ogpImageUrl = `https://next-smoky.vercel.app/images/card.png`
+  const ogpImageUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/images/card.png`
 
   return (
     <div>
