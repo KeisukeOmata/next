@@ -10,8 +10,8 @@ export default function TwitterShareButton(props: Props) {
 
   return (
     <a href={url} className="twitter-share-button" target="_blank">
-      <img src="/images/Twitter_Logo_Blue.svg" width="24" height="24" />
-      <span>シェア</span>
+      <img src="/images/Twitter_Logo_WhiteOnBlue.svg" width="24" height="24" />
+      <span>share</span>
     </a>
   )
 }

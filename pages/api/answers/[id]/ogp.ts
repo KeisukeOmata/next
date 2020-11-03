@@ -9,7 +9,6 @@ import { SeparatedText } from '../../../../types/SeparatedText'
 // package.jsonのscriptsに以下を記載
 // "now-build": "cp canvas_lib64/*so.1 node_modules/canvas/build/Release/ && yarn build"
 
-
 // APIを作成
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   // 渡されたテキストを分割して返す
