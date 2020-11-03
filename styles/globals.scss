@@ -18,6 +18,22 @@ a {
   box-sizing: border-box;
 }
 
+// フッター固定
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+footer{
+  margin-top: auto;
+  text-align: center;
+  margin-bottom: -10px;
+  // footerより下にナビゲーションバーがあるため高さを設定
+  height: 120px;
+}
+
 .twitter-share-button {
   background: #1da1f2;
   color: #fafafa;

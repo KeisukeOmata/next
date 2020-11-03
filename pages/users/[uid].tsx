@@ -8,6 +8,7 @@ import { Query } from '../../types/Query'
 import Layout from '../../components/Layout'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Link from 'next/link'
 
 export default function UserShow() {
   const router = useRouter()
@@ -96,29 +97,40 @@ export default function UserShow() {
               {user.uid === firebase.auth().currentUser.uid ? (
                 <div>自分には送信できません。</div>
               ) : (
-                <form onSubmit={onSubmit}>
-                  <textarea
-                    className="form-control"
-                    placeholder="おげんきですか？"
-                    rows={6}
-                    // formの入力値でstateを更新
-                    value={body}
-                    onChange={(e) => setBody(e.target.value)}
-                    required
-                  ></textarea>
-                  <div className="m-3">
-                    {isSending ? (
-                      // ボタンのstateがtrueの場合アニメーションを表示する
-                      <div className="spinner-border text-secondary" role="status">
-                      </div>
-                    ) : (
-                      // ボタンのstateがfalseの場合ボタンを表示する
-                      <button type="submit" className="btn btn-primary">
-                        質問を送信する
-                      </button>
+                <div>
+                  <form onSubmit={onSubmit}>
+                    <textarea
+                      className="form-control"
+                      placeholder="おげんきですか？"
+                      rows={6}
+                      // formの入力値でstateを更新
+                      value={body}
+                      onChange={(e) => setBody(e.target.value)}
+                      required
+                    ></textarea>
+                    <div className="m-3">
+                      {isSending ? (
+                        // ボタンのstateがtrueの場合アニメーションを表示する
+                        <div className="spinner-border text-secondary" role="status">
+                        </div>
+                      ) : (
+                        // ボタンのstateがfalseの場合ボタンを表示する
+                        <button type="submit" className="btn btn-primary">
+                          質問を送信する
+                        </button>
+                      )}
+                    </div>
+                  </form>
+                  <div>
+                    {user && (
+                      <p>
+                        <Link href="/users/me">
+                          <a className="btn btn-link">自分もみんなに質問してもらおう！</a>
+                        </Link>
+                      </p>
                     )}
                   </div>
-                </form>
+                </div>
               )}
             </div>
           </div>
