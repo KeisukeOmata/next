@@ -28,7 +28,7 @@ export default function AnswersShow(props: Props) {
   const description = getDescription(props.answer)
   // Twitterシェア用のmetaタグに設定するURL
   // 環境変数から取得する(httpから始まる必要がある)
-  const ogpImageUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/api/answers/${props.answer.id}/ogp`
+  const ogpImageUrl = `https://next-smoky.vercel.app/api/answers/${props.answer.id}/ogp`
 
   return (
     <Layout>
@@ -58,7 +58,7 @@ export default function AnswersShow(props: Props) {
             </section>
             <div className="my-3 d-flex justify-content-center">
               <TwitterShareButton
-                url={`${process.env.NEXT_PUBLIC_WEB_URL}/answers/${props.answer.id}`}
+                url={`https://next-smoky.vercel.app/answers/${props.answer.id}`}
                 text={props.answer.body}
               ></TwitterShareButton>
             </div>
