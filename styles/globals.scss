@@ -17,3 +17,14 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.twitter-share-button {
+  background: #1da1f2;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 16px;
+  border-radius: 14px;
+  width: 120px;
+}
