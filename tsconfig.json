@@ -21,7 +21,6 @@
     "baseUrl": "src/@types" ,
     "paths": {
       "dayjs": ["dayjs.d.ts"],
-      "react-toastify": ["react-toastify.d.ts"],
     }, 
   },
   "include": [
