@@ -13,7 +13,7 @@ import { Question } from '../../../../types/Question'
 // package.jsonのscriptsに以下を記載
 // "now-build": "cp canvas_lib64/*so.1 node_modules/canvas/build/Release/ && yarn build"
 
-// APIを作成
+// API取得
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   // 回答を取得
   const id = req.query.id as string
@@ -24,13 +24,12 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const answer = answerDoc.data() as Answer
   // 質問を取得
   const questionDoc = await firestore()
-    // 回答から質問idを取得する
     .collection('questions')
+    // 回答から質問idを取得する
     .doc(answer.questionId)
     .get()
   const question = questionDoc.data() as Question
 
-  // 渡されたテキストを分割して返す
   function createTextLine(context, text: string): SeparatedText {
     const maxWidth = 400
     for (let i = 0; i < text.length; i++) {
@@ -47,8 +46,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       remaining: '',
     }
   }
-
-  // createTextLineにテキストを渡す
+  
   function createTextLines(context, text: string): string[] {
     const lines: string[] = []
     let currentText = text
@@ -78,6 +76,12 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   registerFont(path.resolve('./fonts/ipagp.ttf'), {
     family: 'ipagp',
   })
+  context.font = '20px ipagp'
+  // 文字色
+  context.fillStyle = '#424242'
+  context.textAlign = 'center'
+  context.textBaseline = 'middle'
+  // 改行を作成
   const lines = createTextLines(context, question.body)
   lines.forEach((line, index) => {
     const y = 157 + 40 * (index - (lines.length - 1) / 2)
@@ -85,7 +89,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   })
   // 画像のバッファを取得
   const buffer = canvas.toBuffer()
-
   // バイナリとしてレスポンスすることでブラウザに表示
   res.writeHead(200, {
     'Content-Type': 'image/png',
