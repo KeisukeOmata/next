@@ -3,6 +3,10 @@ import { createCanvas, registerFont, loadImage } from 'canvas'
 import { ApiError } from 'next/dist/next-server/server/api-utils'
 import * as path from 'path'
 import { SeparatedText } from '../../../../types/SeparatedText'
+import '../../../../lib/firebase_admin'
+import { firestore } from 'firebase-admin'
+import { Answer } from '../../../../types/Answer'
+import { Question } from '../../../../types/Question'
 
 // canvas
 // canvas_lib64が必要
@@ -11,6 +15,21 @@ import { SeparatedText } from '../../../../types/SeparatedText'
 
 // APIを作成
 export default async (req: NextApiRequest, res: NextApiResponse) => {
+  // 回答を取得
+  const id = req.query.id as string
+  const answerDoc = await firestore()
+    .collection('answers')
+    .doc(id)
+    .get()
+  const answer = answerDoc.data() as Answer
+  // 質問を取得
+  const questionDoc = await firestore()
+    // 回答から質問idを取得する
+    .collection('questions')
+    .doc(answer.questionId)
+    .get()
+  const question = questionDoc.data() as Question
+
   // 渡されたテキストを分割して返す
   function createTextLine(context, text: string): SeparatedText {
     const maxWidth = 400
@@ -59,11 +78,11 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   registerFont(path.resolve('./fonts/ipagp.ttf'), {
     family: 'ipagp',
   })
-  // const lines = createTextLines(context, question.body)
-  // lines.forEach((line, index) => {
-  //   const y = 157 + 40 * (index - (lines.length - 1) / 2)
-  //   context.fillText(line, 300, y)
-  // })
+  const lines = createTextLines(context, question.body)
+  lines.forEach((line, index) => {
+    const y = 157 + 40 * (index - (lines.length - 1) / 2)
+    context.fillText(line, 300, y)
+  })
   // 画像のバッファを取得
   const buffer = canvas.toBuffer()
 
