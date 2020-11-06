@@ -86,11 +86,13 @@ export default function QuestionsShow() {
     e.preventDefault()
     // ボタンのstateを更新
     setIsSending(true)
+    // firebaseから回答を取得
+    const answerRef = firebase.firestore().collection('answers').doc()
     // runTransactionで複数のデータを操作する
     await firebase.firestore().runTransaction(async (t) => {
       // runTransactionにはaddがないため、setメソッドを使う
       // 新規で作成する場合は引数なしのdocメソッドを使う
-      t.set(firebase.firestore().collection('answers').doc(), {
+      t.set(answerRef, {
         uid: user.uid,
         questionId: question.id,
         body,
@@ -102,10 +104,10 @@ export default function QuestionsShow() {
         isReplied: true,
       })
     })
-    // 回答stateを更新する
     const now = new Date().getTime()
+    // 回答stateを更新する
     setAnswer({
-      id: '',
+      id: answerRef.id,
       uid: user.uid,
       questionId: question.id,
       body,
