@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { createCanvas, registerFont, loadImage } from 'canvas'
-import { ApiError } from 'next/dist/next-server/server/api-utils'
 import * as path from 'path'
 import { SeparatedText } from '../../../../types/SeparatedText'
 import '../../../../lib/firebase_admin'
@@ -79,6 +78,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   context.font = '20px ipagp'
   // 文字色
   context.fillStyle = '#424242'
+  // 設定された色で塗る
+  // context.fillRect(0, 0, width, height)
   context.textAlign = 'center'
   context.textBaseline = 'middle'
   // 改行を作成
