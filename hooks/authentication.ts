@@ -3,9 +3,11 @@ import { useEffect } from 'react'
 import { atom, useRecoilState } from 'recoil'
 import { User } from '../types/User'
 
+// グローバルなstate
 // stateをUser型で作成
 const userState = atom<User>({
   key: 'user',
+  // デフォルト値はnull => 未ログインを表す
   default: null,
 })
 
