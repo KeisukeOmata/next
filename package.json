@@ -15,6 +15,7 @@
     "canvas": "^2.6.1",
     "dayjs": "^1.9.4",
     "firebase-admin": "^9.3.0",
+    "minireset.css": "^0.0.6",
     "next": "9.5.5",
     "react": "17.0.1",
     "react-dom": "17.0.1",
