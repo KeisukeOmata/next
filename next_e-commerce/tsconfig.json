@@ -12,16 +12,11 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "baseUrl": "src/@types" ,
-    "paths": {
-      "dayjs": ["dayjs.d.ts"],
-    }, 
+    "jsx": "preserve"
   },
   "include": [
     "next-env.d.ts",
