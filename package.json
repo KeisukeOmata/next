@@ -9,10 +9,12 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.1",
+    "@types/shopify-buy": "^2.10.3",
     "next": "10.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "sass": "^1.29.0"
+    "sass": "^1.29.0",
+    "shopify-buy": "^2.11.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.10",
