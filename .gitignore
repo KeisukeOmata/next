@@ -33,4 +33,4 @@ yarn-error.log*
 # vercel
 .vercel
 
-next_blog/.eslintcache 
+.eslintcache 
