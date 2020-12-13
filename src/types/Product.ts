@@ -3,6 +3,6 @@ import {
   // ProductVariant as SdkProductVariant,
   Product as SdkProduct,
   // Cart as SdkCart,
-} from 'shopify-buy';
+} from 'shopify-buy'
 
-export type Product = {} & SdkProduct;
+export type Product = Record<string, unknown> & SdkProduct
