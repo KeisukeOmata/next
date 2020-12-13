@@ -17,8 +17,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const products: Product[] = await client.product.fetchAll()
   return {
     props: {
-      // SerializableErrorの回避のため
-      // @see https://github.com/vercel/next.js/issues/11993
       products: JSON.parse(JSON.stringify(products)),
     },
   }
