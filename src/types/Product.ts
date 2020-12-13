@@ -5,4 +5,4 @@ import {
   // Cart as SdkCart,
 } from 'shopify-buy'
 
-export type Product = Record<string, unknown> & SdkProduct
+export type Product = SdkProduct
