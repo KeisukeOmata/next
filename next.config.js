@@ -7,10 +7,7 @@ module.exports = withPWA({
   pwa: {
     dest: 'public',
   },
-})
-
-module.exports = {
   images: {
     domains: ['cdn.shopify.com'],
   },
-}
+})
