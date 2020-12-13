@@ -1,7 +1,9 @@
+import React from 'react'
+import styles from '../styles/pages/index.module.scss'
 import { GetServerSideProps } from 'next';
-import { Product } from '@/types/Product';
-import  SearchResult  from '@/components/SearchResult';
-import { client } from '@/foundations/client';
+import { Product } from '../types/Product';
+import  SearchResult  from '../components/SearchResult';
+import { client } from '../foundations/client';
 
 type Props = {
   products: Product[];

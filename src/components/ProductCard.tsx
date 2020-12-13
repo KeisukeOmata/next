@@ -1,6 +1,7 @@
+import React from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
-import { Product } from '@/types/Product';
+import { Product } from '../types/Product';
 
 type Props = {
   product: Product;
