@@ -1,5 +1,6 @@
-import { Product } from '@/types/Product';
-import ProductCard from '@/components/ProductCard';
+import React from 'react'
+import { Product } from '../types/Product';
+import ProductCard from './ProductCard';
 import Grid from '@material-ui/core/Grid';
 
 type Props = {
