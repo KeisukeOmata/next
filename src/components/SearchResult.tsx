@@ -10,6 +10,7 @@ type Props = {
 const SearchResult: React.FC<Props> = ({ products }) => {
   return (
     <>
+      <title>e-commerce</title>
       <h1>商品一覧</h1>
       <Grid container spacing={1}>
         {products.map((product) => (

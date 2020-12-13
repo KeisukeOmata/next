@@ -34,3 +34,6 @@ yarn-error.log*
 .vercel
 
 .eslintcache 
+
+cypress/videos
+cypress/screenshots 
