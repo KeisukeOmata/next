@@ -1,14 +1,14 @@
 import React from 'react'
-import Link from 'next/link';
-import Image from 'next/image';
-import { Product } from '../types/Product';
+import Link from 'next/link'
+import Image from 'next/image'
+import { Product } from '../types/Product'
 
 type Props = {
-  product: Product;
-};
+  product: Product
+}
 
 const ProductCard: React.FC<Props> = ({ product }) => {
-  console.log({ product });
+  console.log({ product })
   return (
     <>
       <Link href={`items/${product.id}`}>
@@ -27,7 +27,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
         </a>
       </Link>
     </>
-  );
-};
+  )
+}
 
-export default ProductCard;
+export default ProductCard

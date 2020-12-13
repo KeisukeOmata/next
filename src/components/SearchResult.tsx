@@ -1,11 +1,11 @@
 import React from 'react'
-import { Product } from '../types/Product';
-import ProductCard from './ProductCard';
-import Grid from '@material-ui/core/Grid';
+import { Product } from '../types/Product'
+import ProductCard from './ProductCard'
+import Grid from '@material-ui/core/Grid'
 
 type Props = {
-  products: Product[];
-};
+  products: Product[]
+}
 
 const SearchResult: React.FC<Props> = ({ products }) => {
   return (
@@ -19,7 +19,7 @@ const SearchResult: React.FC<Props> = ({ products }) => {
         ))}
       </Grid>
     </>
-  );
-};
+  )
+}
 
-export default SearchResult;
+export default SearchResult
