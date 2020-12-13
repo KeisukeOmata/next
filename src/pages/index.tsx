@@ -1,29 +1,29 @@
 import React from 'react'
-// import styles from '../styles/pages/index.module.scss'
 import { NextPage } from 'next'
 import { GetStaticProps } from 'next'
-import { Product } from '../types/Product'
-import SearchResult from '../components/SearchResult'
-import { client } from '../foundations/client'
+import { TypeItem } from '../types/TypeItem'
+import Items from '../components/Items'
+import { shopify } from '../foundations/shopify'
+// import styles from '../styles/pages/index.module.scss'
 
 type Props = {
-  products: Product[]
+  items: TypeItem[]
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const products = await client.product.fetchAll()
+  const items = await shopify.product.fetchAll()
   return {
     props: {
-      products: JSON.parse(JSON.stringify(products)),
+      items: JSON.parse(JSON.stringify(items)),
     },
     revalidate: 1,
   }
 }
 
-const Home: NextPage<Props> = ({ products }) => {
+const Home: NextPage<Props> = ({ items }) => {
   return (
     <>
-      <SearchResult products={products} />
+      <Items items={items} />
     </>
   )
 }

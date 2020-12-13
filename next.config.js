@@ -7,6 +7,7 @@ module.exports = withPWA({
   pwa: {
     dest: 'public',
   },
+  // next/image
   images: {
     domains: ['cdn.shopify.com'],
   },

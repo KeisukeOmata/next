@@ -5,4 +5,4 @@ import {
   // Cart as SdkCart,
 } from 'shopify-buy'
 
-export type Product = SdkProduct
+export type TypeItem = SdkProduct

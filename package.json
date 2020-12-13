@@ -18,8 +18,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "yarn lint --fix",
-      "yarn test"
+      "yarn lint --fix"
     ]
   },
   "dependencies": {
@@ -38,7 +37,7 @@
     "pwacompat": "^2.0.17",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "sass": "^1.29.0",
+    "sass": "^1.30.0",
     "shopify-buy": "^2.11.0"
   },
   "devDependencies": {
