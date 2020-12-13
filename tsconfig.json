@@ -8,7 +8,27 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    // Switch文内にbreakまたはreturnがない場合にエラー
+    "noFallthroughCasesInSwitch": true,
+    // 利用されていないローカル変数についてエラー
+    "noUnusedLocals": true,
+    // 利用されていない関数のパラメータについてエラー
+    "noUnusedParameters": true,
+    "strict": true,
+    // 暗黙的なanyを禁止
+    // "noImplicitAny": false,
+    // thisの型が暗黙的にanyになる場合にエラー
+    // "noImplicitThis": false,
+    // "use strict";を必ず全てのファイルの先頭行に付与
+    // "alwaysStrict": false,
+    // bind, call, applyを使用する際に、より厳密に型チェックを行う
+    // "strictBindCallApply": false,
+    // Nullableな値に対してオプションの呼び出しを行う記述をエラー
+    // "strictNullChecks": false,
+    // 関数代入時の引数の型チェックを厳密に行う
+    // "strictFunctionTypes": false,
+    // プロパティ宣言時あるいはコンストラクタで初期化されていないときにエラー
+    // "strictPropertyInitialization": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -17,17 +37,21 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    },
+    // srcでファイルにアクセスできるようにする
+    // "baseUrl": "src",
+    // "paths": {
+    //   "@*": [
+    //     "./*"
+    //   ]
+    // },
   },
+  "exclude": [
+    "node_modules"
+  ],
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
+    "**/*.tsx",
+    "next.config.js"
   ]
 }

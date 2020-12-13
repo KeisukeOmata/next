@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/pages/index.module.scss'
+// import styles from '../styles/pages/index.module.scss'
 import { GetServerSideProps } from 'next';
 import { Product } from '../types/Product';
 import  SearchResult  from '../components/SearchResult';
