@@ -3,7 +3,7 @@ import { NextPage } from 'next'
 import { shopify } from '../../foundations/shopify'
 import { TypeItem } from '../../types/TypeItem'
 import { useRouter } from 'next/router'
-// import { ProductDetail } from '@/components/product';
+import Detail from '../../components/Detail'
 // import styles from '../../styles/pages/items/[id].module.scss'
 
 type Props = {
@@ -30,13 +30,17 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 }
 
-const Detail: NextPage<Props> = ({ detail, errors }) => {
+const DetailPage: NextPage<Props> = ({ detail, errors }) => {
   const router = useRouter()
   if (router.isFallback) {
     return <div>loading...</div>
   }
   if (errors) return <div>error</div>
-  return <>{detail.title}</>
+  return (
+    <>
+      <Detail detail={detail} />
+    </>
+  )
 }
 
-export default Detail
+export default DetailPage
