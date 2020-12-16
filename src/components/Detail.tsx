@@ -1,7 +1,9 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import { TypeItem } from '../types/TypeItem'
-// import styles from '../styles/components/Detail.module.scss';
+import Images from './Images'
+
+// import styles from '../styles/components/Detail.module.scss'
 
 type Props = {
   detail: TypeItem
@@ -13,7 +15,7 @@ const Detail: React.FC<Props> = ({ detail }) => {
       <h1>商品詳細</h1>
       <Grid container spacing={1}>
         <Grid item xs={12} lg={6}>
-          hoge
+          <Images detail={detail}></Images>
         </Grid>
         <Grid item xs={12} lg={6}>
           <div>Brand: {detail.vendor}</div>
