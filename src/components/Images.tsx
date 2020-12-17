@@ -11,13 +11,15 @@ const Images: React.FC<Props> = ({ detail }) => {
   return (
     <>
       {detail.images.map((image) => {
-        ;<Image
-          key={image.id}
-          src={image.src}
-          alt={detail.title}
-          width={100}
-          height={100}
-        />
+        return (
+          <Image
+            key={image.id}
+            src={image.src}
+            alt={detail.title}
+            width={100}
+            height={100}
+          />
+        )
       })}
     </>
   )
