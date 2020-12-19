@@ -9,7 +9,8 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore .",
     "test": "jest src/__tests__/.*/*.test.tsx?$",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "storybook": "start-storybook -p 6006 -c .storybook"
   },
   "husky": {
     "hooks": {
@@ -43,12 +44,16 @@
     "swiper": "^6.4.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@storybook/react": "^6.1.11",
     "@testing-library/react": "^11.2.2",
     "@types/jest": "^26.0.19",
     "@types/node": "^14.14.10",
     "@types/react": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.9.1",
     "@typescript-eslint/parser": "^4.9.1",
+    "babel-loader": "^8.2.2",
+    "babel-preset-react-app": "^10.0.0",
     "cypress": "^6.1.0",
     "eslint": "^7.15.0",
     "eslint-config-prettier": "^7.0.0",
