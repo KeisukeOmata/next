@@ -1,6 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
 import '../styles/globals.scss'
+import 'swiper/swiper.scss'
+import 'swiper/components/navigation/navigation.scss'
+import 'swiper/components/pagination/pagination.scss'
 import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
