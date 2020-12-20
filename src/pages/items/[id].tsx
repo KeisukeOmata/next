@@ -3,7 +3,7 @@ import { NextPage } from 'next'
 import { shopify } from '../../foundations/shopify'
 import { TypeItem } from '../../types/TypeItem'
 import { useRouter } from 'next/router'
-import Detail from '../../components/Detail'
+import Detail from '../../components/cart/Detail'
 // import styles from '../../styles/pages/items/[id].module.scss'
 
 type Props = {

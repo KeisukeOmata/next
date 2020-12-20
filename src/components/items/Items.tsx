@@ -1,8 +1,8 @@
 import React from 'react'
-import { TypeItem } from '../types/TypeItem'
+import { TypeItem } from '../../types/TypeItem'
 import Item from './Item'
 import Grid from '@material-ui/core/Grid'
-// import styles from '../styles/components/Items.module.scss'
+// import styles from '../../styles/components/items/Items.module.scss'
 
 type Props = {
   items: TypeItem[]

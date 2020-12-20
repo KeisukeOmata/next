@@ -1,9 +1,9 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
-import { TypeItem, Sku } from '../types/TypeItem'
-import Images from './Images'
+import { TypeItem, Sku } from '../../types/TypeItem'
+import Images from '../items/Images'
 import AddCart from './AddCart'
-import styles from '../styles/components/Detail.module.scss'
+import styles from '../../styles/components/cart/Detail.module.scss'
 
 type Props = {
   detail: TypeItem

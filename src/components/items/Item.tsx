@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { TypeItem } from '../types/TypeItem'
-// import styles from '../styles/components/Item.module.scss'
+import { TypeItem } from '../../types/TypeItem'
+// import styles from '../../styles/components/items/Item.module.scss'
 
 type Props = {
   item: TypeItem

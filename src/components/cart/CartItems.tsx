@@ -1,11 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+// import styles from '../../styles/components/cart/CartItems.module.scss'
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
 import MuiLink from '@material-ui/core/Link'
-import { useCart } from '../hooks/useCart'
-import { getValueByMatchedNameSelectedOptions } from '../utils/helpers'
+import { useCart } from '../../hooks/useCart'
+import { getValueByMatchedNameSelectedOptions } from '../../utils/helpers'
 
 const CartItems: React.FC = () => {
   const { cart, changeQuantity, removeItem } = useCart()

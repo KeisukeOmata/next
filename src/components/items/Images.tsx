@@ -1,8 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
 import Image from 'next/image'
-import { TypeItem } from '../types/TypeItem'
-// import styles from '../styles/components/Detail.module.scss'
+import { TypeItem } from '../../types/TypeItem'
+
+// import styles from '../../styles/components/items/Images.module.scss'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Pagination } from 'swiper'
 
