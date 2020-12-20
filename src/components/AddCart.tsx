@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import Image from 'next/image'
+import { useCart } from '../hooks/useCart'
 import { Sku, Option } from '../types/TypeItem'
 import styles from '../styles/components/AddCart.module.scss'
 import Grid from '@material-ui/core/Grid'
@@ -14,6 +15,7 @@ type Props = {
 }
 
 const AddCart: React.FC<Props> = ({ colors, skuList }) => {
+  // ポップアップメッセージ
   type ToastState = {
     open: boolean
   } & SnackbarOrigin
@@ -26,9 +28,11 @@ const AddCart: React.FC<Props> = ({ colors, skuList }) => {
   const toastClose = () => {
     setToastState({ ...toastState, open: false })
   }
-
-  const showToast = async () => {
-    await setToastState({ ...toastState, open: true })
+  // カートに追加
+  const { addItem } = useCart()
+  const addToCart = async (skuId: string | number) => {
+    await addItem(skuId)
+    setToastState({ ...toastState, open: true })
   }
   return (
     <>
@@ -67,7 +71,7 @@ const AddCart: React.FC<Props> = ({ colors, skuList }) => {
                         <Button
                           variant="contained"
                           color="primary"
-                          onClick={() => showToast()}
+                          onClick={() => addToCart(sku.id)}
                         >
                           カートに入れる
                         </Button>

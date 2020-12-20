@@ -9,7 +9,6 @@ type Props = {
 }
 
 const itemCard: React.FC<Props> = ({ item }) => {
-  console.log({ item })
   return (
     <>
       <Link key={`items-${item.id}`} href={`items/${item.id}`} passHref>
