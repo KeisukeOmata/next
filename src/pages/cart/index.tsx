@@ -1,6 +1,6 @@
 import React from 'react'
 import { NextPage } from 'next'
-import CartItems from '../../components/CartItems'
+import CartItems from '../../components/cart/CartItems'
 import { useCart } from '../../hooks/useCart'
 
 const Cart: NextPage = () => {

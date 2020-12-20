@@ -2,7 +2,7 @@ import React from 'react'
 import { NextPage } from 'next'
 import { GetStaticProps } from 'next'
 import { TypeItem } from '../types/TypeItem'
-import Items from '../components/Items'
+import Items from '../components/items/Items'
 import { shopify } from '../foundations/shopify'
 // import styles from '../styles/pages/index.module.scss'
 
