@@ -4,7 +4,7 @@ import { shopify } from '../../foundations/shopify'
 import { TypeItem } from '../../types/TypeItem'
 import { useCart } from '../../hooks/useCart'
 import { useRouter } from 'next/router'
-import Detail from '../../components/cart/Detail'
+import Detail from '../../components/items/Detail'
 // import styles from '../../styles/pages/items/[id].module.scss'
 
 type Props = {
