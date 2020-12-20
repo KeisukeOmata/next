@@ -1,7 +1,7 @@
 import React from 'react'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import { RecoilRoot } from 'recoil'
+// import { RecoilRoot } from 'recoil'
 import '../styles/globals.scss'
 import 'swiper/swiper.scss'
 import 'swiper/components/navigation/navigation.scss'
@@ -20,9 +20,9 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         ></script>
         <link rel="icon" type="image/png" href="pwa.png" sizes="128x128" />
       </Head>
-      <RecoilRoot>
-        <Component {...pageProps} />
-      </RecoilRoot>
+      {/* <RecoilRoot> */}
+      <Component {...pageProps} />
+      {/* </RecoilRoot> */}
     </>
   )
 }
