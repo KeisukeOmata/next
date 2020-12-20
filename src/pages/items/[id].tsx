@@ -2,6 +2,7 @@ import { GetStaticProps, GetStaticPaths } from 'next'
 import { NextPage } from 'next'
 import { shopify } from '../../foundations/shopify'
 import { TypeItem } from '../../types/TypeItem'
+import { useCart } from '../../hooks/useCart'
 import { useRouter } from 'next/router'
 import Detail from '../../components/cart/Detail'
 // import styles from '../../styles/pages/items/[id].module.scss'
@@ -31,6 +32,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 const DetailPage: NextPage<Props> = ({ detail, errors }) => {
+  const { fetchCart } = useCart()
+  fetchCart()
   const router = useRouter()
   if (router.isFallback) {
     return <div>loading...</div>
