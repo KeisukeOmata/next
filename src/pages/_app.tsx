@@ -1,10 +1,11 @@
 import React from 'react'
+import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import { RecoilRoot } from 'recoil'
 import '../styles/globals.scss'
 import 'swiper/swiper.scss'
 import 'swiper/components/navigation/navigation.scss'
 import 'swiper/components/pagination/pagination.scss'
-import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
@@ -19,7 +20,9 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         ></script>
         <link rel="icon" type="image/png" href="pwa.png" sizes="128x128" />
       </Head>
-      <Component {...pageProps} />
+      <RecoilRoot>
+        <Component {...pageProps} />
+      </RecoilRoot>
     </>
   )
 }
