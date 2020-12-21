@@ -26,6 +26,7 @@ const Home: NextPage<Props> = ({ items }) => {
   fetchCart()
   return (
     <>
+      <h1 className="title">商品一覧</h1>
       <Items items={items} />
     </>
   )

@@ -12,7 +12,6 @@ const Items: React.FC<Props> = ({ items }) => {
   return (
     <>
       <title>e-commerce</title>
-      <h1>商品一覧</h1>
       <Grid container spacing={1}>
         {items.map((item) => (
           <Grid item xs={6} lg={3} key={item.id}>
