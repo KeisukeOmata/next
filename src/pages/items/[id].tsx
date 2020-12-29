@@ -24,7 +24,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const detail = await shopify.product.fetch(id as string)
     return {
       props: { detail: JSON.parse(JSON.stringify(detail)) },
-      revalidate: 1,
+      revalidate: 200,
     }
   } catch (err) {
     return { props: { errors: err.message } }
