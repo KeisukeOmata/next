@@ -19,3 +19,29 @@ a {
 footer {
   margin-top: auto;
 }
+
+button {
+  // 継承する
+  font-family: inherit;
+  border: none;
+  // リンクカーソル
+  cursor: pointer;
+  // デフォルトスタイルを無効にする
+  appearance: none;
+  // 背景を透明にする
+  background: transparent;
+  // 継承する
+  font-size: inherit;
+  // 継承する
+  font-weight: inherit;
+  // 継承する
+  font-family: inherit;
+  // 0.25秒
+  transition: 0.25s;
+  padding: 0;
+  margin: 0;  
+}
+// 押下時の青い枠線を消す
+button:focus {
+	outline:0;
+}
