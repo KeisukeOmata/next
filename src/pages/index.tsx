@@ -3,6 +3,7 @@ import { NextPage } from 'next'
 import { GetStaticProps } from 'next'
 import { TypeItem } from '../types/TypeItem'
 import Items from '../components/items/Items'
+import { ContentWrapper } from '../components/layouts/ContentWrapper'
 import { useCart } from '../hooks/useCart'
 import { shopify } from '../foundations/shopify'
 // import styles from '../styles/pages/index.module.scss'
@@ -26,8 +27,11 @@ const Home: NextPage<Props> = ({ items }) => {
   fetchCart()
   return (
     <>
-      <h1 className="title">商品一覧</h1>
-      <Items items={items} />
+      <section>
+        <ContentWrapper>
+          <Items items={items} />
+        </ContentWrapper>
+      </section>
     </>
   )
 }
