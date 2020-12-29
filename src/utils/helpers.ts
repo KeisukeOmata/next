@@ -8,6 +8,11 @@ export function setCheckoutId(checkoutId: string | number): void {
   localStorage.setItem('checkoutId', String(checkoutId))
 }
 
+// ローカルストレージのcheckoutIdを削除
+export function resetCheckoutId(): void {
+  localStorage.removeItem('checkoutId')
+}
+
 export function getValueByMatchedNameSelectedOptions(
   options: SelectedOption[],
   name: string

@@ -1,15 +1,26 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Cart } from '../../types/TypeItem'
+import { useCart } from '../../hooks/useCart'
+import {
+  resetCheckoutId,
+  getValueByMatchedNameSelectedOptions,
+} from '../../utils/helpers'
 // import styles from '../../styles/components/cart/CartItems.module.scss'
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
 import MuiLink from '@material-ui/core/Link'
-import { useCart } from '../../hooks/useCart'
-import { getValueByMatchedNameSelectedOptions } from '../../utils/helpers'
 
 const CartItems: React.FC = () => {
   const { cart, changeQuantity, removeItem } = useCart()
+  // Shopify画面へ遷移
+  const moveToShopify = (cart: Cart): void => {
+    window.open(cart.webUrl)
+    // ローカルストレージのcheckoutIdを削除
+    resetCheckoutId()
+  }
+
   return (
     cart && (
       <>
@@ -84,13 +95,15 @@ const CartItems: React.FC = () => {
               </Grid>
               <Grid item xs={12} lg={4}>
                 <div>合計: ${cart.subtotalPrice}(税抜)</div>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  onClick={() => window.open(cart.webUrl)}
-                >
-                  購入する
-                </Button>
+                <Link href={`/`}>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    onClick={() => moveToShopify(cart)}
+                  >
+                    購入する
+                  </Button>
+                </Link>
               </Grid>
             </>
           )}
