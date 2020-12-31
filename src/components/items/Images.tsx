@@ -36,6 +36,8 @@ const Images: React.FC<Props> = ({ detail }) => {
                 alt={detail.title}
                 width={500}
                 height={500}
+                // 遅延読み込みしない
+                loading={'eager'}
               />
             </SwiperSlide>
           )
