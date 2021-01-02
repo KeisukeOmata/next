@@ -49,6 +49,8 @@ button:focus {
 }
 
 // iOSでフォーム入力時にズームされないようにする
-input{
+input,
+select {
   font-size: 16px;
+  transform: scale(0.8);
 }
