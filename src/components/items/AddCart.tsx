@@ -90,9 +90,11 @@ const AddCart: React.FC<Props> = ({ colors, skuList }) => {
         open={open}
         onClose={toastClose}
         key={vertical + horizontal}
+        // クリックするとSnackbarが消えなくなる問題を修正
+        onClick={toastClose}
       >
         <Alert elevation={6} variant="filled" severity="success">
-          カートに商品が追加されました
+          BAGに商品が追加されました
         </Alert>
       </Snackbar>
     </>

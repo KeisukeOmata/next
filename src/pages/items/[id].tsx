@@ -5,6 +5,7 @@ import { TypeItem } from '../../types/TypeItem'
 import { useCart } from '../../hooks/useCart'
 import { useRouter } from 'next/router'
 import Detail from '../../components/items/Detail'
+import { ContentWrapper } from '../../components/layouts/ContentWrapper'
 // import styles from '../../styles/pages/items/[id].module.scss'
 
 type Props = {
@@ -41,7 +42,9 @@ const DetailPage: NextPage<Props> = ({ detail, errors }) => {
   if (errors) return <div>error</div>
   return (
     <>
-      <Detail detail={detail} />
+      <ContentWrapper>
+        <Detail detail={detail} />
+      </ContentWrapper>
     </>
   )
 }
