@@ -90,7 +90,7 @@ const AddCart: React.FC<Props> = ({ colors, skuList }) => {
         open={open}
         onClose={toastClose}
         key={vertical + horizontal}
-        // クリックするとAlertが消えなくなる問題を修正
+        // クリックするとSnackbarが消えなくなる問題を修正
         onClick={toastClose}
       >
         <Alert elevation={6} variant="filled" severity="success">
