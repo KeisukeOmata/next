@@ -1,0 +1,37 @@
+@import '../../Breakpoints';
+
+$side-padding: 1.6rem;
+$side-padding-sm: 1rem;
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .item {
+    margin-top: 5%;
+    width: 47.5%;
+    @include mq(sm) {
+      margin-top: 1.3rem;
+      width: 100%;
+    }
+    margin-top: 1.3rem;
+  }
+  .item__detail {
+    width: 100%;
+    @include mq(sm) {
+      width: 100%;
+      margin-top: 1.3rem;
+    }
+  }
+}
+
+.item {
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  background: var(--color-base-background-lighter);
+}
+.item__price {
+  text-align: center;
+  padding: 0.7rem 0;
+}
