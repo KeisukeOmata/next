@@ -9,7 +9,6 @@ import {
 } from '../../utils/helpers'
 import styles from '../../styles/components/cart/CartItems.module.scss'
 import Button from '@material-ui/core/Button'
-import MuiLink from '@material-ui/core/Link'
 
 const CartItems: React.FC = () => {
   const { cart, changeQuantity, removeItem } = useCart()
@@ -30,34 +29,34 @@ const CartItems: React.FC = () => {
             {cart.lineItems.map((item) => (
               <div className={styles.items} key={item.id}>
                 <div className={styles.item}>
-                  <Image
-                    src={item.variant.image.src}
-                    alt={item.variant.image.altText ?? ''}
-                    width={500}
-                    height={500}
-                  />
+                  <Link href={`items/${item.variant.product.id}`}>
+                    <a>
+                      <Image
+                        src={item.variant.image.src}
+                        alt={item.variant.image.altText ?? ''}
+                        width={500}
+                        height={500}
+                      />
+                    </a>
+                  </Link>
                 </div>
                 <div className={styles.item}>
                   <div className={styles.item__detail}>
-                    <Link href={`items/${item.variant.product.id}`}>
-                      <MuiLink color="inherit">
-                        <div>商品名: {item.title}</div>
-                        <div>
-                          カラー:{' '}
-                          {getValueByMatchedNameSelectedOptions(
-                            item.variant.selectedOptions,
-                            'Color'
-                          )}
-                        </div>
-                        <div>
-                          サイズ:{' '}
-                          {getValueByMatchedNameSelectedOptions(
-                            item.variant.selectedOptions,
-                            'Size'
-                          )}
-                        </div>
-                      </MuiLink>
-                    </Link>
+                    <div>商品名: {item.title}</div>
+                    <div>
+                      カラー:{' '}
+                      {getValueByMatchedNameSelectedOptions(
+                        item.variant.selectedOptions,
+                        'Color'
+                      )}
+                    </div>
+                    <div>
+                      サイズ:{' '}
+                      {getValueByMatchedNameSelectedOptions(
+                        item.variant.selectedOptions,
+                        'Size'
+                      )}
+                    </div>
                   </div>
                   <div className={styles.item__detail}>
                     <span>${parseInt(item.variant.price) * item.quantity}</span>
@@ -78,13 +77,7 @@ const CartItems: React.FC = () => {
                     </select>
                   </div>
                   <div className={styles.item__detail}>
-                    <MuiLink
-                      component="button"
-                      variant="body2"
-                      onClick={() => removeItem(item.id)}
-                    >
-                      削除
-                    </MuiLink>
+                    <button onClick={() => removeItem(item.id)}>削除</button>
                   </div>
                 </div>
               </div>
