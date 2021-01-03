@@ -8,14 +8,4 @@ export const Config = {
     process.env.NODE_ENV === 'production'
       ? 'https://e-commerce.keisukeomata.vercel.app/'
       : 'http://localhost:3000',
-  headerLinks: [
-    {
-      title: 'Shop',
-      href: '/',
-    },
-    {
-      title: 'World',
-      href: '/world',
-    },
-  ],
 }

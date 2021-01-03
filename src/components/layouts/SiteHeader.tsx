@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import { Config } from '../../foundations/site.config'
 import { useCart } from '../../hooks/useCart'
 import { ContentWrapper } from './ContentWrapper'
 import styles from '../../styles/components/layouts/SiteHeader.module.scss'
@@ -17,28 +16,17 @@ const Header: React.FC = () => {
             </a>
           </Link>
           <div className={styles.siteHeader__links}>
-            {Config.headerLinks.map((link, i) => {
-              // keyを作成
-              const key = `header-link-${i}`
-              // サイト内リンクの場合
-              if (link.href.startsWith('/')) {
-                return (
-                  <Link key={key} href={link.href} passHref>
-                    <a className={styles.siteHeader__link}>{link.title}</a>
-                  </Link>
-                )
-              }
-              // サイト外リンクの場合
-              return (
-                <a
-                  key={key}
-                  href={link.href}
-                  className={styles.siteHeader__link}
-                >
-                  {link.title}
-                </a>
-              )
-            })}
+            <Link href={'/'} passHref>
+              <a>
+                <button>Shop</button>
+              </a>
+            </Link>
+            <div className={styles.slash}>/</div>
+            <Link href={'/world'} passHref>
+              <a>
+                <button>World</button>
+              </a>
+            </Link>
           </div>
           <Link href={'/cart'} passHref>
             <a>
