@@ -18,7 +18,7 @@ const Header: React.FC = () => {
           <div className={styles.siteHeader__links}>
             <Link href={'/'} passHref>
               <a>
-                <button>Shop</button>
+                <button>Items</button>
               </a>
             </Link>
             <div className={styles.slash}>/</div>
