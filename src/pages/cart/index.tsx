@@ -10,7 +10,6 @@ const Cart: NextPage = () => {
   return (
     <>
       <ContentWrapper>
-        <h1>BAG</h1>
         {cart === null ? <div>loading...</div> : <CartItems />}
       </ContentWrapper>
     </>
