@@ -26,6 +26,7 @@ const CartItems: React.FC = () => {
           <div>BAGが空です</div>
         ) : (
           <>
+            <h1>BAG</h1>
             {cart.lineItems.map((item) => (
               <div className={styles.items} key={item.id}>
                 <div className={styles.item}>
