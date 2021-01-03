@@ -33,8 +33,8 @@ const CartItems: React.FC = () => {
                   <Image
                     src={item.variant.image.src}
                     alt={item.variant.image.altText ?? ''}
-                    width={300}
-                    height={300}
+                    width={500}
+                    height={500}
                   />
                 </div>
                 <div className={styles.item}>
