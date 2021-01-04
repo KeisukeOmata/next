@@ -1,18 +1,16 @@
 import React from 'react'
-import { NextPage } from 'next'
-import { GetStaticProps } from 'next'
-import { TypeItem } from '../types/TypeItem'
+import { NextPage, InferGetStaticPropsType } from 'next'
+// import { TypeItem } from '../types/TypeItem'
 import Items from '../components/items/Items'
 import { ContentWrapper } from '../components/layouts/ContentWrapper'
 import { useCart } from '../hooks/useCart'
 import { shopify } from '../foundations/shopify'
 // import styles from '../styles/pages/index.module.scss'
 
-type Props = {
-  items: TypeItem[]
-}
+// items: TypeItem[]
+type Props = InferGetStaticPropsType<typeof getStaticProps>
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getStaticProps = async () => {
   const items = await shopify.product.fetchAll()
   return {
     props: {
