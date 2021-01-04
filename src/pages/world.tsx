@@ -29,12 +29,6 @@ const World: NextPage = () => {
             </div>
           </div>
           <div className={styles.item}>
-            <div className="item__date">
-              国内外から厳選されたヴィンテージアイテムと、再構築され新たなアイテムとして生まれ変わった
-              一点物を取り扱う Vintage Select Bland。
-            </div>
-          </div>
-          <div className={styles.item}>
             <Image
               src="/brand2.jpg"
               alt="World2"
@@ -42,6 +36,12 @@ const World: NextPage = () => {
               width={500}
               height={500}
             />
+          </div>
+          <div className={styles.item}>
+            <div className="item__date">
+              国内外から厳選されたヴィンテージアイテムと、再構築され新たなアイテムとして生まれ変わった
+              一点物を取り扱う Vintage Select Bland。
+            </div>
           </div>
         </div>
       </ContentWrapper>
