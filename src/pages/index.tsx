@@ -25,11 +25,9 @@ const Home: NextPage<Props> = ({ items }) => {
   fetchCart()
   return (
     <>
-      <section>
-        <ContentWrapper>
-          <Items items={items} />
-        </ContentWrapper>
-      </section>
+      <ContentWrapper>
+        <Items items={items} />
+      </ContentWrapper>
     </>
   )
 }
