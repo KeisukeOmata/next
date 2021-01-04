@@ -1,26 +1,29 @@
-import { GetStaticProps, GetStaticPaths } from 'next'
-import { NextPage } from 'next'
+import {
+  NextPage,
+  GetStaticPaths,
+  InferGetStaticPropsType,
+  GetStaticPropsContext,
+} from 'next'
 import { shopify } from '../../foundations/shopify'
-import { TypeItem } from '../../types/TypeItem'
+// import { TypeItem } from '../../types/TypeItem'
 import { useCart } from '../../hooks/useCart'
 import { useRouter } from 'next/router'
 import Detail from '../../components/items/Detail'
 import { ContentWrapper } from '../../components/layouts/ContentWrapper'
 // import styles from '../../styles/pages/items/[id].module.scss'
 
-type Props = {
-  detail: TypeItem
-  errors?: any
-}
+// detail: TypeItem
+// errors?: any
+type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 export const getStaticPaths: GetStaticPaths = async () => ({
   paths: [],
   fallback: 'blocking',
 })
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps = async (context: GetStaticPropsContext) => {
   try {
-    const id = params?.id
+    const id = context.params?.id
     if (!id) throw new Error('idが取得できません')
     const detail = await shopify.product.fetch(id as string)
     return {
