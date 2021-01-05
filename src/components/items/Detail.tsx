@@ -11,7 +11,7 @@ type Props = {
 const Detail: React.FC<Props> = ({ detail }) => {
   return (
     <>
-      <h1>商品詳細</h1>
+      <h1>Detail</h1>
       <div className={styles.items}>
         <div className={styles.item}>
           <Image
