@@ -1,9 +1,5 @@
-import {
-  NextPage,
-  GetStaticPaths,
-  InferGetStaticPropsType,
-  GetStaticPropsContext,
-} from 'next'
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import { InferGetStaticPropsType, GetStaticPropsContext } from 'next'
 import { shopify } from '../../foundations/shopify'
 // import { TypeItem } from '../../types/TypeItem'
 import { useCart } from '../../hooks/useCart'
@@ -14,16 +10,18 @@ import { ContentWrapper } from '../../components/layouts/ContentWrapper'
 
 // detail: TypeItem
 // errors?: any
-type Props = InferGetStaticPropsType<typeof getStaticProps>
+// type Props = InferGetStaticPropsType<typeof getStaticProps>
 
-export const getStaticPaths: GetStaticPaths = async () => ({
-  paths: [],
-  fallback: 'blocking',
-})
+export async function getStaticPaths() {
+  return {
+    paths: [],
+    fallback: 'blocking',
+  }
+}
 
-export const getStaticProps = async (context: GetStaticPropsContext) => {
+export async function getStaticProps({ params }: GetStaticPropsContext) {
   try {
-    const id = context.params?.id
+    const id = params?.id
     if (!id) throw new Error('idが取得できません')
     const detail = await shopify.product.fetch(id as string)
     return {
@@ -35,7 +33,10 @@ export const getStaticProps = async (context: GetStaticPropsContext) => {
   }
 }
 
-const DetailPage: NextPage<Props> = ({ detail, errors }) => {
+export default function DetailPage({
+  detail,
+  errors,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   const { fetchCart } = useCart()
   fetchCart()
   const router = useRouter()
@@ -51,5 +52,3 @@ const DetailPage: NextPage<Props> = ({ detail, errors }) => {
     </>
   )
 }
-
-export default DetailPage

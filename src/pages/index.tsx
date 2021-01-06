@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import React from 'react'
-import { NextPage, InferGetStaticPropsType } from 'next'
+import { InferGetStaticPropsType } from 'next'
 // import { TypeItem } from '../types/TypeItem'
 import Items from '../components/items/Items'
 import { ContentWrapper } from '../components/layouts/ContentWrapper'
@@ -8,9 +9,9 @@ import { shopify } from '../foundations/shopify'
 // import styles from '../styles/pages/index.module.scss'
 
 // items: TypeItem[]
-type Props = InferGetStaticPropsType<typeof getStaticProps>
+// type Props = InferGetStaticPropsType<typeof getStaticProps>
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
   const items = await shopify.product.fetchAll()
   return {
     props: {
@@ -20,7 +21,9 @@ export const getStaticProps = async () => {
   }
 }
 
-const Home: NextPage<Props> = ({ items }) => {
+export default function Home({
+  items,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   const { fetchCart } = useCart()
   fetchCart()
   return (
@@ -31,5 +34,3 @@ const Home: NextPage<Props> = ({ items }) => {
     </>
   )
 }
-
-export default Home
