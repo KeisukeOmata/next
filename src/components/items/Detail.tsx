@@ -30,7 +30,9 @@ const Detail: React.FC<Props> = ({ detail }) => {
             <br />
             {detail.description}
           </div>
-          <AddCart skuList={detail.variants as Sku[]} />
+          <div className={styles.item__addCart}>
+            <AddCart skuList={detail.variants as Sku[]} />
+          </div>
         </div>
       </div>
     </>

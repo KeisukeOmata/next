@@ -33,7 +33,6 @@ const AddCart: React.FC<Props> = ({ skuList }) => {
   }
   return (
     <>
-      {console.log(skuList)}
       <Button
         variant="contained"
         color="primary"
