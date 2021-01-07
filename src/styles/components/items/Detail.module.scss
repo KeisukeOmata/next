@@ -41,3 +41,10 @@ $side-padding-sm: 1rem;
 .item__description {
   margin-bottom: 0.5rem;
 }
+.item__addCart {
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
