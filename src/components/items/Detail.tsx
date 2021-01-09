@@ -1,6 +1,7 @@
 import React from 'react'
 import { TypeItem, Sku } from '../../types/TypeItem'
 import Image from 'next/image'
+import Slider from './Slider'
 import AddCart from './AddCart'
 import styles from '../../styles/components/items/Detail.module.scss'
 
@@ -14,12 +15,22 @@ const Detail: React.FC<Props> = ({ detail }) => {
       <h1>Detail</h1>
       <div className={styles.items}>
         <div className={styles.item}>
-          <Image
-            src={detail.images[0].src}
-            alt={detail.title}
-            width={500}
-            height={500}
-          />
+          <div className={styles.item__left}>
+            <Slider>
+              {detail.images.map((image, i) => (
+                <div key={image.src}>
+                  <Image
+                    src={image.src}
+                    alt={detail.title || 'Product Image'}
+                    width={500}
+                    height={500}
+                    priority={i === 0}
+                    quality="85"
+                  />
+                </div>
+              ))}
+            </Slider>
+          </div>
         </div>
         <div className={styles.item}>
           <div>Brand: {detail.vendor}</div>
