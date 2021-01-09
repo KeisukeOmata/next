@@ -7,9 +7,7 @@ import { SiteFooter } from '../components/layouts/SiteFooter'
 import { FixedFooter } from '../components/layouts/FixedFooter'
 import '../styles//main.css'
 import '../styles/globals.scss'
-import 'swiper/swiper.scss'
-import 'swiper/components/navigation/navigation.scss'
-import 'swiper/components/pagination/pagination.scss'
+import 'keen-slider/keen-slider.min.css'
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
