@@ -10,6 +10,7 @@ $side-padding-sm: 1rem;
   .item {
     margin-top: 5%;
     width: 47.5%;
+    height: auto;
     @include mq(sm) {
       margin-top: 1.3rem;
       width: 100%;
