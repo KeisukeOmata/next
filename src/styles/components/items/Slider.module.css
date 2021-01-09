@@ -25,6 +25,10 @@
   @screen md {
     @apply left-6;
   }
+
+  @screen sm {
+    @apply left-2;
+  }
 }
 
 .rightControl {
@@ -33,6 +37,10 @@
 
   @screen md {
     @apply right-6;
+  }
+
+  @screen sm {
+    @apply right-2;
   }
 }
 
@@ -45,8 +53,6 @@
 }
 
 .positionIndicatorsContainer {
-  @apply hidden;
-
   @screen sm {
     @apply block absolute bottom-6 left-1/2;
     transform: translateX(-50%);
