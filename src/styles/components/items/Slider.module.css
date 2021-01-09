@@ -19,29 +19,13 @@
 }
 
 .leftControl {
-  @apply bg-cover left-10;
+  @apply bg-cover left-2;
   background-image: url('/cursor-left.png');
-
-  @screen md {
-    @apply left-6;
-  }
-
-  @screen sm {
-    @apply left-2;
-  }
 }
 
 .rightControl {
-  @apply bg-cover right-10;
+  @apply bg-cover right-2;
   background-image: url('/cursor-right.png');
-
-  @screen md {
-    @apply right-6;
-  }
-
-  @screen sm {
-    @apply right-2;
-  }
 }
 
 .control {
@@ -53,10 +37,8 @@
 }
 
 .positionIndicatorsContainer {
-  @screen sm {
-    @apply block absolute bottom-6 left-1/2;
-    transform: translateX(-50%);
-  }
+  @apply block absolute bottom-6 left-1/2;
+  transform: translateX(-50%);
 }
 
 .positionIndicator {
