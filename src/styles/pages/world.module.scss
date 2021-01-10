@@ -7,6 +7,9 @@ $side-padding-sm: 1rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  @include mq(sm) {
+    flex-direction: column;
+  }
   .item {
     margin-top: 5%;
     width: 47.5%;
@@ -24,6 +27,8 @@ $side-padding-sm: 1rem;
   flex-flow: column;
   position: relative;
   background: var(--color-base-background-lighter);
+  -webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+  justify-content: center; /* 横方向中央揃え */
 }
 .item__mainLink {
   padding: 1.1rem $side-padding 1.5rem;
@@ -36,5 +41,36 @@ $side-padding-sm: 1rem;
 }
 .item__date {
   color: var(--color-base-text-lighter);
-  font-size: 12px;
+  font-size: 16px;
+}
+
+.order1 {
+  @include mq(sm) {
+    order: 1;
+  }
+}
+.order2 {
+  @include mq(sm) {
+    order: 2;
+  }
+}
+.order3 {
+  @include mq(sm) {
+    order: 3;
+  }
+}
+.order4 {
+  @include mq(sm) {
+    order: 4;
+  }
+}
+.order5 {
+  @include mq(sm) {
+    order: 5;
+  }
+}
+.order6 {
+  @include mq(sm) {
+    order: 6;
+  }
 }
