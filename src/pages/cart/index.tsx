@@ -1,10 +1,9 @@
 import React from 'react'
-import { NextPage } from 'next'
 import CartItems from '../../components/cart/CartItems'
 import { ContentWrapper } from '../../components/layouts/ContentWrapper'
 import { useCart } from '../../hooks/useCart'
 
-const Cart: NextPage = () => {
+export default function Cart() {
   const { cart, fetchCart } = useCart()
   fetchCart()
   return (
@@ -15,5 +14,3 @@ const Cart: NextPage = () => {
     </>
   )
 }
-
-export default Cart
