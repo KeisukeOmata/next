@@ -29,7 +29,7 @@
 }
 
 .control {
-  @apply opacity-0 transition duration-150;
+  @apply transition duration-150;
 }
 
 .root:hover .control {
