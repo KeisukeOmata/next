@@ -1,17 +1,7 @@
-/* @tailwind base;
+@tailwind base;
 @import './base.css';
 
 @tailwind components;
 @import './components.css';
-
-@tailwind utilities; */
-
-@tailwind base;
-@tailwind components;
-
-.title {
-  @apply text-5xl text-center;
-  color: red;
-}
 
 @tailwind utilities;
