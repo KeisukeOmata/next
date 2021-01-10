@@ -1,11 +1,8 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { useCart } from '../../hooks/useCart'
 import { Sku } from '../../types/TypeItem'
-// import styles from '../../styles/components/items/AddCart.module.scss'
-import Button from '@material-ui/core/Button'
+import s from '../../styles/components/items/AddCart.module.css'
 import Snackbar, { SnackbarOrigin } from '@material-ui/core/Snackbar'
-import Alert from '@material-ui/lab/Alert'
 
 type Props = {
   skuList: Sku[]
@@ -33,13 +30,9 @@ const AddCart: React.FC<Props> = ({ skuList }) => {
   }
   return (
     <>
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={() => addToCart(skuList[0].id)}
-      >
+      <button className={s.button} onClick={() => addToCart(skuList[0].id)}>
         BAGに入れる
-      </Button>
+      </button>
       <Snackbar
         autoHideDuration={2000}
         anchorOrigin={{ vertical, horizontal }}
@@ -48,11 +41,8 @@ const AddCart: React.FC<Props> = ({ skuList }) => {
         key={vertical + horizontal}
         // クリックするとSnackbarが消えなくなる問題を修正
         onClick={toastClose}
-      >
-        <Alert elevation={6} variant="filled" severity="success">
-          BAGに商品が追加されました
-        </Alert>
-      </Snackbar>
+        message="BAGに商品が追加されました"
+      ></Snackbar>
     </>
   )
 }
