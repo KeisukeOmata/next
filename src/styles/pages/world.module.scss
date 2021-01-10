@@ -18,7 +18,6 @@ $side-padding-sm: 1rem;
       width: 100%;
     }
     margin-top: 1.3rem;
-    // width: 100%;
   }
 }
 
@@ -27,8 +26,8 @@ $side-padding-sm: 1rem;
   flex-flow: column;
   position: relative;
   background: var(--color-base-background-lighter);
-  -webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
-  justify-content: center; /* 横方向中央揃え */
+  // 上下中央揃え
+  justify-content: center;
 }
 .item__mainLink {
   padding: 1.1rem $side-padding 1.5rem;
