@@ -7,8 +7,7 @@ import {
   resetCheckoutId,
   getValueByMatchedNameSelectedOptions,
 } from '../../utils/helpers'
-import styles from '../../styles/components/cart/CartItems.module.scss'
-import Button from '@material-ui/core/Button'
+import s from '../../styles/components/cart/CartItems.module.scss'
 
 const CartItems: React.FC = () => {
   const { cart, changeQuantity, removeItem } = useCart()
@@ -28,8 +27,8 @@ const CartItems: React.FC = () => {
           <>
             <h1>BAG</h1>
             {cart.lineItems.map((item) => (
-              <div className={styles.items} key={item.id}>
-                <div className={styles.item}>
+              <div className={s.items} key={item.id}>
+                <div className={s.item}>
                   <Link href={`items/${item.variant.product.id}`}>
                     <a>
                       <Image
@@ -41,8 +40,8 @@ const CartItems: React.FC = () => {
                     </a>
                   </Link>
                 </div>
-                <div className={styles.item}>
-                  <div className={styles.item__detail}>
+                <div className={s.item}>
+                  <div className={s.item__detail}>
                     <div>商品名: {item.title}</div>
                     <div>
                       カラー:{' '}
@@ -59,10 +58,10 @@ const CartItems: React.FC = () => {
                       )}
                     </div>
                   </div>
-                  <div className={styles.item__detail}>
+                  <div className={s.item__detail}>
                     <span>${parseInt(item.variant.price) * item.quantity}</span>
                   </div>
-                  <div className={styles.item__detail}>
+                  <div className={s.item__detail}>
                     <select
                       defaultValue={item.quantity}
                       onChange={(e) => changeQuantity(item.id, e.target.value)}
@@ -77,26 +76,25 @@ const CartItems: React.FC = () => {
                       })}
                     </select>
                   </div>
-                  <div className={styles.item__detail}>
+                  <div className={s.item__detail}>
                     <button onClick={() => removeItem(item.id)}>削除</button>
                   </div>
                 </div>
               </div>
             ))}
-            <div className={styles.item}>
-              <div className={styles.item__price}>
+            <div className={s.item}>
+              <div className={s.item__price}>
                 合計: ${cart.subtotalPrice}(税抜)
               </div>
             </div>
-            <div className={styles.item}>
+            <div className={s.item}>
               <Link href={`/`}>
-                <Button
-                  variant="contained"
-                  color="primary"
+                <button
+                  className={s.button}
                   onClick={() => moveToShopify(cart)}
                 >
                   購入する
-                </Button>
+                </button>
               </Link>
             </div>
           </>

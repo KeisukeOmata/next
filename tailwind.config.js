@@ -52,6 +52,9 @@ module.exports = {
       lineHeight: {
         'extra-loose': '2.2',
       },
+      outline: {
+        black: '2px solid black',
+      },
     },
   },
   plugins: [require('@tailwindcss/ui')],
