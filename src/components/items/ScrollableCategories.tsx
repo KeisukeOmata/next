@@ -2,7 +2,6 @@ import React from 'react'
 import { atom, useRecoilState } from 'recoil'
 import cn from 'classnames'
 import s from '../../styles/components/items/ScrollableCategories.module.scss'
-
 import { categories } from '../../foundations/categories'
 import Items from './Items'
 import { TypeItem } from '../../types/TypeItem'
@@ -15,6 +14,61 @@ const categoryAtom = atom<string | null>({
 
 const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
   const [categoryState, setCategoryState] = useRecoilState(categoryAtom)
+
+  const getCategory: any = (category: string) => {
+    if (category == 'ALL') {
+      return (
+        <>
+          <h1>ALL</h1>
+          <div className={s.items}>
+            {items
+              .slice(0)
+              .reverse()
+              .map((item, i) => (
+                <>
+                  <Items key={`post-item-${i}`} item={item} />
+                  {console.log(item)}
+                </>
+              ))}
+          </div>
+        </>
+      )
+    } else if (category === '新着') {
+      return (
+        <>
+          <h1>新着</h1>
+          <div className={s.items}>
+            {items
+              .slice(-10)
+              .reverse()
+              .map((item, i) => (
+                <>
+                  <Items key={`post-item-${i}`} item={item} />
+                  {console.log(item)}
+                </>
+              ))}
+          </div>
+        </>
+      )
+    } else {
+      return (
+        <>
+          <h1>{categoryState}</h1>
+          <div className={s.items}>
+            {items
+              .slice(0)
+              .reverse()
+              .map(
+                (item, i) =>
+                  item.productType == categoryState && (
+                    <Items key={`post-item-${i}`} item={item} />
+                  )
+              )}
+          </div>
+        </>
+      )
+    }
+  }
 
   return (
     <>
@@ -35,36 +89,7 @@ const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
           </div>
         ))}
       </div>
-      <ContentWrapper>
-        {categoryState == 'ALL' ? (
-          <>
-            <h1>ALL</h1>
-            <div className={s.items}>
-              {items
-                .slice(0)
-                .reverse()
-                .map((item, i) => (
-                  <Items key={`post-item-${i}`} item={item} />
-                ))}
-            </div>
-          </>
-        ) : (
-          <>
-            <h1>{categoryState}</h1>
-            <div className={s.items}>
-              {items
-                .slice(0)
-                .reverse()
-                .map(
-                  (item, i) =>
-                    item.productType == categoryState && (
-                      <Items key={`post-item-${i}`} item={item} />
-                    )
-                )}
-            </div>
-          </>
-        )}
-      </ContentWrapper>
+      <ContentWrapper>{getCategory(categoryState)}</ContentWrapper>
     </>
   )
 }

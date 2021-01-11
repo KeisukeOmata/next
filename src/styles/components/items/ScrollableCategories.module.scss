@@ -81,6 +81,9 @@ $side-padding-sm: 1rem;
   margin-right: 50px;
   line-height: 1.5;
   scroll-snap-align: center;
+  @include mq(sm) {
+    margin-right: 25px;
+  }
 }
 .scrollableCategory__name {
   display: block;
