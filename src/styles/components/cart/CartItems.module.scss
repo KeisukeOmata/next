@@ -20,7 +20,6 @@ $side-padding-sm: 1rem;
     width: 100%;
     @include mq(sm) {
       width: 100%;
-      margin-top: 1.3rem;
     }
   }
 }
@@ -46,4 +45,24 @@ $side-padding-sm: 1rem;
 
 .button[data-active] {
   @apply bg-gray-600;
+}
+
+.button2 {
+  @apply bg-secondary text-accents-1 cursor-pointer inline-flex px-10 rounded-sm leading-6  transition ease-in-out duration-150 shadow-sm font-semibold text-center justify-center uppercase py-2 border border-transparent items-center;
+}
+
+.button2:hover {
+  @apply bg-accents-0 text-primary border border-secondary outline-black;
+}
+
+.button2[data-active] {
+  @apply bg-gray-600;
+}
+
+.cartSectionTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3rem 0;
+  border-bottom: solid 1px rgba(212, 231, 241, 0.6);
 }

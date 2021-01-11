@@ -73,3 +73,15 @@ $side-padding-sm: 1rem;
     order: 6;
   }
 }
+
+.worldSectionTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3rem 0;
+  border-bottom: solid 1px rgba(212, 231, 241, 0.6);
+}
+
+.worldCategories {
+  padding: 1rem 0;
+}

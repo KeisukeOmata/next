@@ -6,7 +6,7 @@ import { useCart } from '../../hooks/useCart'
 import { useRouter } from 'next/router'
 import Detail from '../../components/items/Detail'
 import { ContentWrapper } from '../../components/layouts/ContentWrapper'
-// import styles from '../../styles/pages/items/[id].module.scss'
+import s from '../../styles/pages/items/[id].module.scss'
 
 // detail: TypeItem
 // errors?: any
@@ -46,9 +46,11 @@ export default function DetailPage({
   if (errors) return <div>error</div>
   return (
     <>
-      <ContentWrapper>
-        <Detail detail={detail} />
-      </ContentWrapper>
+      <section className={s.itemCategories}>
+        <ContentWrapper>
+          <Detail detail={detail} />
+        </ContentWrapper>
+      </section>
     </>
   )
 }

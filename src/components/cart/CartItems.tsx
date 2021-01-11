@@ -22,10 +22,14 @@ const CartItems: React.FC = () => {
     cart && (
       <>
         {cart.lineItems.length === 0 ? (
-          <div>BAGが空です</div>
+          <div className={s.cartSectionTitleContainer}>
+            <h2>BAGが空です</h2>
+          </div>
         ) : (
           <>
-            <h1>BAG</h1>
+            <div className={s.cartSectionTitleContainer}>
+              <h2>BAG</h2>
+            </div>
             {cart.lineItems.map((item) => (
               <div className={s.items} key={item.id}>
                 <div className={s.item}>
@@ -45,8 +49,8 @@ const CartItems: React.FC = () => {
                 </div>
                 <div className={s.item}>
                   <div className={s.item__detail}>
-                    <div>商品名: {item.title}</div>
-                    <div>
+                    <div>{item.title}</div>
+                    {/* <div>
                       カラー:{' '}
                       {getValueByMatchedNameSelectedOptions(
                         item.variant.selectedOptions,
@@ -59,17 +63,18 @@ const CartItems: React.FC = () => {
                         item.variant.selectedOptions,
                         'Size'
                       )}
-                    </div>
+                    </div> */}
                   </div>
                   <div className={s.item__detail}>
-                    <span>${parseInt(item.variant.price) * item.quantity}</span>
+                    <span>¥{item.variant.price}</span>
                   </div>
                   <div className={s.item__detail}>
+                    個数：
                     <select
                       defaultValue={item.quantity}
                       onChange={(e) => changeQuantity(item.id, e.target.value)}
                     >
-                      {[...Array(5).keys()].map((number) => {
+                      {[...Array(10).keys()].map((number) => {
                         const value = number + 1
                         return (
                           <option key={value} value={value}>
@@ -80,15 +85,24 @@ const CartItems: React.FC = () => {
                     </select>
                   </div>
                   <div className={s.item__detail}>
-                    <button onClick={() => removeItem(item.id)}>削除</button>
+                    <span>
+                      合計： ¥{parseInt(item.variant.price) * item.quantity}
+                    </span>
+                  </div>
+                  <br></br>
+                  <div className={s.item__detail}>
+                    <button
+                      className={s.button2}
+                      onClick={() => removeItem(item.id)}
+                    >
+                      削除
+                    </button>
                   </div>
                 </div>
               </div>
             ))}
             <div className={s.item}>
-              <div className={s.item__price}>
-                合計: ${cart.subtotalPrice}(税抜)
-              </div>
+              <div className={s.item__price}>お会計: ¥{cart.subtotalPrice}</div>
             </div>
             <div className={s.item}>
               <Link href={`/`}>

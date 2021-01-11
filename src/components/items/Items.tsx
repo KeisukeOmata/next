@@ -23,7 +23,7 @@ const Items: React.FC<{ item: TypeItem }> = ({ item }) => {
             />
             <div className={styles.item__date}>
               <div>{title}</div>
-              <div>{variants[0].price}</div>
+              <div>¥{variants[0].price}</div>
             </div>
           </a>
         </Link>
