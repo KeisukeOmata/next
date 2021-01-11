@@ -14,7 +14,7 @@ const categoryAtom = atom<string | null>({
 })
 
 const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
-  const [categoryState, setCategory] = useRecoilState(categoryAtom)
+  const [categoryState, setCategoryState] = useRecoilState(categoryAtom)
 
   return (
     <>
@@ -27,7 +27,7 @@ const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
                   s.scrollableCategory__name,
                   categoryState == category.name ? s.chosen : s.notChoose
                 )}
-                onClick={() => setCategory(category.name as string)}
+                onClick={() => setCategoryState(category.name as string)}
               >
                 {category.name}
               </button>
