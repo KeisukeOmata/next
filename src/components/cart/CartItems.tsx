@@ -36,6 +36,9 @@ const CartItems: React.FC = () => {
                         alt={item.variant.image.altText ?? ''}
                         width={500}
                         height={500}
+                        quality="85"
+                        // 遅延読み込みしない
+                        loading={'eager'}
                       />
                     </a>
                   </Link>
