@@ -3,10 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Cart } from '../../types/TypeItem'
 import { useCart } from '../../hooks/useCart'
-import {
-  resetCheckoutId,
-  getValueByMatchedNameSelectedOptions,
-} from '../../utils/helpers'
+import { resetCheckoutId } from '../../utils/helpers'
 import s from '../../styles/components/cart/CartItems.module.scss'
 
 const CartItems: React.FC = () => {
