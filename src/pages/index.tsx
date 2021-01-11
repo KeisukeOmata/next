@@ -2,11 +2,14 @@
 import React from 'react'
 import { InferGetStaticPropsType } from 'next'
 // import { TypeItem } from '../types/TypeItem'
-import Items from '../components/items/Items'
-import { ContentWrapper } from '../components/layouts/ContentWrapper'
+import {
+  ContentWrapper,
+  UndoWrapForScroll,
+} from '../components/layouts/ContentWrapper'
+import ScrollableCategories from '../components/items/ScrollableCategories'
 import { useCart } from '../hooks/useCart'
 import { shopify } from '../foundations/shopify'
-// import styles from '../styles/pages/index.module.scss'
+import s from '../styles/pages/index.module.scss'
 
 // items: TypeItem[]
 // type Props = InferGetStaticPropsType<typeof getStaticProps>
@@ -28,9 +31,18 @@ export default function Home({
   fetchCart()
   return (
     <>
-      <ContentWrapper>
-        <Items items={items} />
-      </ContentWrapper>
+      <section className={s.homeCategories}>
+        <ContentWrapper>
+          <div className={s.homeSectionTitleContainer}>
+            <h2 className={s.homeSectionTitle}>Categories</h2>
+          </div>
+          <div className={s.homeCategoriesContainer}>
+            <UndoWrapForScroll>
+              <ScrollableCategories items={items} />
+            </UndoWrapForScroll>
+          </div>
+        </ContentWrapper>
+      </section>
     </>
   )
 }

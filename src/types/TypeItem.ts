@@ -22,7 +22,9 @@ export type Sku = {
 
 export type Option = SdkOption
 
-export type TypeItem = SdkProduct
+export type TypeItem = {
+  productType: string | null
+} & SdkProduct
 
 type lineItem = {
   id: string

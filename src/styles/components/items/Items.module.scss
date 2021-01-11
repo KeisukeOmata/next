@@ -20,6 +20,12 @@ $side-padding-sm: 1rem;
 }
 
 .item {
+  width: 47.5%;
+  @include mq(sm) {
+    margin-top: 1.3rem;
+    width: 100%;
+  }
+
   display: flex;
   flex-flow: column;
   position: relative;
