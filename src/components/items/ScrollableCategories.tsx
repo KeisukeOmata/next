@@ -29,21 +29,27 @@ const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
           <>
             <h1>ALL</h1>
             <div className={styles.items}>
-              {items.map((item, i) => (
-                <Items key={`post-item-${i}`} item={item} />
-              ))}
+              {items
+                .slice(0)
+                .reverse()
+                .map((item, i) => (
+                  <Items key={`post-item-${i}`} item={item} />
+                ))}
             </div>
           </>
         ) : (
           <>
             <h1>{category}</h1>
             <div className={styles.items}>
-              {items.map(
-                (item, i) =>
-                  item.productType == category && (
-                    <Items key={`post-item-${i}`} item={item} />
-                  )
-              )}
+              {items
+                .slice(0)
+                .reverse()
+                .map(
+                  (item, i) =>
+                    item.productType == category && (
+                      <Items key={`post-item-${i}`} item={item} />
+                    )
+                )}
             </div>
           </>
         )}
