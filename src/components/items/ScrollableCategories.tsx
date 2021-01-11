@@ -16,7 +16,7 @@ const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
             <div className={styles.scrollableCategory__link}>
               <button
                 className={styles.scrollableCategory__name}
-                onClick={(event) => setCategory(event.target.innerHTML)}
+                onClick={() => setCategory(category.name)}
               >
                 {category.name}
               </button>
