@@ -3,7 +3,7 @@ import { TypeItem, Sku } from '../../types/TypeItem'
 import Image from 'next/image'
 import Slider from './Slider'
 import AddCart from './AddCart'
-import styles from '../../styles/components/items/Detail.module.scss'
+import s from '../../styles/components/items/Detail.module.scss'
 
 type Props = {
   detail: TypeItem
@@ -12,10 +12,12 @@ type Props = {
 const Detail: React.FC<Props> = ({ detail }) => {
   return (
     <>
-      <h1>Detail</h1>
-      <div className={styles.items}>
-        <div className={styles.item}>
-          <div className={styles.item__left}>
+      <div className={s.itemSectionTitleContainer}>
+        <h2>{detail.title}</h2>
+      </div>
+      <div className={s.items}>
+        <div className={s.item}>
+          <div className={s.item__left}>
             <Slider>
               {detail.images.map((image, i) => (
                 <div key={image.src}>
@@ -34,12 +36,11 @@ const Detail: React.FC<Props> = ({ detail }) => {
             </Slider>
           </div>
         </div>
-        <div className={styles.item}>
-          <div>Brand: {detail.vendor}</div>
+        <div className={s.item}>
+          <div>{detail.vendor}</div>
           <div>{detail.title}</div>
-          <div>Price: ${detail.variants[0].price}</div>
-          <div className={styles.item__description}>
-            商品情報
+          <div>¥{detail.variants[0].price}</div>
+          <div className={s.item__description}>
             <br />
             {detail.description}
           </div>

@@ -19,7 +19,9 @@ const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
     if (category == 'ALL') {
       return (
         <>
-          <h1>ALL</h1>
+          <div className={s.categorySectionTitleContainer}>
+            <h2>ALL</h2>
+          </div>
           <div className={s.items}>
             {items
               .slice(0)
@@ -27,7 +29,6 @@ const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
               .map((item, i) => (
                 <>
                   <Items key={`post-item-${i}`} item={item} />
-                  {console.log(item)}
                 </>
               ))}
           </div>
@@ -36,7 +37,9 @@ const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
     } else if (category === '新着') {
       return (
         <>
-          <h1>新着</h1>
+          <div className={s.categorySectionTitleContainer}>
+            <h2>新着</h2>
+          </div>
           <div className={s.items}>
             {items
               .slice(-10)
@@ -44,7 +47,6 @@ const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
               .map((item, i) => (
                 <>
                   <Items key={`post-item-${i}`} item={item} />
-                  {console.log(item)}
                 </>
               ))}
           </div>
@@ -53,7 +55,9 @@ const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
     } else {
       return (
         <>
-          <h1>{categoryState}</h1>
+          <div className={s.categorySectionTitleContainer}>
+            <h2 className={s.homeSectionTitle}>{categoryState}</h2>
+          </div>
           <div className={s.items}>
             {items
               .slice(0)

@@ -34,7 +34,7 @@ export default function Home({
       <section className={s.homeCategories}>
         <ContentWrapper>
           <div className={s.homeSectionTitleContainer}>
-            <h2 className={s.homeSectionTitle}>Categories</h2>
+            <h2 className={s.homeSectionTitle}>Items</h2>
           </div>
           <div className={s.homeCategoriesContainer}>
             <UndoWrapForScroll>
