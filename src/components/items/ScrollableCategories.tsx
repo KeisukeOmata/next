@@ -1,12 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { atom, useRecoilState } from 'recoil'
 import styles from '../../styles/components/items/ScrollableCategories.module.scss'
 import { categories } from '../../foundations/categories'
 import Items from './Items'
 import { TypeItem } from '../../types/TypeItem'
 import { ContentWrapper } from '../layouts/ContentWrapper'
 
+const categoryState = atom<string | null>({
+  key: 'categoryState',
+  default: 'ALL',
+})
+
 const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
-  const [category, setCategory] = useState('ALL')
+  const [category, setCategory] = useRecoilState(categoryState)
 
   return (
     <>
@@ -16,7 +22,7 @@ const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
             <div className={styles.scrollableCategory__link}>
               <button
                 className={styles.scrollableCategory__name}
-                onClick={() => setCategory(category.name)}
+                onClick={() => setCategory(category.name as string)}
               >
                 {category.name}
               </button>
