@@ -16,10 +16,10 @@ export const categories: Category[] = [
     name: 'スカート',
   },
   {
-    name: 'バッグ',
+    name: 'アクセサリー',
   },
   {
-    name: 'アクセサリー',
+    name: 'バッグ',
   },
   {
     name: '小物',
