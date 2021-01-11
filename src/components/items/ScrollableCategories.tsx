@@ -1,27 +1,32 @@
 import React from 'react'
 import { atom, useRecoilState } from 'recoil'
-import styles from '../../styles/components/items/ScrollableCategories.module.scss'
+import cn from 'classnames'
+import s from '../../styles/components/items/ScrollableCategories.module.scss'
+
 import { categories } from '../../foundations/categories'
 import Items from './Items'
 import { TypeItem } from '../../types/TypeItem'
 import { ContentWrapper } from '../layouts/ContentWrapper'
 
-const categoryState = atom<string | null>({
+const categoryAtom = atom<string | null>({
   key: 'categoryState',
   default: 'ALL',
 })
 
 const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
-  const [category, setCategory] = useRecoilState(categoryState)
+  const [categoryState, setCategory] = useRecoilState(categoryAtom)
 
   return (
     <>
-      <div className={styles.scrollableCategories}>
+      <div className={s.scrollableCategories}>
         {categories.map((category, i) => (
           <div key={`category-${i}`}>
-            <div className={styles.scrollableCategory__link}>
+            <div className={s.scrollableCategory__link}>
               <button
-                className={styles.scrollableCategory__name}
+                className={cn(
+                  s.scrollableCategory__name,
+                  categoryState == category.name ? s.chosen : s.notChoose
+                )}
                 onClick={() => setCategory(category.name as string)}
               >
                 {category.name}
@@ -31,10 +36,10 @@ const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
         ))}
       </div>
       <ContentWrapper>
-        {category == 'ALL' ? (
+        {categoryState == 'ALL' ? (
           <>
             <h1>ALL</h1>
-            <div className={styles.items}>
+            <div className={s.items}>
               {items
                 .slice(0)
                 .reverse()
@@ -45,14 +50,14 @@ const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
           </>
         ) : (
           <>
-            <h1>{category}</h1>
-            <div className={styles.items}>
+            <h1>{categoryState}</h1>
+            <div className={s.items}>
               {items
                 .slice(0)
                 .reverse()
                 .map(
                   (item, i) =>
-                    item.productType == category && (
+                    item.productType == categoryState && (
                       <Items key={`post-item-${i}`} item={item} />
                     )
                 )}

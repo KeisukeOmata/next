@@ -88,3 +88,18 @@ $side-padding-sm: 1rem;
   font-size: 13px;
   white-space: nowrap;
 }
+
+.chosen {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.chosen::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #333;
+}
