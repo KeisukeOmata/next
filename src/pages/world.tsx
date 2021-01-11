@@ -18,9 +18,11 @@ export default function World() {
             <Image
               src="/brand.webp"
               alt="World"
-              quality={85}
+              quality="85"
               width={500}
               height={500}
+              // 遅延読み込みしない
+              loading={'eager'}
             />
           </div>
           <div className={cn(s.item, s.order2)}>
@@ -39,18 +41,22 @@ export default function World() {
             <Image
               src="/brand2.jpg"
               alt="World2"
-              quality={85}
+              quality="85"
               width={500}
               height={500}
+              // 遅延読み込みしない
+              loading={'eager'}
             />
           </div>
           <div className={cn(s.item, s.order5)}>
             <Image
               src="/brand3.webp"
               alt="World"
-              quality={85}
+              quality="85"
               width={500}
               height={500}
+              // 遅延読み込みしない
+              loading={'eager'}
             />
           </div>
           <div className={cn(s.item, s.order6)}>

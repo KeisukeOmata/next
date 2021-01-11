@@ -15,9 +15,11 @@ const Items: React.FC<{ item: TypeItem }> = ({ item }) => {
             <Image
               src={images[0].src}
               alt={title}
-              quality={100}
               width={500}
               height={500}
+              quality="85"
+              // 遅延読み込みしない
+              loading={'eager'}
             />
             <div className={styles.item__date}>
               <div>{title}</div>

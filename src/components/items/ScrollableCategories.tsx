@@ -9,7 +9,7 @@ import { ContentWrapper } from '../layouts/ContentWrapper'
 
 const categoryAtom = atom<string | null>({
   key: 'categoryState',
-  default: 'ALL',
+  default: '新着',
 })
 
 const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
