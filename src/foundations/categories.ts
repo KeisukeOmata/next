@@ -4,9 +4,6 @@ type Category = {
 
 export const categories: Category[] = [
   {
-    name: 'ALL',
-  },
-  {
     name: '新着',
   },
   {
@@ -16,7 +13,13 @@ export const categories: Category[] = [
     name: 'カットソー',
   },
   {
+    name: 'スカート',
+  },
+  {
     name: 'バッグ',
+  },
+  {
+    name: 'アクセサリー',
   },
   {
     name: '小物',
