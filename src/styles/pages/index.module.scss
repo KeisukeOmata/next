@@ -4,15 +4,15 @@
   padding: 2.7rem 0 2rem;
 }
 .homeTop__title {
-  font-size: 3.1rem;
+  // font-size: 3.1rem;
   line-height: 1.4;
   @include mq(xs) {
-    font-size: 2.6rem;
+    // font-size: 2.6rem;
   }
 }
 .homeTop__description {
   margin-top: 0.4rem;
-  font-size: 1.2rem;
+  // font-size: 1.2rem;
   color: var(--color-base-text-lighter);
 }
 
@@ -24,8 +24,8 @@
   border-bottom: solid 1px rgba(212, 231, 241, 0.6);
 }
 .homeCategories {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 .homeCategoriesContainer {
-  margin-top: 2rem;
+  margin-top: 1.3rem;
 }

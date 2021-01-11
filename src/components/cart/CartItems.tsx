@@ -83,7 +83,7 @@ const CartItems: React.FC = () => {
                   </div>
                   <div className={s.item__detail}>
                     <span>
-                      合計： ¥{parseInt(item.variant.price) * item.quantity}
+                      小計： ¥{parseInt(item.variant.price) * item.quantity}
                     </span>
                   </div>
                   <br></br>
@@ -99,7 +99,7 @@ const CartItems: React.FC = () => {
               </div>
             ))}
             <div className={s.item}>
-              <div className={s.item__price}>お会計: ¥{cart.subtotalPrice}</div>
+              <div className={s.item__price}>合計: ¥{cart.subtotalPrice}</div>
             </div>
             <div className={s.item}>
               <Link href={`/`}>
