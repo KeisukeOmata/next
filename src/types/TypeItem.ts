@@ -24,6 +24,7 @@ export type Option = SdkOption
 
 export type TypeItem = {
   productType: string | null
+  descriptionHtml: string
 } & SdkProduct
 
 type lineItem = {
