@@ -40,10 +40,13 @@ const Detail: React.FC<Props> = ({ detail }) => {
           <div>{detail.vendor}</div>
           <div>{detail.title}</div>
           <div>¥{detail.variants[0].price}</div>
-          <div className={s.item__description}>
-            <br />
-            {detail.description}
-          </div>
+          <br />
+          <div
+            className={s.item__description}
+            dangerouslySetInnerHTML={{
+              __html: `${detail.descriptionHtml}`,
+            }}
+          />
           <AddCart skuList={detail.variants as Sku[]} />
         </div>
       </div>
