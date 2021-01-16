@@ -20,7 +20,7 @@ export default function World() {
             <div className={cn(s.item, s.order1)}>
               <Image
                 src="/brand.webp"
-                alt="World"
+                alt="Brand Image1"
                 quality="85"
                 width={500}
                 height={500}
@@ -43,7 +43,7 @@ export default function World() {
             <div className={cn(s.item, s.order3)}>
               <Image
                 src="/brand2.jpg"
-                alt="World2"
+                alt="Brand Image2"
                 quality="85"
                 width={500}
                 height={500}
@@ -54,7 +54,7 @@ export default function World() {
             <div className={cn(s.item, s.order5)}>
               <Image
                 src="/brand3.webp"
-                alt="World"
+                alt="Brand Image3"
                 quality="85"
                 width={500}
                 height={500}

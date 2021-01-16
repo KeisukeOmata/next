@@ -23,7 +23,7 @@ const Detail: React.FC<Props> = ({ detail }) => {
                 <div key={image.src}>
                   <Image
                     src={image.src}
-                    alt={detail.title || 'Product Image'}
+                    alt={detail.title || 'Item Image'}
                     width={500}
                     height={500}
                     priority={i === 0}
