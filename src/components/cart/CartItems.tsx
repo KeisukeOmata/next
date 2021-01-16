@@ -34,7 +34,7 @@ const CartItems: React.FC = () => {
                     <a>
                       <Image
                         src={item.variant.image.src}
-                        alt={item.variant.image.altText ?? ''}
+                        alt={item.variant.image.altText || 'Item Image'}
                         width={500}
                         height={500}
                         quality="85"

@@ -14,7 +14,7 @@ const Items: React.FC<{ item: TypeItem }> = ({ item }) => {
           <a className={styles.item__mainLink}>
             <Image
               src={images[0].src}
-              alt={title}
+              alt={title || 'Item Image'}
               width={500}
               height={500}
               quality="85"
