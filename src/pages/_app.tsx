@@ -13,17 +13,17 @@ import 'keen-slider/keen-slider.min.css'
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   // Focus on main when the page transitions.
-  // const router = useRouter()
+  const router = useRouter()
 
-  // const handleRouteChange = useCallback(() => {
-  //   const main = document.getElementById('main')
-  //   main?.focus({ preventScroll: true })
-  // }, [])
+  const handleRouteChange = useCallback(() => {
+    const main = document.getElementById('main')
+    main?.focus({ preventScroll: true })
+  }, [])
 
-  // useEffect(() => {
-  //   router.events.on('routeChangeComplete', handleRouteChange)
-  //   return () => router.events.off('routeChangeComplete', handleRouteChange)
-  // })
+  useEffect(() => {
+    router.events.on('routeChangeComplete', handleRouteChange)
+    return () => router.events.off('routeChangeComplete', handleRouteChange)
+  })
 
   return (
     <>
