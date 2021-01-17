@@ -1,5 +1,7 @@
 import React from 'react'
 import type { AppProps } from 'next/app'
+import { useRouter } from 'next/router'
+import { useCallback, useEffect } from 'react'
 import Head from 'next/head'
 import { RecoilRoot } from 'recoil'
 import SiteHeader from '../components/layouts/SiteHeader'
@@ -10,6 +12,19 @@ import '../styles/globals.scss'
 import 'keen-slider/keen-slider.min.css'
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+  // Focus on main when the page transitions.
+  // const router = useRouter()
+
+  // const handleRouteChange = useCallback(() => {
+  //   const main = document.getElementById('main')
+  //   main?.focus({ preventScroll: true })
+  // }, [])
+
+  // useEffect(() => {
+  //   router.events.on('routeChangeComplete', handleRouteChange)
+  //   return () => router.events.off('routeChangeComplete', handleRouteChange)
+  // })
+
   return (
     <>
       <Head>
@@ -25,7 +40,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       <FixedFooter>
         <RecoilRoot>
           <SiteHeader />
-          <main aria-label="メイン">
+          <main id="main" tabIndex={-1} aria-label="メイン">
             <Component {...pageProps} />
           </main>
         </RecoilRoot>
