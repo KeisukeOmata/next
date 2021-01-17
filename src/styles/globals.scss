@@ -1,11 +1,11 @@
-@import "./Breakpoints";
+@import './Breakpoints';
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Arial, sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
+  font-family: Arial, sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
 }
 
 a {
@@ -41,12 +41,12 @@ button {
   // 0.25秒
   transition: 0.25s;
   padding: 0;
-  margin: 0;  
+  margin: 0;
 }
 // 押下時の青い枠線を消す
-button:focus {
-	outline:0;
-}
+// button:focus {
+// 	outline:0;
+// }
 
 // iOSでフォーム入力時にズームされないようにする
 input,
