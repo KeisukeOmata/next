@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useCart } from '../../hooks/useCart'
 import { Sku } from '../../types/TypeItem'
-import cn from 'classnames'
 import s from '../../styles/components/items/AddCart.module.css'
 import Snackbar, { SnackbarOrigin } from '@material-ui/core/Snackbar'
 
@@ -33,7 +32,7 @@ const AddCart: React.FC<Props> = ({ skuList }) => {
     <>
       <button
         aria-label="カートに追加する"
-        className={cn(s.button, open == true ? s.notChoose : s.chosen)}
+        className={s.button}
         onClick={() => addToCart(skuList[0].id)}
       >
         BAGに入れる
