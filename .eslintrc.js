@@ -7,8 +7,9 @@ module.exports = {
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:prettier/recommended',
     'prettier/@typescript-eslint',
+    'plugin:jsx-a11y/recommended',
   ],
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['@typescript-eslint', 'react', 'jsx-a11y'],
   parser: '@typescript-eslint/parser',
   env: {
     browser: true,
