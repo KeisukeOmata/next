@@ -41,7 +41,22 @@ $side-padding-sm: 1rem;
 
 /* Disable smartphone hover. */
 @screen md {
-  .button2:hover {
+  .button:hover {
+    @apply bg-accents-0 text-primary border border-secondary outline-black;
+  }
+}
+@screen lg {
+  .button:hover {
+    @apply bg-accents-0 text-primary border border-secondary outline-black;
+  }
+}
+@screen xl {
+  .button:hover {
+    @apply bg-accents-0 text-primary border border-secondary outline-black;
+  }
+}
+@screen 2xl {
+  .button:hover {
     @apply bg-accents-0 text-primary border border-secondary outline-black;
   }
 }
@@ -56,6 +71,21 @@ $side-padding-sm: 1rem;
 
 /* Disable smartphone hover. */
 @screen md {
+  .button2:hover {
+    @apply bg-accents-0 text-primary border border-secondary outline-black;
+  }
+}
+@screen lg {
+  .button2:hover {
+    @apply bg-accents-0 text-primary border border-secondary outline-black;
+  }
+}
+@screen xl {
+  .button2:hover {
+    @apply bg-accents-0 text-primary border border-secondary outline-black;
+  }
+}
+@screen 2xl {
   .button2:hover {
     @apply bg-accents-0 text-primary border border-secondary outline-black;
   }

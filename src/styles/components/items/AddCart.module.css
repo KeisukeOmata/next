@@ -8,6 +8,21 @@
     @apply bg-accents-0 text-primary border border-secondary outline-black;
   }
 }
+@screen lg {
+  .button:hover {
+    @apply bg-accents-0 text-primary border border-secondary outline-black;
+  }
+}
+@screen xl {
+  .button:hover {
+    @apply bg-accents-0 text-primary border border-secondary outline-black;
+  }
+}
+@screen 2xl {
+  .button:hover {
+    @apply bg-accents-0 text-primary border border-secondary outline-black;
+  }
+}
 
 .button[data-active] {
   @apply bg-gray-600;
