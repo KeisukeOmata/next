@@ -20,15 +20,15 @@ const Header: React.FC = () => {
           </Link>
           <div className={styles.siteHeader__links}>
             <Link href={'/'} passHref>
-              <button aria-label="アイテム一覧を表示するボタン">Items</button>
+              <button aria-label="アイテム一覧を表示する">Items</button>
             </Link>
             <div className={styles.slash}>/</div>
             <Link href={'/world'} passHref>
-              <button aria-label="about usを表示するボタン">World</button>
+              <button aria-label="about usを表示する">World</button>
             </Link>
           </div>
           <Link href={'/cart'} passHref>
-            <button aria-label="カートを表示するボタン">BAG({quantity})</button>
+            <button aria-label="カートを表示する">BAG({quantity})</button>
           </Link>
         </div>
       </ContentWrapper>
