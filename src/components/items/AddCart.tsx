@@ -31,7 +31,7 @@ const AddCart: React.FC<Props> = ({ skuList }) => {
   return (
     <>
       <button
-        aria-label="カートに追加するボタン"
+        aria-label="カートに追加する"
         className={s.button}
         onClick={() => addToCart(skuList[0].id)}
       >

@@ -12,7 +12,7 @@ const Items: React.FC<{ item: TypeItem }> = ({ item }) => {
       <div className={styles.item}>
         <Link key={`items-${id}`} href={`items/${id}`} passHref>
           <button
-            aria-label={`${title}のページを表示するボタン`}
+            aria-label={`${title}のページを表示する`}
             className={styles.item__mainLink}
           >
             <Image
