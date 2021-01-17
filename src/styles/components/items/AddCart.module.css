@@ -10,3 +10,6 @@
   @apply bg-gray-600;
 }
 
+.notChoose {
+  pointer-events: none;
+}
