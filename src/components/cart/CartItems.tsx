@@ -47,7 +47,7 @@ const CartItems: React.FC = () => {
                 </div>
                 <div className={s.item}>
                   <div className={s.item__detail}>
-                    <div>{item.title}</div>
+                    <p>{item.title}</p>
                     {/* <div>
                       カラー:{' '}
                       {getValueByMatchedNameSelectedOptions(
@@ -64,7 +64,7 @@ const CartItems: React.FC = () => {
                     </div> */}
                   </div>
                   <div className={s.item__detail}>
-                    <span>¥{item.variant.price}</span>
+                    <p>¥{item.variant.price}</p>
                   </div>
                   <div className={s.item__detail}>
                     個数：
@@ -83,9 +83,9 @@ const CartItems: React.FC = () => {
                     </select>
                   </div>
                   <div className={s.item__detail}>
-                    <span>
+                    <p>
                       小計： ¥{parseInt(item.variant.price) * item.quantity}
-                    </span>
+                    </p>
                   </div>
                   <br></br>
                   <div className={s.item__detail}>
@@ -101,7 +101,7 @@ const CartItems: React.FC = () => {
               </div>
             ))}
             <div className={s.item}>
-              <div className={s.item__price}>合計: ¥{cart.subtotalPrice}</div>
+              <p className={s.item__price}>合計: ¥{cart.subtotalPrice}</p>
             </div>
             <div className={s.item}>
               <Link href={`/`}>

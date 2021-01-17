@@ -25,7 +25,9 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       <FixedFooter>
         <RecoilRoot>
           <SiteHeader />
-          <Component {...pageProps} />
+          <main aria-label="メイン">
+            <Component {...pageProps} />
+          </main>
         </RecoilRoot>
         <SiteFooter />
       </FixedFooter>
