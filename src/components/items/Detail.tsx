@@ -37,11 +37,11 @@ const Detail: React.FC<Props> = ({ detail }) => {
           </div>
         </div>
         <div className={s.item}>
-          <div>{detail.vendor}</div>
-          <div>{detail.title}</div>
-          <div>¥{detail.variants[0].price}</div>
+          <p>{detail.vendor}</p>
+          <p>{detail.title}</p>
+          <p>¥{detail.variants[0].price}</p>
           <br />
-          <div
+          <article
             className={s.item__description}
             dangerouslySetInnerHTML={{
               __html: `${detail.descriptionHtml}`,
