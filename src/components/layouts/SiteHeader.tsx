@@ -11,27 +11,19 @@ const Header: React.FC = () => {
       <ContentWrapper>
         <div className={styles.siteHeader__inner}>
           <Link href="/" passHref>
-            <a className={styles.siteHeader__logoLink}>
-              <button>SKPISM</button>
-            </a>
+            <button className={styles.siteHeader__logoLink}>SKPISM</button>
           </Link>
           <div className={styles.siteHeader__links}>
             <Link href={'/'} passHref>
-              <a>
-                <button>Items</button>
-              </a>
+              <button>Items</button>
             </Link>
             <div className={styles.slash}>/</div>
             <Link href={'/world'} passHref>
-              <a>
-                <button>World</button>
-              </a>
+              <button>World</button>
             </Link>
           </div>
           <Link href={'/cart'} passHref>
-            <a>
-              <button>BAG({quantity})</button>
-            </a>
+            <button>BAG({quantity})</button>
           </Link>
         </div>
       </ContentWrapper>

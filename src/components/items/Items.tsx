@@ -11,7 +11,7 @@ const Items: React.FC<{ item: TypeItem }> = ({ item }) => {
     <>
       <div className={styles.item}>
         <Link key={`items-${id}`} href={`items/${id}`} passHref>
-          <a className={styles.item__mainLink}>
+          <button className={styles.item__mainLink}>
             <Image
               src={images[0].src}
               alt={title || 'Item Image'}
@@ -25,7 +25,7 @@ const Items: React.FC<{ item: TypeItem }> = ({ item }) => {
               <div>{title}</div>
               <div>¥{variants[0].price}</div>
             </div>
-          </a>
+          </button>
         </Link>
       </div>
     </>

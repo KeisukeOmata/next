@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-onchange */
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -31,7 +32,7 @@ const CartItems: React.FC = () => {
               <div className={s.items} key={item.id}>
                 <div className={s.item}>
                   <Link href={`items/${item.variant.product.id}`}>
-                    <a>
+                    <button>
                       <Image
                         src={item.variant.image.src}
                         alt={item.variant.image.altText || 'Item Image'}
@@ -41,7 +42,7 @@ const CartItems: React.FC = () => {
                         // 遅延読み込みしない
                         loading={'eager'}
                       />
-                    </a>
+                    </button>
                   </Link>
                 </div>
                 <div className={s.item}>
