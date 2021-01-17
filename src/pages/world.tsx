@@ -52,7 +52,7 @@ export default function World() {
             <div className={cn(s.item, s.order5)}>
               <Image
                 src="/brand3.webp"
-                alt="Brand Image3"
+                alt="Brandの画像3"
                 quality="85"
                 width={500}
                 height={500}

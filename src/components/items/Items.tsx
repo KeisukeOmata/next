@@ -25,8 +25,8 @@ const Items: React.FC<{ item: TypeItem }> = ({ item }) => {
               loading={'eager'}
             />
             <div className={styles.item__date}>
-              <div>{title}</div>
-              <div>¥{variants[0].price}</div>
+              <p>{title}</p>
+              <p>¥{variants[0].price}</p>
             </div>
           </button>
         </Link>
