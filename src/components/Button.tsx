@@ -5,7 +5,7 @@ type Props = {
 }
 
 const button: React.FC<Props> = ({ text }: Props) => {
-  return <button>{text}</button>
+  return <button aria-label={`${text}ボタン`}>{text}</button>
 }
 
 export default button

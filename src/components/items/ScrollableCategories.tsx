@@ -80,7 +80,7 @@ const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
         {categories.map((category, i) => (
           <div key={`category-${i}`} className={s.scrollableCategory__link}>
             <button
-              aria-label={`category-button-${i}`}
+              aria-label={`${category}を表示するボタン`}
               className={cn(
                 s.scrollableCategory__name,
                 categoryState == category.name ? s.chosen : s.notChoose

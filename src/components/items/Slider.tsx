@@ -21,12 +21,12 @@ const Slider: FC = ({ children }) => {
       <button
         className={cn(s.leftControl, s.control)}
         onClick={slider?.prev}
-        aria-label="Previous Product Image"
+        aria-label="前の画像を表示するボタン"
       />
       <button
         className={cn(s.rightControl, s.control)}
         onClick={slider?.next}
-        aria-label="Next Product Image"
+        aria-label="次の画像を表示するボタン"
       />
       <div
         ref={ref}
@@ -54,7 +54,7 @@ const Slider: FC = ({ children }) => {
           {[...Array(slider.details().size).keys()].map((idx) => {
             return (
               <button
-                aria-label="Position indicator"
+                aria-label={`${idx}枚目の画像を表示するボタン`}
                 key={idx}
                 className={cn(s.positionIndicator, {
                   [s.positionIndicatorActive]: currentSlide === idx,

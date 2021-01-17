@@ -11,19 +11,24 @@ const Header: React.FC = () => {
       <ContentWrapper>
         <div className={styles.siteHeader__inner}>
           <Link href="/" passHref>
-            <button className={styles.siteHeader__logoLink}>SKPISM</button>
+            <button
+              aria-label="このサイトの名前"
+              className={styles.siteHeader__logoLink}
+            >
+              SKPISM
+            </button>
           </Link>
           <div className={styles.siteHeader__links}>
             <Link href={'/'} passHref>
-              <button>Items</button>
+              <button aria-label="アイテム一覧を表示するボタン">Items</button>
             </Link>
             <div className={styles.slash}>/</div>
             <Link href={'/world'} passHref>
-              <button>World</button>
+              <button aria-label="about usを表示するボタン">World</button>
             </Link>
           </div>
           <Link href={'/cart'} passHref>
-            <button>BAG({quantity})</button>
+            <button aria-label="カートを表示するボタン">BAG({quantity})</button>
           </Link>
         </div>
       </ContentWrapper>
