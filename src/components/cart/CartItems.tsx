@@ -89,6 +89,7 @@ const CartItems: React.FC = () => {
                   <br></br>
                   <div className={s.item__detail}>
                     <button
+                      aria-label="delete-item-button"
                       className={s.button2}
                       onClick={() => removeItem(item.id)}
                     >
@@ -104,6 +105,7 @@ const CartItems: React.FC = () => {
             <div className={s.item}>
               <Link href={`/`}>
                 <button
+                  aria-label="buy-button"
                   className={s.button}
                   onClick={() => moveToShopify(cart)}
                 >

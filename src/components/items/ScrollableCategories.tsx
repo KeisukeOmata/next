@@ -78,18 +78,17 @@ const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
     <>
       <div className={s.scrollableCategories}>
         {categories.map((category, i) => (
-          <div key={`category-${i}`}>
-            <div className={s.scrollableCategory__link}>
-              <button
-                className={cn(
-                  s.scrollableCategory__name,
-                  categoryState == category.name ? s.chosen : s.notChoose
-                )}
-                onClick={() => setCategoryState(category.name as string)}
-              >
-                {category.name}
-              </button>
-            </div>
+          <div key={`category-${i}`} className={s.scrollableCategory__link}>
+            <button
+              aria-label={`category-button-${i}`}
+              className={cn(
+                s.scrollableCategory__name,
+                categoryState == category.name ? s.chosen : s.notChoose
+              )}
+              onClick={() => setCategoryState(category.name as string)}
+            >
+              {category.name}
+            </button>
           </div>
         ))}
       </div>
