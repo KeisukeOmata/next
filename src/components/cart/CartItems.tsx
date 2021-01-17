@@ -32,7 +32,9 @@ const CartItems: React.FC = () => {
               <div className={s.items} key={item.id}>
                 <div className={s.item}>
                   <Link href={`items/${item.variant.product.id}`}>
-                    <button>
+                    <button
+                      aria-label={`${item.title}のページを表示するボタン`}
+                    >
                       <Image
                         src={item.variant.image.src}
                         alt={item.variant.image.altText || 'Item Image'}
@@ -90,7 +92,7 @@ const CartItems: React.FC = () => {
                   <br></br>
                   <div className={s.item__detail}>
                     <button
-                      aria-label="delete-item-button"
+                      aria-label="カートから商品を削除するボタン"
                       className={s.button2}
                       onClick={() => removeItem(item.id)}
                     >
@@ -106,7 +108,7 @@ const CartItems: React.FC = () => {
             <div className={s.item}>
               <Link href={`/`}>
                 <button
-                  aria-label="buy-button"
+                  aria-label="お会計に進むボタン"
                   className={s.button}
                   onClick={() => moveToShopify(cart)}
                 >

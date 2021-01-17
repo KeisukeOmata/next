@@ -11,7 +11,10 @@ const Items: React.FC<{ item: TypeItem }> = ({ item }) => {
     <>
       <div className={styles.item}>
         <Link key={`items-${id}`} href={`items/${id}`} passHref>
-          <button className={styles.item__mainLink}>
+          <button
+            aria-label={`${title}のページを表示するボタン`}
+            className={styles.item__mainLink}
+          >
             <Image
               src={images[0].src}
               alt={title || 'Item Image'}
