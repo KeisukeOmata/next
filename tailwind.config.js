@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       maxWidth: {
         '8xl': '1920px',
+        md: '641px',
       },
       colors: {
         primary: 'var(--primary)',
