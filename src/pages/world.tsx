@@ -13,7 +13,9 @@ export default function World() {
     <>
       <section className={s.worldCategories}>
         <ContentWrapper>
-          <h2 className={s.worldSectionTitleContainer}>World</h2>
+          <div className={s.worldSectionTitleContainer}>
+            <h2>World</h2>
+          </div>
           <div className={s.items}>
             <div className={cn(s.item, s.order1)}>
               <Image

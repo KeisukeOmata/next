@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { atom, useRecoilState } from 'recoil'
 import cn from 'classnames'
 import s from '../../styles/components/items/ScrollableCategories.module.scss'
@@ -14,13 +14,27 @@ const categoryAtom = atom<string | null>({
 
 const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
   const [categoryState, setCategoryState] = useRecoilState(categoryAtom)
+  const [count, setCount] = useState(0)
+  const ref = useRef<HTMLHeadingElement | null>(null)
+
+  useEffect(() => {
+    if (count == 0) {
+      // Focus on main when the parent component is rendered.
+      setCount(1)
+    } else {
+      // Focus on heading element when the child component is rendered.
+      ref.current?.focus()
+    }
+  }, [categoryState])
 
   const getCategory: any = (category: string) => {
     if (category == 'ALL') {
       return (
         <>
           <div className={s.categorySectionTitleContainer}>
-            <h2>ALL</h2>
+            <h2 ref={ref} tabIndex={-1}>
+              ALL
+            </h2>
           </div>
           <div className={s.items}>
             {items
@@ -38,7 +52,9 @@ const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
       return (
         <>
           <div className={s.categorySectionTitleContainer}>
-            <h2>新着</h2>
+            <h2 ref={ref} tabIndex={-1}>
+              新着
+            </h2>
           </div>
           <div className={s.items}>
             {items
@@ -56,7 +72,9 @@ const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
       return (
         <>
           <div className={s.categorySectionTitleContainer}>
-            <h2 className={s.homeSectionTitle}>{categoryState}</h2>
+            <h2 ref={ref} tabIndex={-1} className={s.homeSectionTitle}>
+              {categoryState}
+            </h2>
           </div>
           <div className={s.items}>
             {items
@@ -80,7 +98,7 @@ const ScrollableCategories: React.FC<{ items: TypeItem[] }> = ({ items }) => {
         {categories.map((category, i) => (
           <div key={`category-${i}`} className={s.scrollableCategory__link}>
             <button
-              aria-label={`${category}を表示する`}
+              aria-label={`${category.name}を表示する`}
               className={cn(
                 s.scrollableCategory__name,
                 categoryState == category.name ? s.chosen : s.notChoose
