@@ -7,21 +7,15 @@ export const categories: Category[] = [
     name: '新着',
   },
   {
-    name: 'ワンピース',
+    name: 'Shirts',
   },
   {
-    name: 'カットソー',
+    name: 'Knitwear',
   },
   {
-    name: 'スカート',
+    name: 'T-Shirts',
   },
   {
-    name: 'アクセサリー',
-  },
-  {
-    name: 'バッグ',
-  },
-  {
-    name: '小物',
+    name: 'Boots',
   },
 ]
