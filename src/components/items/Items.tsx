@@ -1,10 +1,14 @@
-import React from 'react'
+import { FC } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { TypeItem } from '../../types/TypeItem'
 import styles from '../../styles/components/items/Items.module.scss'
 
-const Items: React.FC<{ item: TypeItem }> = ({ item }) => {
+type Props = {
+  item: TypeItem
+}
+
+const Items: FC<Props> = ({ item }) => {
   const { id, images, title, variants } = item
 
   return (
