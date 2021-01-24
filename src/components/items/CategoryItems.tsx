@@ -1,4 +1,5 @@
 import { FC, useState, useEffect, useRef } from 'react'
+import { atom, useRecoilValue } from 'recoil'
 import { TypeItem } from '../../types/TypeItem'
 import Items from './Items'
 import s from '../../styles/components/items/ScrollableCategories.module.scss'
@@ -8,9 +9,15 @@ type Props = {
   items: TypeItem[]
 }
 
+export const itemAtom = atom<string | null>({
+  key: 'itemState',
+  default: null,
+})
+
 const CategoryItems: FC<Props> = ({ categoryState, items }) => {
   const [count, setCount] = useState(0)
   const ref = useRef<HTMLHeadingElement | null>(null)
+  const itemState = useRecoilValue(itemAtom)
 
   useEffect(() => {
     if (count == 0) {
@@ -36,7 +43,11 @@ const CategoryItems: FC<Props> = ({ categoryState, items }) => {
             .reverse()
             .map((item, i) => (
               <>
-                <Items key={`post-item-${i}`} item={item} />
+                <Items
+                  key={`post-item-${i}`}
+                  item={item}
+                  focused={itemState == item.id}
+                />
               </>
             ))}
         </div>
@@ -56,7 +67,11 @@ const CategoryItems: FC<Props> = ({ categoryState, items }) => {
             .reverse()
             .map((item, i) => (
               <>
-                <Items key={`post-item-${i}`} item={item} />
+                <Items
+                  key={`post-item-${i}`}
+                  item={item}
+                  focused={itemState == item.id}
+                />
               </>
             ))}
         </div>
@@ -77,7 +92,11 @@ const CategoryItems: FC<Props> = ({ categoryState, items }) => {
             .map(
               (item, i) =>
                 item.productType == categoryState && (
-                  <Items key={`post-item-${i}`} item={item} />
+                  <Items
+                    key={`post-item-${i}`}
+                    item={item}
+                    focused={itemState == item.id}
+                  />
                 )
             )}
         </div>
