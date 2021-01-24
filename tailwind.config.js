@@ -9,10 +9,16 @@ module.exports = {
     ],
   },
   theme: {
+    screens: {
+      sm: { max: '640px' },
+      md: { min: '641px' },
+      lg: { min: '1024px', max: '1279px' },
+      xl: { min: '1280px', max: '1535px' },
+      '2xl': { min: '1536px' },
+    },
     extend: {
       maxWidth: {
         '8xl': '1920px',
-        md: '641px',
       },
       colors: {
         primary: 'var(--primary)',
