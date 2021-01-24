@@ -1,10 +1,10 @@
-import React from 'react'
+import { FC } from 'react'
 import Link from 'next/link'
 import { useCart } from '../../hooks/useCart'
 import { ContentWrapper } from './ContentWrapper'
 import styles from '../../styles/components/layouts/SiteHeader.module.scss'
 
-const Header: React.FC = () => {
+const Header: FC = () => {
   const { quantity } = useCart()
   return (
     <header className={styles.siteHeader}>

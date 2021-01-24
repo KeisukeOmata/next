@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import React from 'react'
 import { InferGetStaticPropsType } from 'next'
 // import { TypeItem } from '../types/TypeItem'
 import {
