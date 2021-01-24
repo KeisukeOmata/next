@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import React from 'react'
 import Image from 'next/image'
 import { useCart } from '../hooks/useCart'
 import cn from 'classnames'

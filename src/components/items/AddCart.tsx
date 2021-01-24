@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { FC, useState } from 'react'
 import { useCart } from '../../hooks/useCart'
 import { Sku } from '../../types/TypeItem'
 import s from '../../styles/components/items/AddCart.module.css'
@@ -8,7 +8,7 @@ type Props = {
   skuList: Sku[]
 }
 
-const AddCart: React.FC<Props> = ({ skuList }) => {
+const AddCart: FC<Props> = ({ skuList }) => {
   // ポップアップメッセージ
   type ToastState = {
     open: boolean

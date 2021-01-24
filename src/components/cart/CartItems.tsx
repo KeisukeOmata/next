@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/no-onchange */
-import React from 'react'
+import { FC } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Cart } from '../../types/TypeItem'
@@ -7,7 +7,7 @@ import { useCart } from '../../hooks/useCart'
 import { resetCheckoutId } from '../../utils/helpers'
 import s from '../../styles/components/cart/CartItems.module.scss'
 
-const CartItems: React.FC = () => {
+const CartItems: FC = () => {
   const { cart, changeQuantity, removeItem } = useCart()
   // Shopify画面へ遷移
   const moveToShopify = (cart: Cart): void => {

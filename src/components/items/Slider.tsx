@@ -1,4 +1,4 @@
-import React, { Children, FC, isValidElement, useState } from 'react'
+import { Children, FC, isValidElement, useState } from 'react'
 import { useKeenSlider } from 'keen-slider/react'
 import cn from 'classnames'
 import s from '../../styles/components/items/Slider.module.css'

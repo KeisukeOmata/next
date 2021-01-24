@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC } from 'react'
 import { TypeItem, Sku } from '../../types/TypeItem'
 import Image from 'next/image'
 import Slider from './Slider'
@@ -9,7 +9,7 @@ type Props = {
   detail: TypeItem
 }
 
-const Detail: React.FC<Props> = ({ detail }) => {
+const Detail: FC<Props> = ({ detail }) => {
   return (
     <>
       <div className={s.itemSectionTitleContainer}>
