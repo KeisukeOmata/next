@@ -13,7 +13,7 @@ type Props = {
 
 const Items: FC<Props> = ({ item, focused }) => {
   const { id, images, title, variants } = item
-  const ref = useRef<HTMLButtonElement>()
+  const ref = useRef<HTMLButtonElement | null>(null)
   const setItemState = useSetRecoilState(itemAtom)
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const Items: FC<Props> = ({ item, focused }) => {
       <div className={styles.item}>
         <Link key={`items-${id}`} href={`items/${id}`} passHref>
           <button
-            ref={ref as any}
+            ref={ref}
             tabIndex={-1}
             onClick={() => setItemState(id as string)}
             aria-label={`${title}のページを表示する`}
