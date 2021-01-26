@@ -1,0 +1,33 @@
+.error {
+  padding: 3rem 0;
+  text-align: center;
+}
+.error__status {
+  font-size: 110px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.error__message {
+  color: var(--color-base-text-lighter);
+}
+.error__actions {
+  margin-top: 3rem;
+}
+
+.button {
+  @apply bg-secondary text-accents-1 cursor-pointer inline-flex px-10 rounded-sm leading-6  transition ease-in-out duration-150 shadow-sm font-semibold text-center justify-center uppercase py-2 border border-transparent items-center;
+}
+
+@screen md {
+  .button:hover {
+    @apply bg-accents-0 text-primary border border-secondary outline-black;
+  }
+}
+
+.button:active {
+  @apply bg-accents-0 text-primary border border-secondary outline-black;
+}
+
+.button[data-active] {
+  @apply bg-gray-600;
+}
