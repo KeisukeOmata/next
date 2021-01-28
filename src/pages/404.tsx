@@ -3,13 +3,12 @@ import styles from '../styles/pages/404.module.scss'
 import { NextPage } from 'next'
 import Link from 'next/link'
 import { ContentWrapper } from '../components/layouts/ContentWrapper'
-// import { HeadSEO } from 'layouts/HeadSEO'
+import { PageSEO } from '../components/layouts/PageSEO'
 
 const Custom404: NextPage = () => {
   return (
     <>
-      {/* 404ページなのでインデックスしない */}
-      {/* <HeadSEO title="404 not found" noindex={true} /> */}
+      <PageSEO title="404 not found" noindex={true} />
       <div className={styles.error}>
         <ContentWrapper>
           <p className={styles.error__status}>404</p>
