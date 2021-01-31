@@ -3,14 +3,11 @@ import { InferGetStaticPropsType, GetStaticPropsContext } from 'next'
 import { useRouter } from 'next/router'
 import Detail from 'components/items/Detail'
 import { ContentWrapper } from 'components/layouts/ContentWrapper'
+import { PageSEO } from 'components/layouts/PageSEO'
 import { shopify } from 'foundations/shopify'
 import { useCart } from 'hooks/useCart'
-// import { TypeItem } from 'types/TypeItem'
+import { getItemPath } from 'utils/helpers'
 import s from 'styles/pages/items/[id].module.scss'
-
-// detail: TypeItem
-// errors?: any
-// type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 export async function getStaticPaths() {
   return {
@@ -46,6 +43,8 @@ export default function DetailPage({
   if (errors) return <div>error</div>
   return (
     <>
+      {console.log(detail)}
+      <PageSEO title={detail.title} path={getItemPath(detail.id)} />
       <section className={s.itemCategories}>
         <ContentWrapper>
           <Detail detail={detail} />

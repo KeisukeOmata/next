@@ -19,3 +19,7 @@ export function getValueByMatchedNameSelectedOptions(
 ): string {
   return options.find((option) => option.name === name)?.value ?? ''
 }
+
+export function getItemPath(id: string): string {
+  return `/items/${encodeURIComponent(id)}`
+}
