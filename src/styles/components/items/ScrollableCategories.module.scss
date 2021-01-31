@@ -1,4 +1,4 @@
-@import '../../Breakpoints';
+@import 'styles/Breakpoints';
 
 $side-padding: 1.6rem;
 $side-padding-sm: 1rem;
@@ -60,7 +60,7 @@ $side-padding-sm: 1rem;
   scroll-snap-type: x mandatory;
   // カテゴリー右の余白
   &:after {
-    content: "";
+    content: '';
     display: block;
     width: 20px;
     height: 20px;

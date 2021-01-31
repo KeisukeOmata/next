@@ -1,11 +1,11 @@
 import { FC } from 'react'
 import { atom, useRecoilState } from 'recoil'
 import cn from 'classnames'
-import s from '../../styles/components/items/ScrollableCategories.module.scss'
-import { categories } from '../../foundations/categories'
-import { TypeItem } from '../../types/TypeItem'
-import CategoryItems from './CategoryItems'
-import { ContentWrapper } from '../layouts/ContentWrapper'
+import CategoryItems from 'components/items/CategoryItems'
+import { ContentWrapper } from 'components/layouts/ContentWrapper'
+import { categories } from 'foundations/categories'
+import { TypeItem } from 'types/TypeItem'
+import s from 'styles/components/items/ScrollableCategories.module.scss'
 
 type Props = {
   items: TypeItem[]

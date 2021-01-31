@@ -1,9 +1,9 @@
-import { FC } from 'react'
-import { TypeItem, Sku } from '../../types/TypeItem'
 import Image from 'next/image'
-import Slider from './Slider'
-import AddCart from './AddCart'
-import s from '../../styles/components/items/Detail.module.scss'
+import { FC } from 'react'
+import AddCart from 'components/items/AddCart'
+import Slider from 'components/items/Slider'
+import { TypeItem, Sku } from 'types/TypeItem'
+import s from 'styles/components/items/Detail.module.scss'
 
 type Props = {
   detail: TypeItem

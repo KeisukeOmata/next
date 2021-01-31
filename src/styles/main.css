@@ -1,8 +1,8 @@
 @tailwind base;
-@import './base.css';
+@import 'styles/base.css';
 
 @tailwind components;
-@import './components.css';
+@import 'styles/components.css';
 
 /* Do not show focus on smartphones. */
 @screen sm {

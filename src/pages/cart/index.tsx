@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import CartItems from '../../components/cart/CartItems'
-import { PageSEO } from '../../components/layouts/PageSEO'
-import { ContentWrapper } from '../../components/layouts/ContentWrapper'
-import { useCart } from '../../hooks/useCart'
-import s from '../../styles/pages/cart/index.module.scss'
+import CartItems from 'components/cart/CartItems'
+import { PageSEO } from 'components/layouts/PageSEO'
+import { ContentWrapper } from 'components/layouts/ContentWrapper'
+import { useCart } from 'hooks/useCart'
+import s from 'styles/pages/cart/index.module.scss'
 
 export default function Cart() {
   const { cart, fetchCart } = useCart()

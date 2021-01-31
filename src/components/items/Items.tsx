@@ -1,10 +1,10 @@
-import { FC, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { FC, useEffect, useRef } from 'react'
 import { useSetRecoilState } from 'recoil'
-import { itemAtom } from './CategoryItems'
-import { TypeItem } from '../../types/TypeItem'
-import styles from '../../styles/components/items/Items.module.scss'
+import { itemAtom } from 'components/items/CategoryItems'
+import { TypeItem } from 'types/TypeItem'
+import s from 'styles/components/items/Items.module.scss'
 
 type Props = {
   item: TypeItem
@@ -24,14 +24,14 @@ const Items: FC<Props> = ({ item, focused }) => {
 
   return (
     <>
-      <div className={styles.item}>
+      <div className={s.item}>
         <Link key={`items-${id}`} href={`items/${id}`} passHref>
           <button
             ref={ref}
             tabIndex={-1}
             onClick={() => setItemState(id as string)}
             aria-label={`${title}のページを表示する`}
-            className={styles.item__mainLink}
+            className={s.item__mainLink}
           >
             <Image
               src={images[0].src}
@@ -42,7 +42,7 @@ const Items: FC<Props> = ({ item, focused }) => {
               // 遅延読み込みしない
               loading={'eager'}
             />
-            <div className={styles.item__date}>
+            <div className={s.item__date}>
               <p>{title}</p>
               <p>¥{variants[0].price}</p>
             </div>
