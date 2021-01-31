@@ -43,13 +43,11 @@ const CategoryItems: FC<Props> = ({ items }) => {
             .slice(0)
             .reverse()
             .map((item, i) => (
-              <>
-                <Items
-                  key={`post-item-${i}`}
-                  item={item}
-                  focused={itemState == item.id}
-                />
-              </>
+              <Items
+                key={`post-item-${i}`}
+                item={item}
+                focused={itemState == item.id}
+              />
             ))}
         </div>
       </>
@@ -67,13 +65,11 @@ const CategoryItems: FC<Props> = ({ items }) => {
             .slice(-10)
             .reverse()
             .map((item, i) => (
-              <>
-                <Items
-                  key={`post-item-${i}`}
-                  item={item}
-                  focused={itemState == item.id}
-                />
-              </>
+              <Items
+                key={`post-item-${i}`}
+                item={item}
+                focused={itemState == item.id}
+              />
             ))}
         </div>
       </>
