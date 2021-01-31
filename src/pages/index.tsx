@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { InferGetStaticPropsType } from 'next'
+import { PageSEO } from 'components/layouts/PageSEO'
 import {
   ContentWrapper,
   UndoWrapForScroll,
@@ -7,11 +8,8 @@ import {
 import ScrollableCategories from 'components/items/ScrollableCategories'
 import { useCart } from 'hooks/useCart'
 import { shopify } from 'foundations/shopify'
-// import { TypeItem } from 'types/TypeItem'
+import { Config } from 'foundations/site.config'
 import s from 'styles/pages/index.module.scss'
-
-// items: TypeItem[]
-// type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 export async function getStaticProps() {
   const items = await shopify.product.fetchAll()
@@ -30,6 +28,12 @@ export default function Home({
   fetchCart()
   return (
     <>
+      <PageSEO
+        title={Config.siteMeta.title}
+        description={Config.siteMeta.description}
+        path="/"
+        removeSiteNameFromTitle={true}
+      />
       <section className={s.homeCategories}>
         <ContentWrapper>
           <div className={s.homeSectionTitleContainer}>
