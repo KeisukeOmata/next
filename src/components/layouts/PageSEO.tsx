@@ -7,7 +7,6 @@ type Props = {
   path?: string
   description?: string
   ogImageUrl?: string
-  noindex?: boolean
   removeSiteNameFromTitle?: boolean
 }
 
@@ -17,7 +16,6 @@ export const PageSEO: FC<Props> = (props) => {
     title,
     description,
     ogImageUrl,
-    noindex,
     removeSiteNameFromTitle,
   } = props
   const pageUrl = `${Config.siteRoot}${path || ''}`
@@ -41,7 +39,6 @@ export const PageSEO: FC<Props> = (props) => {
         </>
       )}
       {path && <link rel="canonical" href={pageUrl} />}
-      {noindex && <meta name="robots" content="noindex" />}
     </Head>
   )
 }
