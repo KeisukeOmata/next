@@ -10,7 +10,7 @@ type Props = {
 }
 
 export const itemAtom = atom<string | null>({
-  key: 'itemState',
+  key: 'itemStateKey',
   default: null,
 })
 
@@ -45,7 +45,7 @@ const CategoryItems: FC<Props> = ({ items }) => {
             .map((item, i) => (
               <>
                 <Items
-                  key={`post-item-${i}`}
+                  key={`post-item-all-${i}`}
                   item={item}
                   focused={itemState == item.id}
                 />
@@ -69,7 +69,7 @@ const CategoryItems: FC<Props> = ({ items }) => {
             .map((item, i) => (
               <>
                 <Items
-                  key={`post-item-${i}`}
+                  key={`post-item-new-${i}`}
                   item={item}
                   focused={itemState == item.id}
                 />

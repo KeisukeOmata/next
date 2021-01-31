@@ -12,7 +12,7 @@ type Props = {
 }
 
 export const categoryAtom = atom<string | null>({
-  key: 'categoryState',
+  key: 'categoryStateKey',
   default: '新着',
 })
 
