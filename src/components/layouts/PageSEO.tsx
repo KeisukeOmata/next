@@ -1,6 +1,6 @@
-import { FC } from 'react'
 import Head from 'next/head'
-import { Config } from '../../foundations/site.config'
+import { FC } from 'react'
+import { Config } from 'foundations/site.config'
 
 type Props = {
   title: string

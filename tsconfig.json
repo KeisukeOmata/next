@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "downlevelIteration": true,
+    "baseUrl": "src",
+    // "downlevelIteration": true,
     "target": "esnext",
     "lib": [
       "dom",
@@ -38,13 +39,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    // srcでファイルにアクセスできるようにする
-    // "baseUrl": "src",
-    // "paths": {
-    //   "@*": [
-    //     "./*"
-    //   ]
-    // },
   },
   "exclude": [
     "node_modules"

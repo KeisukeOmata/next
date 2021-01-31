@@ -1,7 +1,7 @@
 import { Children, FC, isValidElement, useState } from 'react'
 import { useKeenSlider } from 'keen-slider/react'
 import cn from 'classnames'
-import s from '../../styles/components/items/Slider.module.css'
+import s from 'styles/components/items/Slider.module.css'
 
 const Slider: FC = ({ children }) => {
   const [currentSlide, setCurrentSlide] = useState(0)

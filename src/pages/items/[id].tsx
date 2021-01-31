@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { InferGetStaticPropsType, GetStaticPropsContext } from 'next'
-import { shopify } from '../../foundations/shopify'
-// import { TypeItem } from '../../types/TypeItem'
-import { useCart } from '../../hooks/useCart'
 import { useRouter } from 'next/router'
-import Detail from '../../components/items/Detail'
-import { ContentWrapper } from '../../components/layouts/ContentWrapper'
-import s from '../../styles/pages/items/[id].module.scss'
+import Detail from 'components/items/Detail'
+import { ContentWrapper } from 'components/layouts/ContentWrapper'
+import { shopify } from 'foundations/shopify'
+import { useCart } from 'hooks/useCart'
+// import { TypeItem } from 'types/TypeItem'
+import s from 'styles/pages/items/[id].module.scss'
 
 // detail: TypeItem
 // errors?: any

@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import Image from 'next/image'
-import { useCart } from '../hooks/useCart'
 import cn from 'classnames'
-import s from '../styles/pages/world.module.scss'
-import { ContentWrapper } from '../components/layouts/ContentWrapper'
+import { ContentWrapper } from 'components/layouts/ContentWrapper'
+import { useCart } from 'hooks/useCart'
+import s from 'styles/pages/world.module.scss'
 
 export default function World() {
   const { fetchCart } = useCart()

@@ -1,7 +1,7 @@
 import { FC, useState } from 'react'
-import { useCart } from '../../hooks/useCart'
-import { Sku } from '../../types/TypeItem'
-import s from '../../styles/components/items/AddCart.module.css'
+import { useCart } from 'hooks/useCart'
+import { Sku } from 'types/TypeItem'
+import s from 'styles/components/items/AddCart.module.css'
 import Snackbar, { SnackbarOrigin } from '@material-ui/core/Snackbar'
 
 type Props = {

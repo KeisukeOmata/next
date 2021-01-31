@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { InferGetStaticPropsType } from 'next'
-// import { TypeItem } from '../types/TypeItem'
 import {
   ContentWrapper,
   UndoWrapForScroll,
-} from '../components/layouts/ContentWrapper'
-import ScrollableCategories from '../components/items/ScrollableCategories'
-import { useCart } from '../hooks/useCart'
-import { shopify } from '../foundations/shopify'
-import s from '../styles/pages/index.module.scss'
+} from 'components/layouts/ContentWrapper'
+import ScrollableCategories from 'components/items/ScrollableCategories'
+import { useCart } from 'hooks/useCart'
+import { shopify } from 'foundations/shopify'
+// import { TypeItem } from 'types/TypeItem'
+import s from 'styles/pages/index.module.scss'
 
 // items: TypeItem[]
 // type Props = InferGetStaticPropsType<typeof getStaticProps>

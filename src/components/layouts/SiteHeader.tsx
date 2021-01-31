@@ -1,28 +1,28 @@
-import { FC } from 'react'
 import Link from 'next/link'
-import { useCart } from '../../hooks/useCart'
-import { ContentWrapper } from './ContentWrapper'
-import styles from '../../styles/components/layouts/SiteHeader.module.scss'
+import { FC } from 'react'
+import { ContentWrapper } from 'components/layouts/ContentWrapper'
+import { useCart } from 'hooks/useCart'
+import s from 'styles/components/layouts/SiteHeader.module.scss'
 
 const Header: FC = () => {
   const { quantity } = useCart()
   return (
-    <header className={styles.siteHeader}>
+    <header className={s.siteHeader}>
       <ContentWrapper>
-        <div className={styles.siteHeader__inner}>
+        <div className={s.siteHeader__inner}>
           <Link href="/" passHref>
             <button
               aria-label="このサイトの名前"
-              className={styles.siteHeader__logoLink}
+              className={s.siteHeader__logoLink}
             >
               SKPISM
             </button>
           </Link>
-          <div className={styles.siteHeader__links}>
+          <div className={s.siteHeader__links}>
             <Link href={'/'} passHref>
               <button aria-label="アイテム一覧を表示する">Items</button>
             </Link>
-            <div className={styles.slash}>/</div>
+            <div className={s.slash}>/</div>
             <Link href={'/world'} passHref>
               <button aria-label="about usを表示する">World</button>
             </Link>

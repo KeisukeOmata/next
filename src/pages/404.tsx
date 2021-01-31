@@ -1,21 +1,20 @@
-import React from 'react'
-import styles from '../styles/pages/404.module.scss'
-import { NextPage } from 'next'
 import Link from 'next/link'
-import { ContentWrapper } from '../components/layouts/ContentWrapper'
-import { PageSEO } from '../components/layouts/PageSEO'
+import { ContentWrapper } from 'components/layouts/ContentWrapper'
+import { PageSEO } from 'components/layouts/PageSEO'
+import s from 'styles/pages/404.module.scss'
 
-const Custom404: NextPage = () => {
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+export default function Custom404() {
   return (
     <>
       <PageSEO title="404 not found" noindex={true} />
-      <div className={styles.error}>
+      <div className={s.error}>
         <ContentWrapper>
-          <p className={styles.error__status}>404</p>
-          <h1 className={styles.error__message}>Page not found...</h1>
-          <nav className={styles.error__actions}>
+          <p className={s.error__status}>404</p>
+          <h1 className={s.error__message}>Page not found...</h1>
+          <nav className={s.error__actions}>
             <Link href="/" passHref>
-              <button aria-label="Topページに戻る" className={styles.button}>
+              <button aria-label="Topページに戻る" className={s.button}>
                 Topへ
               </button>
             </Link>
@@ -25,5 +24,3 @@ const Custom404: NextPage = () => {
     </>
   )
 }
-
-export default Custom404
