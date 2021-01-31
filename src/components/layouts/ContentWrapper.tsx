@@ -1,18 +1,18 @@
 import { FC } from 'react'
 import styles from '../../styles/components/layouts/ContentWrapper.module.scss'
 
-export const ContentWrapper: FC = (props) => {
+export const ContentWrapper: FC = ({ children }) => {
   return (
     <>
-      <div className={styles.contentWrapper}>{props.children}</div>
+      <div className={styles.contentWrapper}>{children}</div>
     </>
   )
 }
 
-export const UndoWrapForScroll: FC = (props) => {
+export const UndoWrapForScroll: FC = ({ children }) => {
   return (
     <>
-      <div className={styles.undoWrapForScroll}>{props.children}</div>
+      <div className={styles.undoWrapForScroll}>{children}</div>
     </>
   )
 }

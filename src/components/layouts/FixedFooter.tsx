@@ -1,10 +1,10 @@
 import { FC } from 'react'
 import styles from '../../styles/components/layouts/FixedFooter.module.scss'
 
-export const FixedFooter: FC = (props) => {
+export const FixedFooter: FC = ({ children }) => {
   return (
     <>
-      <div className={styles.fixedFooter}>{props.children}</div>
+      <div className={styles.fixedFooter}>{children}</div>
     </>
   )
 }
