@@ -45,7 +45,7 @@ const CategoryItems: FC<Props> = ({ items }) => {
             .map((item, i) => (
               <>
                 <Items
-                  key={`post-item-all-${i}`}
+                  key={`post-item-${i}`}
                   item={item}
                   focused={itemState == item.id}
                 />
@@ -69,7 +69,7 @@ const CategoryItems: FC<Props> = ({ items }) => {
             .map((item, i) => (
               <>
                 <Items
-                  key={`post-item-new-${i}`}
+                  key={`post-item-${i}`}
                   item={item}
                   focused={itemState == item.id}
                 />
