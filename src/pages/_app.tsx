@@ -27,6 +27,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="manifest" href="manifest.webmanifest" />
         <script
@@ -35,6 +36,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
           crossOrigin="anonymous"
         ></script>
         <link rel="icon" type="image/png" href="pwa.png" sizes="128x128" />
+        <link rel="apple-touch-icon" sizes="180x180" href="pwa.png" />
       </Head>
       <FixedFooter>
         <RecoilRoot>
