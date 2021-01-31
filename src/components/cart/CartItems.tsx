@@ -31,7 +31,7 @@ const CartItems: FC = () => {
             {cart.lineItems.map((item) => (
               <div className={s.items} key={item.id}>
                 <div className={s.item}>
-                  <Link href={`items/${item.variant.product.id}`}>
+                  <Link href={`/items/${item.variant.product.id}`}>
                     <button aria-label={`${item.title}のページを表示する`}>
                       <Image
                         src={item.variant.image.src}

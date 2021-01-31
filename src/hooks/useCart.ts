@@ -14,11 +14,11 @@ type useCartType = {
 }
 
 const cartState = atom<Cart | null>({
-  key: 'cartState',
+  key: 'cartStateKey',
   default: null,
 })
 const quantityState = selector({
-  key: 'quantityState',
+  key: 'quantityStateKey',
   get: ({ get }) =>
     get(cartState)?.lineItems.reduce(
       (accumulator, currentValue) => accumulator + currentValue.quantity,
