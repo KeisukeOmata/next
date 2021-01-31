@@ -7,7 +7,7 @@ import s from 'styles/pages/404.module.scss'
 export default function Custom404() {
   return (
     <>
-      <PageSEO title="404 not found" />
+      <PageSEO title="404 not found" noindex={true} />
       <div className={s.error}>
         <ContentWrapper>
           <p className={s.error__status}>404</p>

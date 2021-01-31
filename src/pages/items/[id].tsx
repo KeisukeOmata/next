@@ -43,7 +43,6 @@ export default function DetailPage({
   if (errors) return <div>error</div>
   return (
     <>
-      {console.log(detail)}
       <PageSEO title={detail.title} path={getItemPath(detail.id)} />
       <section className={s.itemCategories}>
         <ContentWrapper>
