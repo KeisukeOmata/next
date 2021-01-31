@@ -11,7 +11,7 @@ type Props = {
   items: TypeItem[]
 }
 
-const categoryAtom = atom<string | null>({
+export const categoryAtom = atom<string | null>({
   key: 'categoryState',
   default: '新着',
 })
@@ -38,7 +38,7 @@ const ScrollableCategories: FC<Props> = ({ items }) => {
         ))}
       </div>
       <ContentWrapper>
-        <CategoryItems categoryState={categoryState as string} items={items} />
+        <CategoryItems items={items} />
       </ContentWrapper>
     </>
   )
