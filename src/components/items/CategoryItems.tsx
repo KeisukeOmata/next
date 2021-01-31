@@ -1,11 +1,11 @@
 import { FC, useState, useEffect, useRef } from 'react'
 import { atom, useRecoilValue } from 'recoil'
+import { categoryAtom } from './ScrollableCategories'
 import { TypeItem } from '../../types/TypeItem'
 import Items from './Items'
 import s from '../../styles/components/items/ScrollableCategories.module.scss'
 
 type Props = {
-  categoryState: string
   items: TypeItem[]
 }
 
@@ -14,10 +14,11 @@ export const itemAtom = atom<string | null>({
   default: null,
 })
 
-const CategoryItems: FC<Props> = ({ categoryState, items }) => {
+const CategoryItems: FC<Props> = ({ items }) => {
   const [count, setCount] = useState(0)
   const ref = useRef<HTMLHeadingElement | null>(null)
   const itemState = useRecoilValue(itemAtom)
+  const categoryState = useRecoilValue(categoryAtom)
 
   useEffect(() => {
     if (count == 0) {
