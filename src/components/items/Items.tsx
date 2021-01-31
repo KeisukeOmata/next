@@ -25,7 +25,7 @@ const Items: FC<Props> = ({ item, focused }) => {
   return (
     <>
       <div className={s.item}>
-        <Link key={`items-${id}`} href={`items/${id}`} passHref>
+        <Link key={`items-${id}`} href={`/items/${id}`} passHref>
           <button
             ref={ref}
             tabIndex={-1}
