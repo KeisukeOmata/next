@@ -12,7 +12,7 @@ import s from 'styles/pages/items/[id].module.scss'
 export async function getStaticPaths() {
   return {
     paths: [],
-    fallback: true,
+    fallback: 'blocking',
   }
 }
 
