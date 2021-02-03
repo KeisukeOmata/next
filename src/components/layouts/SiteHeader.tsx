@@ -15,7 +15,7 @@ const Header: FC = () => {
               aria-label="このサイトの名前"
               className={s.siteHeader__logoLink}
             >
-              SKPISM
+              Brand
             </button>
           </Link>
           <div className={s.siteHeader__links}>
