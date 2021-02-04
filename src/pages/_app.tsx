@@ -29,14 +29,39 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="manifest" href="manifest.webmanifest" />
         <script
           async
           src="https://unpkg.com/pwacompat"
           crossOrigin="anonymous"
         ></script>
-        <link rel="icon" type="image/png" href="pwa.png" sizes="128x128" />
-        <link rel="apple-touch-icon" sizes="180x180" href="pwa.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/images/icons/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/images/icons/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/images/icons/favicon-16x16.png"
+        />
+        <link
+          rel="mask-icon"
+          href="/images/icons/safari-pinned-tab.svg"
+          color="#5bbad5"
+        />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta
+          name="msapplication-config"
+          content="/images/icons/browserconfig.xml"
+        />
+        <meta name="theme-color" content="#ffffff" />
       </Head>
       <FixedFooter>
         <RecoilRoot>
