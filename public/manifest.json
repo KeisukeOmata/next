@@ -7,7 +7,7 @@
   "display": "standalone",
   "orientation": "any",
   "scope": "/",
-  "start_url": "/",
+  "start_url": "https://e-commerce.keisukeomata.vercel.app/",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
