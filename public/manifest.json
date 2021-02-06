@@ -5,8 +5,8 @@
   "theme_color": "#FFFFFF",
   "background_color": "#FFFFFF",
   "display": "standalone",
-  "orientation": "any",
-  "scope": "/",
+  "orientation": "portrait",
+  "scope": "https://e-commerce.keisukeomata.vercel.app/",
   "start_url": "https://e-commerce.keisukeomata.vercel.app/",
   "icons": [
     {
