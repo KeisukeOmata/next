@@ -10,14 +10,13 @@ type Props = {
   removeSiteNameFromTitle?: boolean
 }
 
-export const PageSEO: FC<Props> = (props) => {
-  const {
-    path,
-    title,
-    description,
-    ogImageUrl,
-    removeSiteNameFromTitle,
-  } = props
+export const PageSEO: FC<Props> = ({
+  path,
+  title,
+  description,
+  ogImageUrl,
+  removeSiteNameFromTitle,
+}) => {
   const pageUrl = `${Config.siteRoot}${path || ''}`
 
   return (
