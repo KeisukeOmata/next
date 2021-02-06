@@ -39,8 +39,6 @@ const CartItems: FC = () => {
                         width={500}
                         height={500}
                         quality="85"
-                        // 遅延読み込みしない
-                        loading={'eager'}
                       />
                     </button>
                   </Link>

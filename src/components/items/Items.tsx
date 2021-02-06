@@ -39,8 +39,6 @@ const Items: FC<Props> = ({ item, focused }) => {
               width={500}
               height={500}
               quality="85"
-              // 遅延読み込みしない
-              loading={'eager'}
             />
             <div className={s.item__date}>
               <p>{title}</p>

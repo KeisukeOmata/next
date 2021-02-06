@@ -28,8 +28,6 @@ const Detail: FC<Props> = ({ detail }) => {
                     height={500}
                     priority={i === 0}
                     quality="85"
-                    // 遅延読み込みしない
-                    loading={'eager'}
                   />
                 </div>
               ))}
