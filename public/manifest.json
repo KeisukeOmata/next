@@ -6,8 +6,8 @@
   "background_color": "#FFFFFF",
   "display": "standalone",
   "orientation": "portrait",
-  "scope": "https://e-commerce.keisukeomata.vercel.app/",
-  "start_url": "https://e-commerce.keisukeomata.vercel.app/",
+  "scope": "/",
+  "start_url": "/",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
