@@ -2,9 +2,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
-import { useCart } from 'hooks/useCart'
-import { resetCheckoutId } from 'utils/helpers'
-import { Cart } from 'types/TypeItem'
+import { useCart } from 'lib/hooks/useCart'
+import { resetCheckoutId } from 'lib/helpers'
+import { Cart } from 'lib/Type'
 import s from 'styles/components/cart/CartItems.module.scss'
 
 const CartItems: FC = () => {

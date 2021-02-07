@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { FC } from 'react'
 import { ContentWrapper } from 'components/layouts/ContentWrapper'
-import { useCart } from 'hooks/useCart'
+import { useCart } from 'lib/hooks/useCart'
 import s from 'styles/components/layouts/SiteHeader.module.scss'
 
 const Header: FC = () => {

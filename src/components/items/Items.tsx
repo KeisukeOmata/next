@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { FC, useEffect, useRef } from 'react'
 import { useSetRecoilState } from 'recoil'
 import { itemAtom } from 'components/items/CategoryItems'
-import { TypeItem } from 'types/TypeItem'
+import { TypeItem } from 'lib/Type'
 import s from 'styles/components/items/Items.module.scss'
 
 type Props = {

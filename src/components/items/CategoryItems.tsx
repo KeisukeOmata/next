@@ -2,7 +2,7 @@ import { FC, useState, useEffect, useRef } from 'react'
 import { atom, useRecoilValue } from 'recoil'
 import { categoryAtom } from 'components/items/ScrollableCategories'
 import Items from 'components/items/Items'
-import { TypeItem } from 'types/TypeItem'
+import { TypeItem } from 'lib/Type'
 import s from 'styles/components/items/ScrollableCategories.module.scss'
 
 type Props = {

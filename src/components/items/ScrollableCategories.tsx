@@ -3,8 +3,8 @@ import { atom, useRecoilState } from 'recoil'
 import cn from 'classnames'
 import CategoryItems from 'components/items/CategoryItems'
 import { ContentWrapper } from 'components/layouts/ContentWrapper'
-import { categories } from 'foundations/categories'
-import { TypeItem } from 'types/TypeItem'
+import { categories } from 'lib/categories'
+import { TypeItem } from 'lib/Type'
 import s from 'styles/components/items/ScrollableCategories.module.scss'
 
 type Props = {
