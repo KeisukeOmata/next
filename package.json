@@ -23,15 +23,11 @@
     ]
   },
   "dependencies": {
-    "@apollo/react-hooks": "^4.0.0",
     "@material-ui/core": "^4.11.1",
-    "@material-ui/lab": "^4.0.0-alpha.57",
     "@types/recoil": "^0.0.1",
     "@types/shopify-buy": "^2.10.3",
     "@typescript-eslint/eslint-plugin": "^4.9.0",
     "@typescript-eslint/parser": "^4.9.0",
-    "apollo-boost": "^0.4.9",
-    "apollo-link-ws": "^1.0.20",
     "eslint": "^7.15.0",
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-prettier": "^3.2.0",
@@ -47,14 +43,12 @@
     "recoil": "^0.1.2",
     "sass": "^1.30.0",
     "shopify-buy": "^2.11.0",
-    "subscriptions-transport-ws": "^0.9.18",
-    "swiper": "^6.4.1"
+    "subscriptions-transport-ws": "^0.9.18"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@storybook/react": "^6.1.11",
     "@tailwindcss/ui": "^0.7.2",
-    "@testing-library/react": "^11.2.2",
     "@types/classnames": "^2.2.11",
     "@types/jest": "^26.0.19",
     "@types/node": "^14.14.10",

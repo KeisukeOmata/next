@@ -6,9 +6,9 @@ import {
   UndoWrapForScroll,
 } from 'components/layouts/ContentWrapper'
 import ScrollableCategories from 'components/items/ScrollableCategories'
-import { useCart } from 'hooks/useCart'
-import { shopify } from 'foundations/shopify'
-import { Config } from 'foundations/site.config'
+import { useCart } from 'lib/hooks/useCart'
+import { shopify } from 'lib/shopify'
+import { Config } from 'lib/site.config'
 import s from 'styles/pages/index.module.scss'
 
 export async function getStaticProps() {

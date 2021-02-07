@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { FC } from 'react'
 import AddCart from 'components/items/AddCart'
 import Slider from 'components/items/Slider'
-import { TypeItem, Sku } from 'types/TypeItem'
+import { TypeItem, Sku } from 'lib/Type'
 import s from 'styles/components/items/Detail.module.scss'
 
 type Props = {

@@ -4,9 +4,9 @@ import { useRouter } from 'next/router'
 import Detail from 'components/items/Detail'
 import { ContentWrapper } from 'components/layouts/ContentWrapper'
 import { PageSEO } from 'components/layouts/PageSEO'
-import { shopify } from 'foundations/shopify'
-import { useCart } from 'hooks/useCart'
-import { getItemPath } from 'utils/helpers'
+import { shopify } from 'lib/shopify'
+import { useCart } from 'lib/hooks/useCart'
+import { getItemPath } from 'lib/helpers'
 import s from 'styles/pages/items/[id].module.scss'
 
 export async function getStaticPaths() {

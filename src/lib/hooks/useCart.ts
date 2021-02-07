@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import { atom, useRecoilState, selector, useRecoilValue } from 'recoil'
-import { shopify } from 'foundations/shopify'
-import { getCheckoutId, setCheckoutId } from 'utils/helpers'
-import { Cart } from 'types/TypeItem'
+import { shopify } from 'lib/shopify'
+import { getCheckoutId, setCheckoutId } from 'lib/helpers'
+import { Cart } from 'lib/Type'
 
 type useCartType = {
   cart: Cart | null

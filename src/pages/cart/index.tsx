@@ -2,7 +2,7 @@
 import CartItems from 'components/cart/CartItems'
 import { PageSEO } from 'components/layouts/PageSEO'
 import { ContentWrapper } from 'components/layouts/ContentWrapper'
-import { useCart } from 'hooks/useCart'
+import { useCart } from 'lib/hooks/useCart'
 import s from 'styles/pages/cart/index.module.scss'
 
 export default function Cart() {

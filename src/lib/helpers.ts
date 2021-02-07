@@ -1,4 +1,4 @@
-import { SelectedOption } from 'types/TypeItem'
+import { SelectedOption } from 'lib/Type'
 
 export function getCheckoutId(): string {
   return localStorage.getItem('checkoutId') ?? ''

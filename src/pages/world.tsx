@@ -3,7 +3,7 @@ import Image from 'next/image'
 import cn from 'classnames'
 import { PageSEO } from 'components/layouts/PageSEO'
 import { ContentWrapper } from 'components/layouts/ContentWrapper'
-import { useCart } from 'hooks/useCart'
+import { useCart } from 'lib/hooks/useCart'
 import s from 'styles/pages/world.module.scss'
 
 export default function World() {
