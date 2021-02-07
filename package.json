@@ -10,7 +10,8 @@
     "test": "jest src/__tests__/.*/*.test.tsx?$",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "storybook": "start-storybook -p 6006 -c .storybook"
+    "storybook": "start-storybook -p 6006 -c .storybook",
+    "find:unused": "next-unused"
   },
   "husky": {
     "hooks": {
@@ -41,8 +42,7 @@
     "react-dom": "17.0.1",
     "recoil": "^0.1.2",
     "sass": "^1.30.0",
-    "shopify-buy": "^2.11.0",
-    "find:unused": "next-unused"
+    "shopify-buy": "^2.11.0"
   },
   "next-unused": {
     "debug": true,
