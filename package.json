@@ -78,6 +78,7 @@
     "jest": "^26.6.3",
     "keen-slider": "^5.3.5",
     "next-seo": "^4.19.0",
+    "next-themes": "^0.0.10",
     "next-unused": "^0.0.3",
     "postcss": "^8.2.1",
     "postcss-preset-env": "^6.7.0",
