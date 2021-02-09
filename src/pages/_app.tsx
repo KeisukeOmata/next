@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import { useCallback, useEffect } from 'react'
 import { RecoilRoot } from 'recoil'
+import { ThemeProvider } from 'next-themes'
 import SiteHeader from 'components/layouts/SiteHeader'
 import { SiteFooter } from 'components/layouts/SiteFooter'
 import { FixedFooter } from 'components/layouts/FixedFooter'
@@ -63,15 +64,17 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <FixedFooter>
-        <RecoilRoot>
-          <SiteHeader />
-          <main id="main" tabIndex={-1} aria-label="メイン">
-            <Component {...pageProps} />
-          </main>
-        </RecoilRoot>
-        <SiteFooter />
-      </FixedFooter>
+      <ThemeProvider>
+        <FixedFooter>
+          <RecoilRoot>
+            <SiteHeader />
+            <main id="main" tabIndex={-1} aria-label="メイン">
+              <Component {...pageProps} />
+            </main>
+            <SiteFooter />
+          </RecoilRoot>
+        </FixedFooter>
+      </ThemeProvider>
     </>
   )
 }
