@@ -2,6 +2,7 @@
 const Sun = ({ ...props }) => {
   return (
     <svg
+      aria-label="月のアイコン"
       viewBox="0 0 24 24"
       width="24"
       height="24"
