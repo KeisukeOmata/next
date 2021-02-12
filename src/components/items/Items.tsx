@@ -11,7 +11,7 @@ type Props = {
   focused: boolean
 }
 
-const Items: FC<Props> = ({ item, focused }) => {
+export const Items: FC<Props> = ({ item, focused }) => {
   const { id, images, title, variants } = item
   const ref = useRef<HTMLButtonElement | null>(null)
   const setItemState = useSetRecoilState(itemAtom)
@@ -50,5 +50,3 @@ const Items: FC<Props> = ({ item, focused }) => {
     </>
   )
 }
-
-export default Items

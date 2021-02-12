@@ -1,7 +1,7 @@
 import { FC, useState, useEffect, useRef } from 'react'
 import { atom, useRecoilValue } from 'recoil'
 import { categoryAtom } from 'components/items/ScrollableCategories'
-import Items from 'components/items/Items'
+import { Items } from 'components/items/Items'
 import { TypeItem } from 'lib/Type'
 import s from 'styles/components/items/ScrollableCategories.module.scss'
 
@@ -14,7 +14,7 @@ export const itemAtom = atom<string | null>({
   default: null,
 })
 
-const CategoryItems: FC<Props> = ({ items }) => {
+export const CategoryItems: FC<Props> = ({ items }) => {
   const [count, setCount] = useState(0)
   const ref = useRef<HTMLHeadingElement | null>(null)
   const itemState = useRecoilValue(itemAtom)
@@ -101,5 +101,3 @@ const CategoryItems: FC<Props> = ({ items }) => {
     )
   }
 }
-
-export default CategoryItems

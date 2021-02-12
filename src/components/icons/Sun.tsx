@@ -1,5 +1,6 @@
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-const Sun = ({ ...props }) => {
+import { FC } from 'react'
+
+export const Sun: FC = () => {
   return (
     <svg
       aria-label="太陽のアイコン"
@@ -12,7 +13,6 @@ const Sun = ({ ...props }) => {
       strokeLinejoin="round"
       fill="none"
       shapeRendering="geometricPrecision"
-      {...props}
     >
       <circle cx="12" cy="12" r="5" />
       <path d="M12 1v2" />

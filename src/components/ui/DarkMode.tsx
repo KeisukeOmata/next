@@ -1,8 +1,8 @@
 import { FC, useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
-import Moon from 'components/icons/Moon'
+import { Moon } from 'components/icons/Moon'
 import Sun from 'components/icons/Sun'
-import Skeleton from 'components/ui/Skeleton'
+import { Skeleton } from 'components/ui/Skeleton'
 
 export const DarkMode: FC = () => {
   const { theme, setTheme } = useTheme()

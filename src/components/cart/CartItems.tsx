@@ -7,7 +7,7 @@ import { resetCheckoutId } from 'lib/helpers'
 import { Cart } from 'lib/Type'
 import s from 'styles/components/cart/CartItems.module.scss'
 
-const CartItems: FC = () => {
+export const CartItems: FC = () => {
   const { cart, changeQuantity, removeItem } = useCart()
   // Shopify画面へ遷移
   const moveToShopify = (cart: Cart): void => {
@@ -119,5 +119,3 @@ const CartItems: FC = () => {
     )
   )
 }
-
-export default CartItems
