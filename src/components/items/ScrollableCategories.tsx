@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { atom, useRecoilState } from 'recoil'
 import cn from 'classnames'
-import CategoryItems from 'components/items/CategoryItems'
+import { CategoryItems } from 'components/items/CategoryItems'
 import { ContentWrapper } from 'components/layouts/ContentWrapper'
 import { categories } from 'lib/categories'
 import { TypeItem } from 'lib/Type'
@@ -16,7 +16,7 @@ export const categoryAtom = atom<string | null>({
   default: '新着',
 })
 
-const ScrollableCategories: FC<Props> = ({ items }) => {
+export const ScrollableCategories: FC<Props> = ({ items }) => {
   const [categoryState, setCategoryState] = useRecoilState(categoryAtom)
 
   return (
@@ -43,5 +43,3 @@ const ScrollableCategories: FC<Props> = ({ items }) => {
     </>
   )
 }
-
-export default ScrollableCategories

@@ -5,7 +5,7 @@ import {
   ContentWrapper,
   UndoWrapForScroll,
 } from 'components/layouts/ContentWrapper'
-import ScrollableCategories from 'components/items/ScrollableCategories'
+import { ScrollableCategories } from 'components/items/ScrollableCategories'
 import { useCart } from 'lib/hooks/useCart'
 import { shopify } from 'lib/shopify'
 import { Config } from 'lib/site.config'

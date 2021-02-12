@@ -5,7 +5,7 @@ import { DarkMode } from 'components/ui/DarkMode'
 import { useCart } from 'lib/hooks/useCart'
 import s from 'styles/components/layouts/SiteHeader.module.scss'
 
-const Header: FC = () => {
+export const SiteHeader: FC = () => {
   const { quantity } = useCart()
   return (
     <header className={s.siteHeader}>
@@ -38,5 +38,3 @@ const Header: FC = () => {
     </header>
   )
 }
-
-export default Header

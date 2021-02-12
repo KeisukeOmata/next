@@ -8,7 +8,7 @@ type Props = {
   skuList: Sku[]
 }
 
-const AddCart: FC<Props> = ({ skuList }) => {
+export const AddCart: FC<Props> = ({ skuList }) => {
   // ポップアップメッセージ
   type ToastState = {
     open: boolean
@@ -50,5 +50,3 @@ const AddCart: FC<Props> = ({ skuList }) => {
     </>
   )
 }
-
-export default AddCart

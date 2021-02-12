@@ -3,7 +3,7 @@ import { useKeenSlider } from 'keen-slider/react'
 import cn from 'classnames'
 import s from 'styles/components/items/Slider.module.css'
 
-const Slider: FC = ({ children }) => {
+export const Slider: FC = ({ children }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isMounted, setIsMounted] = useState(false)
 
@@ -72,5 +72,3 @@ const Slider: FC = ({ children }) => {
     </div>
   )
 }
-
-export default Slider

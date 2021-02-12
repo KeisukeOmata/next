@@ -1,11 +1,11 @@
 import { FC } from 'react'
 
-interface Props {
+type Props = {
   width: string
   height: string
 }
 
-const Skeleton: FC<Props> = ({ width, height }) => {
+export const Skeleton: FC<Props> = ({ width, height }) => {
   return (
     <span
       style={{
@@ -15,5 +15,3 @@ const Skeleton: FC<Props> = ({ width, height }) => {
     ></span>
   )
 }
-
-export default Skeleton
