@@ -67,6 +67,7 @@ const CartItems: FC = () => {
                   <div className={s.item__detail}>
                     個数：
                     <select
+                      className="text-black"
                       defaultValue={item.quantity}
                       onChange={(e) => changeQuantity(item.id, e.target.value)}
                     >
