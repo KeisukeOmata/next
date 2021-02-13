@@ -9,7 +9,7 @@ type Props = {
   items: TypeItem[]
 }
 
-export const itemAtom = atom<string | null>({
+export const focusItemAtom = atom<string | null>({
   key: 'itemStateKey',
   default: null,
 })
@@ -17,7 +17,7 @@ export const itemAtom = atom<string | null>({
 export const ItemsByCategory: FC<Props> = ({ items }) => {
   const [count, setCount] = useState(0)
   const ref = useRef<HTMLHeadingElement | null>(null)
-  const itemState = useRecoilValue(itemAtom)
+  const focusItemState = useRecoilValue(focusItemAtom)
   const categoryState = useRecoilValue(categoryAtom)
 
   useEffect(() => {
@@ -46,7 +46,7 @@ export const ItemsByCategory: FC<Props> = ({ items }) => {
               <Item
                 key={`post-item-${i}`}
                 item={item}
-                focused={itemState == item.id}
+                focused={focusItemState == item.id}
               />
             ))}
         </div>
@@ -68,7 +68,7 @@ export const ItemsByCategory: FC<Props> = ({ items }) => {
               <Item
                 key={`post-item-${i}`}
                 item={item}
-                focused={itemState == item.id}
+                focused={focusItemState == item.id}
               />
             ))}
         </div>
@@ -92,7 +92,7 @@ export const ItemsByCategory: FC<Props> = ({ items }) => {
                   <Item
                     key={`post-item-${i}`}
                     item={item}
-                    focused={itemState == item.id}
+                    focused={focusItemState == item.id}
                   />
                 )
             )}
