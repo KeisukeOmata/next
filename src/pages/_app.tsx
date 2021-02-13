@@ -31,6 +31,8 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     <>
       <NextSeo {...Config} />
       <NextHead>
+        <meta property="og:image" content="/logo.svg" />
+        <meta name="twitter:image" content="/logo.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" key="site-manifest" />
         <script

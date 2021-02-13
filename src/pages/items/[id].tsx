@@ -47,6 +47,7 @@ export default function DetailPage({
         title={detail.title}
         path={getItemPath(detail.id)}
         description={detail.description}
+        ogImageUrl={detail.images[0].src}
       />
       <section className={s.itemCategories}>
         <ContentWrapper>

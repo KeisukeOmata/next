@@ -15,6 +15,14 @@ export const Config = {
         ? 'https://e-commerce.keisukeomata.vercel.app/'
         : 'http://localhost:3000',
     site_name: 'e-commerce',
+    images: [
+      {
+        url: '/logo.svg',
+        width: 500,
+        height: 500,
+        alt: 'Brand logo.',
+      },
+    ],
   },
   twitter: {
     handle: '@mete0la',
