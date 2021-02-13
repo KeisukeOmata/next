@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FC, useEffect, useRef } from 'react'
 import { useSetRecoilState } from 'recoil'
-import { itemAtom } from 'components/items/CategoryItems'
+import { itemAtom } from 'components/items/ItemsByCategory'
 import { TypeItem } from 'lib/Type'
 import s from 'styles/components/items/Items.module.scss'
 
@@ -11,7 +11,7 @@ type Props = {
   focused: boolean
 }
 
-export const Items: FC<Props> = ({ item, focused }) => {
+export const Item: FC<Props> = ({ item, focused }) => {
   const { id, images, title, variants } = item
   const ref = useRef<HTMLButtonElement | null>(null)
   const setItemState = useSetRecoilState(itemAtom)

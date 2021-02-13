@@ -6,6 +6,7 @@ import {
   UndoWrapForScroll,
 } from 'components/layouts/ContentWrapper'
 import { ScrollableCategories } from 'components/items/ScrollableCategories'
+import { ItemsByCategory } from 'components/items/ItemsByCategory'
 import { useCart } from 'lib/hooks/useCart'
 import { shopify } from 'lib/shopify'
 import { Config } from 'lib/site.config'
@@ -41,9 +42,10 @@ export default function Home({
           </div>
           <div className={s.homeCategoriesContainer}>
             <UndoWrapForScroll>
-              <ScrollableCategories items={items} />
+              <ScrollableCategories />
             </UndoWrapForScroll>
           </div>
+          <ItemsByCategory items={items} />
         </ContentWrapper>
       </section>
     </>
