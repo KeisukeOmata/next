@@ -8,7 +8,7 @@ type Props = {
   skuList: Sku[]
 }
 
-export const AddCart: FC<Props> = ({ skuList }) => {
+export const AddCartButton: FC<Props> = ({ skuList }) => {
   // ポップアップメッセージ
   type ToastState = {
     open: boolean

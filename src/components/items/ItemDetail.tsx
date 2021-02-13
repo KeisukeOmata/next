@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { FC } from 'react'
-import { AddCart } from 'components/items/AddCart'
-import { Slider } from 'components/items/Slider'
+import { AddCartButton } from 'components/ui/AddCartButton'
+import { Slider } from 'components/ui/Slider'
 import { TypeItem, Sku } from 'lib/Type'
 import s from 'styles/components/items/Detail.module.scss'
 
@@ -9,7 +9,7 @@ type Props = {
   detail: TypeItem
 }
 
-export const Detail: FC<Props> = ({ detail }) => {
+export const ItemDetail: FC<Props> = ({ detail }) => {
   return (
     <>
       <div className={s.itemSectionTitleContainer}>
@@ -45,7 +45,7 @@ export const Detail: FC<Props> = ({ detail }) => {
               __html: `${detail.descriptionHtml}`,
             }}
           />
-          <AddCart skuList={detail.variants as Sku[]} />
+          <AddCartButton skuList={detail.variants as Sku[]} />
         </div>
       </div>
     </>

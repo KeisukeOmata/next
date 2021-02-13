@@ -1,7 +1,7 @@
 import { FC, useState, useEffect, useRef } from 'react'
 import { atom, useRecoilValue } from 'recoil'
 import { categoryAtom } from 'components/items/ScrollableCategories'
-import { Items } from 'components/items/Items'
+import { Item } from 'components/items/Item'
 import { TypeItem } from 'lib/Type'
 import s from 'styles/components/items/ScrollableCategories.module.scss'
 
@@ -9,15 +9,15 @@ type Props = {
   items: TypeItem[]
 }
 
-export const itemAtom = atom<string | null>({
+export const focusItemAtom = atom<string | null>({
   key: 'itemStateKey',
   default: null,
 })
 
-export const CategoryItems: FC<Props> = ({ items }) => {
+export const ItemsByCategory: FC<Props> = ({ items }) => {
   const [count, setCount] = useState(0)
   const ref = useRef<HTMLHeadingElement | null>(null)
-  const itemState = useRecoilValue(itemAtom)
+  const focusItemState = useRecoilValue(focusItemAtom)
   const categoryState = useRecoilValue(categoryAtom)
 
   useEffect(() => {
@@ -43,10 +43,10 @@ export const CategoryItems: FC<Props> = ({ items }) => {
             .slice(0)
             .reverse()
             .map((item, i) => (
-              <Items
+              <Item
                 key={`post-item-${i}`}
                 item={item}
-                focused={itemState == item.id}
+                focused={focusItemState == item.id}
               />
             ))}
         </div>
@@ -65,10 +65,10 @@ export const CategoryItems: FC<Props> = ({ items }) => {
             .slice(-10)
             .reverse()
             .map((item, i) => (
-              <Items
+              <Item
                 key={`post-item-${i}`}
                 item={item}
-                focused={itemState == item.id}
+                focused={focusItemState == item.id}
               />
             ))}
         </div>
@@ -89,10 +89,10 @@ export const CategoryItems: FC<Props> = ({ items }) => {
             .map(
               (item, i) =>
                 item.productType == categoryState && (
-                  <Items
+                  <Item
                     key={`post-item-${i}`}
                     item={item}
-                    focused={itemState == item.id}
+                    focused={focusItemState == item.id}
                   />
                 )
             )}
