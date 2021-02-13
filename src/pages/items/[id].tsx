@@ -43,7 +43,11 @@ export default function DetailPage({
   if (errors) return <div>error</div>
   return (
     <>
-      <PageSEO title={detail.title} path={getItemPath(detail.id)} />
+      <PageSEO
+        title={detail.title}
+        path={getItemPath(detail.id)}
+        description={detail.description}
+      />
       <section className={s.itemCategories}>
         <ContentWrapper>
           <ItemDetail detail={detail} />

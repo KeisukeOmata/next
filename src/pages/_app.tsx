@@ -1,12 +1,14 @@
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
-import Head from 'next/head'
+import NextHead from 'next/head'
 import { useCallback, useEffect } from 'react'
 import { RecoilRoot } from 'recoil'
 import { ThemeProvider } from 'next-themes'
+import { NextSeo } from 'next-seo'
 import { SiteHeader } from 'components/layouts/SiteHeader'
 import { SiteFooter } from 'components/layouts/SiteFooter'
 import { FixedFooter } from 'components/layouts/FixedFooter'
+import { Config } from 'lib/site.config'
 import 'styles//main.css'
 import 'styles/globals.scss'
 import 'keen-slider/keen-slider.min.css'
@@ -27,7 +29,8 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 
   return (
     <>
-      <Head>
+      <NextSeo {...Config} />
+      <NextHead>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" key="site-manifest" />
         <script
@@ -63,7 +66,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
           content="/images/icons/browserconfig.xml"
         />
         <meta name="theme-color" content="#ffffff" />
-      </Head>
+      </NextHead>
       <ThemeProvider>
         <FixedFooter>
           <RecoilRoot>

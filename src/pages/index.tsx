@@ -29,12 +29,7 @@ export default function Home({
   fetchCart()
   return (
     <>
-      <PageSEO
-        title={Config.siteMeta.title}
-        description={Config.siteMeta.description}
-        path="/"
-        removeSiteNameFromTitle={true}
-      />
+      <PageSEO title={Config.title} description={Config.description} path="/" />
       <section className={s.homeCategories}>
         <ContentWrapper>
           <div className={s.homeSectionTitleContainer}>
