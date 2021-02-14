@@ -4,6 +4,7 @@ import cn from 'classnames'
 import { PageSEO } from 'components/layouts/PageSEO'
 import { ContentWrapper } from 'components/layouts/ContentWrapper'
 import { useCart } from 'lib/hooks/useCart'
+import { Config } from 'lib/site.config'
 import s from 'styles/pages/world.module.scss'
 
 export default function World() {
@@ -11,7 +12,7 @@ export default function World() {
   fetchCart()
   return (
     <>
-      <PageSEO title="World" path="/world" ogImageUrl="/brand1.webp" />
+      <PageSEO title="World" path="/world" ogImageUrl={Config.defaultOGImage} />
       <section className={s.worldCategories}>
         <ContentWrapper>
           <div className={s.worldSectionTitleContainer}>

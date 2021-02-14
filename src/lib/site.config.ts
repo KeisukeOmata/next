@@ -33,4 +33,8 @@ export const Config = {
     process.env.NODE_ENV === 'production'
       ? 'https://e-commerce.keisukeomata.vercel.app/'
       : 'http://localhost:3000',
+  defaultOGImage:
+    process.env.NODE_ENV === 'production'
+      ? 'https://e-commerce.keisukeomata.vercel.app/brand1.webp'
+      : 'http://localhost:3000/brand1.webp',
 }
