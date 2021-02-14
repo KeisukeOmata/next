@@ -31,8 +31,8 @@ export default function Home({
     <>
       <PageSEO
         title={Config.title}
-        description={Config.description}
         path="/"
+        description={Config.description}
         ogImageUrl={Config.defaultOGImage}
       />
       <section className={s.homeCategories}>
