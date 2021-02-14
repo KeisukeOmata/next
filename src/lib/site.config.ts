@@ -4,7 +4,7 @@ export const Config = {
   description: 'e-commerce using ISR(Incremental Static Regeneration).',
   canonical:
     process.env.NODE_ENV === 'production'
-      ? 'https://e-commerce.keisukeomata.vercel.app/'
+      ? 'https://e-commerce.keisukeomata.vercel.app'
       : 'http://localhost:3000',
   copyright: 'Keisuke Omata',
   openGraph: {
@@ -12,7 +12,7 @@ export const Config = {
     locale: 'ja',
     url:
       process.env.NODE_ENV === 'production'
-        ? 'https://e-commerce.keisukeomata.vercel.app/'
+        ? 'https://e-commerce.keisukeomata.vercel.app'
         : 'http://localhost:3000',
     site_name: 'e-commerce',
     images: [
@@ -31,10 +31,10 @@ export const Config = {
   },
   siteRoot:
     process.env.NODE_ENV === 'production'
-      ? 'https://e-commerce.keisukeomata.vercel.app/'
+      ? 'https://e-commerce.keisukeomata.vercel.app'
       : 'http://localhost:3000',
   defaultOGImage:
     process.env.NODE_ENV === 'production'
-      ? 'https://e-commerce.keisukeomata.vercel.app/brand1.webp'
-      : 'http://localhost:3000/brand1.webp',
+      ? 'https://e-commerce.keisukeomata.vercel.app/public/brand1.webp'
+      : 'http://localhost:3000/public/brand1.webp',
 }
