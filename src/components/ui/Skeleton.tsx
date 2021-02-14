@@ -5,13 +5,11 @@ type Props = {
   height: string
 }
 
-export const Skeleton: FC<Props> = ({ width, height }) => {
-  return (
-    <span
-      style={{
-        minWidth: width,
-        minHeight: height,
-      }}
-    ></span>
-  )
-}
+export const Skeleton: FC<Props> = ({ width, height }) => (
+  <span
+    style={{
+      minWidth: width,
+      minHeight: height,
+    }}
+  ></span>
+)
