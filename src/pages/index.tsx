@@ -30,10 +30,10 @@ export default function Home({
   return (
     <>
       <PageSEO
-        title={Config.siteMeta.title}
-        description={Config.siteMeta.description}
+        title={Config.title}
+        description={Config.description}
         path="/"
-        removeSiteNameFromTitle={true}
+        ogImageUrl={Config.defaultOGImage}
       />
       <section className={s.homeCategories}>
         <ContentWrapper>

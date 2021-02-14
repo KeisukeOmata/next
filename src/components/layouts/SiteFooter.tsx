@@ -4,6 +4,6 @@ import s from 'styles/components/layouts/SiteFooter.module.scss'
 
 export const SiteFooter: FC = () => (
   <footer className={s.siteFooter}>
-    <p>© {Config.siteMeta.copyright}</p>
+    <p>© {Config.copyright}</p>
   </footer>
 )
