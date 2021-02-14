@@ -29,7 +29,12 @@ export default function Home({
   fetchCart()
   return (
     <>
-      <PageSEO title={Config.title} description={Config.description} path="/" />
+      <PageSEO
+        title={Config.title}
+        description={Config.description}
+        path="/"
+        ogImageUrl="/logo.svg"
+      />
       <section className={s.homeCategories}>
         <ContentWrapper>
           <div className={s.homeSectionTitleContainer}>

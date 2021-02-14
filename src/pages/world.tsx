@@ -11,7 +11,7 @@ export default function World() {
   fetchCart()
   return (
     <>
-      <PageSEO title="World" path="/world" />
+      <PageSEO title="World" path="/world" ogImageUrl="/logo.svg" />
       <section className={s.worldCategories}>
         <ContentWrapper>
           <div className={s.worldSectionTitleContainer}>

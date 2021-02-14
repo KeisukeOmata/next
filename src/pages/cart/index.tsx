@@ -10,7 +10,7 @@ export default function Cart() {
   fetchCart()
   return (
     <>
-      <PageSEO title="Cart" path="/cart" />
+      <PageSEO title="Cart" path="/cart" ogImageUrl="/logo.svg" />
       <section className={s.cartCategories}>
         <ContentWrapper>
           {cart === null ? <div>loading...</div> : <CartItems />}
