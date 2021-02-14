@@ -33,7 +33,7 @@ export default function Home({
         title={Config.title}
         description={Config.description}
         path="/"
-        ogImageUrl="/logo.svg"
+        ogImageUrl="/brand1.webp"
       />
       <section className={s.homeCategories}>
         <ContentWrapper>

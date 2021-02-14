@@ -17,7 +17,7 @@ export const Config = {
     site_name: 'e-commerce',
     images: [
       {
-        url: '/logo.svg',
+        url: '/brand1.webp',
         width: 500,
         height: 500,
         alt: 'Brand logo.',
