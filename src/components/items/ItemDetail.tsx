@@ -1,15 +1,36 @@
 import Image from 'next/image'
-import { FC } from 'react'
-import { AddCartButton } from 'components/ui/AddCartButton'
+import { FC, useState } from 'react'
+import { Button } from 'components/ui/Button/Button'
 import { Slider } from 'components/ui/Slider'
-import { TypeItem, Sku } from 'lib/Type'
+import { TypeItem } from 'lib/Type'
+import { useCart } from 'lib/hooks/useCart'
 import s from 'styles/components/items/Detail.module.scss'
+import Snackbar, { SnackbarOrigin } from '@material-ui/core/Snackbar'
 
 type Props = {
   detail: TypeItem
 }
 
 export const ItemDetail: FC<Props> = ({ detail }) => {
+  type ToastState = {
+    open: boolean
+  } & SnackbarOrigin
+  const [toastState, setToastState] = useState<ToastState>({
+    open: false,
+    vertical: 'top',
+    horizontal: 'center',
+  })
+  const { vertical, horizontal, open } = toastState
+  const toastClose = () => {
+    setToastState({ ...toastState, open: false })
+  }
+  // カートに追加
+  const { addItem } = useCart()
+  const addToCart = async (skuId: string | number) => {
+    await addItem(skuId)
+    setToastState({ ...toastState, open: true })
+  }
+
   return (
     <>
       <div className={s.itemSectionTitleContainer}>
@@ -45,7 +66,23 @@ export const ItemDetail: FC<Props> = ({ detail }) => {
               __html: `${detail.descriptionHtml}`,
             }}
           />
-          <AddCartButton skuList={detail.variants as Sku[]} />
+          <Button
+            type="button"
+            aria-label="BAGに入れる"
+            onClick={() => addToCart(detail.variants[0].id)}
+          >
+            BAGに入れる
+          </Button>
+          <Snackbar
+            autoHideDuration={2000}
+            anchorOrigin={{ vertical, horizontal }}
+            open={open}
+            onClose={toastClose}
+            key={vertical + horizontal}
+            // クリックするとSnackbarが消えなくなる問題を修正
+            onClick={toastClose}
+            message="BAGに商品が追加されました"
+          ></Snackbar>
         </div>
       </div>
     </>

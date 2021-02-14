@@ -15,4 +15,3 @@
 .button[data-active] {
   @apply bg-gray-600;
 }
-
