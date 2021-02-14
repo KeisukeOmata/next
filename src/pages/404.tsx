@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { ContentWrapper } from 'components/layouts/ContentWrapper'
+import { Button } from 'components/ui/Button/Button'
 import { PageSEO } from 'components/layouts/PageSEO'
 import s from 'styles/pages/404.module.scss'
 
@@ -14,9 +15,9 @@ export default function Custom404() {
           <h1 className={s.error__message}>Page not found...</h1>
           <nav className={s.error__actions}>
             <Link href="/" passHref>
-              <button aria-label="Topページに戻る" className={s.button}>
+              <Button type="button" aria-label="Topページに戻る">
                 Topへ
-              </button>
+              </Button>
             </Link>
           </nav>
         </ContentWrapper>

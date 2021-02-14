@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
+import { Button } from 'components/ui/Button/Button'
 import { useCart } from 'lib/hooks/useCart'
 import { resetCheckoutId } from 'lib/helpers'
 import { Cart } from 'lib/Type'
@@ -88,13 +89,13 @@ export const CartItems: FC = () => {
                   </div>
                   <br></br>
                   <div className={s.item__detail}>
-                    <button
+                    <Button
+                      type="button"
                       aria-label="カートから商品を削除する"
-                      className={s.button2}
                       onClick={() => removeItem(item.id)}
                     >
                       削除
-                    </button>
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -104,13 +105,13 @@ export const CartItems: FC = () => {
             </div>
             <div className={s.item}>
               <Link href={`/`}>
-                <button
+                <Button
+                  type="button"
                   aria-label="お会計に進む"
-                  className={s.button}
                   onClick={() => moveToShopify(cart)}
                 >
                   購入する
-                </button>
+                </Button>
               </Link>
             </div>
           </>
