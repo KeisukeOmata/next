@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { atom, useRecoilState } from 'recoil'
 import cn from 'classnames'
 import { categories } from 'lib/categories'
-import s from 'styles/components/items/ScrollableCategories.module.scss'
+import s from './ScrollableCategories.module.scss'
 
 export const categoryAtom = atom<string | null>({
   key: 'categoryStateKey',

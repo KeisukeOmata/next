@@ -2,9 +2,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FC, useEffect, useRef } from 'react'
 import { useSetRecoilState } from 'recoil'
-import { focusItemAtom } from 'components/items/ItemsByCategory'
+import { focusItemAtom } from 'components/items/ItemsByCategory/ItemsByCategory'
 import { TypeItem } from 'lib/Type'
-import s from 'styles/components/items/Items.module.scss'
+import s from './Item.module.scss'
 
 type Props = {
   item: TypeItem

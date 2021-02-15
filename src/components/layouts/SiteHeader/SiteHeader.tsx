@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import { FC } from 'react'
-import { ContentWrapper } from 'components/layouts/ContentWrapper'
+import { ContentWrapper } from 'components/layouts/ContentWrapper/ContentWrapper'
 import { DarkMode } from 'components/ui/DarkMode'
 import { useCart } from 'lib/hooks/useCart'
-import s from 'styles/components/layouts/SiteHeader.module.scss'
+import s from './SiteHeader.module.scss'
 
 export const SiteHeader: FC = () => {
   const { quantity } = useCart()

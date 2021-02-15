@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import cn from 'classnames'
 import { PageSEO } from 'components/layouts/PageSEO'
-import { ContentWrapper } from 'components/layouts/ContentWrapper'
+import { ContentWrapper } from 'components/layouts/ContentWrapper/ContentWrapper'
 import { useCart } from 'lib/hooks/useCart'
 import { Config } from 'lib/site.config'
 import s from 'styles/pages/world.module.scss'

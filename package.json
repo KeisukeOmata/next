@@ -48,7 +48,8 @@
     "debug": true,
     "include": [
       "src/components",
-      "src/lib"
+      "src/lib",
+      "src/styles"
     ],
     "exclude": [],
     "entrypoints": [
