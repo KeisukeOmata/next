@@ -4,9 +4,9 @@ import { PageSEO } from 'components/layouts/PageSEO'
 import {
   ContentWrapper,
   UndoWrapForScroll,
-} from 'components/layouts/ContentWrapper'
-import { ScrollableCategories } from 'components/items/ScrollableCategories'
-import { ItemsByCategory } from 'components/items/ItemsByCategory'
+} from 'components/layouts/ContentWrapper/ContentWrapper'
+import { ScrollableCategories } from 'components/items/ScrollableCategories/ScrollableCategories'
+import { ItemsByCategory } from 'components/items/ItemsByCategory/ItemsByCategory'
 import { useCart } from 'lib/hooks/useCart'
 import { shopify } from 'lib/shopify'
 import { Config } from 'lib/site.config'

@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import { FC, useState } from 'react'
 import { Button } from 'components/ui/Button/Button'
-import { Slider } from 'components/ui/Slider'
+import { Slider } from 'components/ui/Slider/Slider'
 import { TypeItem } from 'lib/Type'
 import { useCart } from 'lib/hooks/useCart'
-import s from 'styles/components/items/Detail.module.scss'
+import s from './ItemDetail.module.scss'
 import Snackbar, { SnackbarOrigin } from '@material-ui/core/Snackbar'
 
 type Props = {

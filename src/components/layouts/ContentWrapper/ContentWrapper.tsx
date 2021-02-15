@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import s from 'styles/components/layouts/ContentWrapper.module.scss'
+import s from './ContentWrapper.module.scss'
 
 export const ContentWrapper: FC = ({ children }) => (
   <div className={s.contentWrapper}>{children}</div>

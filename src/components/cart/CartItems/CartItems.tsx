@@ -6,7 +6,7 @@ import { Button } from 'components/ui/Button/Button'
 import { useCart } from 'lib/hooks/useCart'
 import { resetCheckoutId } from 'lib/helpers'
 import { Cart } from 'lib/Type'
-import s from 'styles/components/cart/CartItems.module.scss'
+import s from './CartItems.module.scss'
 
 export const CartItems: FC = () => {
   const { cart, changeQuantity, removeItem } = useCart()

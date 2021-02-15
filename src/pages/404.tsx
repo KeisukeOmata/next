@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ContentWrapper } from 'components/layouts/ContentWrapper'
+import { ContentWrapper } from 'components/layouts/ContentWrapper/ContentWrapper'
 import { Button } from 'components/ui/Button/Button'
 import { PageSEO } from 'components/layouts/PageSEO'
 import s from 'styles/pages/404.module.scss'
