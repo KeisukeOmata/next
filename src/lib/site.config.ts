@@ -37,4 +37,9 @@ export const Config = {
     process.env.NODE_ENV === 'production'
       ? 'https://e-commerce.keisukeomata.vercel.app/brand1.webp'
       : 'http://localhost:3000/brand1.webp',
+  siteURL: {
+    twitter: 'https://twitter.com/mete0la',
+    instagram: 'https://twitter.com/mete0la',
+    github: 'https://github.com/KeisukeOmata/next_e-commerce',
+  },
 }
