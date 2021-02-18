@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { FC } from 'react'
-import { ContentWrapper } from 'components/layouts/ContentWrapper/ContentWrapper'
-import { DarkMode } from 'components/ui/DarkMode'
+import { ContentWrapper } from 'components/layouts'
+import { DarkMode } from 'components/ui'
 import { useCart } from 'lib/hooks/useCart'
 import s from './SiteHeader.module.scss'
 

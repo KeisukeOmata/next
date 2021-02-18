@@ -1,0 +1,1 @@
+export { ScrollableCategories } from './ScrollableCategories'

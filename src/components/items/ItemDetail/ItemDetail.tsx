@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { FC, useState } from 'react'
-import { Button } from 'components/ui/Button/Button'
-import { Slider } from 'components/ui/Slider/Slider'
+import { Button, Slider } from 'components/ui'
 import { TypeItem } from 'lib/Type'
 import { useCart } from 'lib/hooks/useCart'
 import s from './ItemDetail.module.scss'

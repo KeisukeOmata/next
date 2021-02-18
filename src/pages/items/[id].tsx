@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { InferGetStaticPropsType, GetStaticPropsContext } from 'next'
 import { useRouter } from 'next/router'
-import { ItemDetail } from 'components/items/ItemDetail/ItemDetail'
-import { ContentWrapper } from 'components/layouts/ContentWrapper/ContentWrapper'
-import { PageSEO } from 'components/layouts/PageSEO'
+import { ItemDetail } from 'components/items'
+import { ContentWrapper, PageSEO } from 'components/layouts'
 import { shopify } from 'lib/shopify'
 import { useCart } from 'lib/hooks/useCart'
 import { getItemPath } from 'lib/helpers'

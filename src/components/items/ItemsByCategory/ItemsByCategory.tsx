@@ -1,7 +1,7 @@
 import { FC, useState, useEffect, useRef } from 'react'
 import { atom, useRecoilValue } from 'recoil'
 import { categoryAtom } from 'components/items/ScrollableCategories/ScrollableCategories'
-import { Item } from 'components/items/Item/Item'
+import { Item } from 'components/items'
 import { TypeItem } from 'lib/Type'
 import s from './ItemsByCategory.module.scss'
 

@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import { CartItems } from 'components/cart/CartItems/CartItems'
-import { PageSEO } from 'components/layouts/PageSEO'
-import { ContentWrapper } from 'components/layouts/ContentWrapper/ContentWrapper'
+import { CartItems } from 'components/cart'
+import { PageSEO, ContentWrapper } from 'components/layouts'
 import { useCart } from 'lib/hooks/useCart'
 import { Config } from 'lib/site.config'
 import s from 'styles/pages/cart/index.module.scss'

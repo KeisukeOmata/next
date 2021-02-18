@@ -1,0 +1,1 @@
+export { ItemDetail } from './ItemDetail'

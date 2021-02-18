@@ -1,0 +1,1 @@
+export { FixedFooter } from './FixedFooter'
