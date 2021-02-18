@@ -1,7 +1,6 @@
 import Link from 'next/link'
-import { ContentWrapper } from 'components/layouts/ContentWrapper/ContentWrapper'
-import { Button } from 'components/ui/Button/Button'
-import { PageSEO } from 'components/layouts/PageSEO'
+import { ContentWrapper, PageSEO } from 'components/layouts'
+import { Button } from 'components/ui'
 import s from 'styles/pages/404.module.scss'
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types

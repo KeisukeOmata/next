@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import Image from 'next/image'
 import cn from 'classnames'
-import { PageSEO } from 'components/layouts/PageSEO'
-import { ContentWrapper } from 'components/layouts/ContentWrapper/ContentWrapper'
+import { PageSEO, ContentWrapper } from 'components/layouts'
 import { useCart } from 'lib/hooks/useCart'
 import { Config } from 'lib/site.config'
 import s from 'styles/pages/world.module.scss'

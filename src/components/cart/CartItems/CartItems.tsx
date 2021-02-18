@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
-import { Button } from 'components/ui/Button/Button'
+import { Button } from 'components/ui'
 import { useCart } from 'lib/hooks/useCart'
 import { resetCheckoutId } from 'lib/helpers'
 import { Cart } from 'lib/Type'

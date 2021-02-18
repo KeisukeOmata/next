@@ -1,12 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { InferGetStaticPropsType } from 'next'
-import { PageSEO } from 'components/layouts/PageSEO'
-import {
-  ContentWrapper,
-  UndoWrapForScroll,
-} from 'components/layouts/ContentWrapper/ContentWrapper'
-import { ScrollableCategories } from 'components/items/ScrollableCategories/ScrollableCategories'
-import { ItemsByCategory } from 'components/items/ItemsByCategory/ItemsByCategory'
+import { PageSEO, ContentWrapper, UndoWrapForScroll } from 'components/layouts'
+import { ScrollableCategories, ItemsByCategory } from 'components/items'
 import { useCart } from 'lib/hooks/useCart'
 import { shopify } from 'lib/shopify'
 import { Config } from 'lib/site.config'
