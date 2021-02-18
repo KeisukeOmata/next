@@ -1,7 +1,32 @@
+@import 'styles/Breakpoints';
+
 .siteFooter {
   padding: 1rem 0;
   border-top: solid 1px var(--color-border);
   text-align: center;
   font-size: 0.9rem;
   color: var(--color-base-text-lighter);
+  border-top: solid 1px rgba(212, 231, 241, 0.6);
+}
+
+.siteFooter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .item {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    width: 47.5%;
+    height: auto;
+    @include mq(sm) {
+      width: 100%;
+    }
+  }
+}
+
+.item {
+  // display: flex;
+  flex-flow: column;
+  position: relative;
+  background: var(--color-base-background-lighter);
 }
