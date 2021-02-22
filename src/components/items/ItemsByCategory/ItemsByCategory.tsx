@@ -1,18 +1,13 @@
 import { FC, useState, useEffect, useRef } from 'react'
-import { atom, useRecoilValue } from 'recoil'
-import { categoryAtom } from 'components/items/ScrollableCategories/ScrollableCategories'
+import { useRecoilValue } from 'recoil'
 import { Item } from 'components/items'
 import { TypeItem } from 'lib/Type'
+import { categoryAtom, focusItemAtom } from 'lib/atoms'
 import s from './ItemsByCategory.module.scss'
 
 type Props = {
   items: TypeItem[]
 }
-
-export const focusItemAtom = atom<string | null>({
-  key: 'itemStateKey',
-  default: null,
-})
 
 export const ItemsByCategory: FC<Props> = ({ items }) => {
   const [count, setCount] = useState(0)
