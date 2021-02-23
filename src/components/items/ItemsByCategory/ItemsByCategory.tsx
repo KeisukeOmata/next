@@ -1,8 +1,7 @@
 import { FC, useState, useEffect, useRef } from 'react'
-import { useRecoilValue } from 'recoil'
 import { Item } from 'components/items'
 import { TypeItem } from 'lib/Type'
-import { categoryAtom, focusItemAtom } from 'lib/atoms'
+import { useRecoil } from 'lib/hooks/useRecoil'
 import s from './ItemsByCategory.module.scss'
 
 type Props = {
@@ -12,8 +11,9 @@ type Props = {
 export const ItemsByCategory: FC<Props> = ({ items }) => {
   const [count, setCount] = useState(0)
   const ref = useRef<HTMLHeadingElement | null>(null)
-  const focusItemState = useRecoilValue(focusItemAtom)
-  const categoryState = useRecoilValue(categoryAtom)
+  const { getCategoryState, getfocusItemState } = useRecoil()
+  const categoryState = getCategoryState()
+  const focusItemState = getfocusItemState()
 
   useEffect(() => {
     if (count == 0) {

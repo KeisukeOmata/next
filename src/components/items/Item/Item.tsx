@@ -1,9 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { FC, useEffect, useRef } from 'react'
-import { useSetRecoilState } from 'recoil'
 import { TypeItem } from 'lib/Type'
-import { focusItemAtom } from 'lib/atoms'
+import { useRecoil } from 'lib/hooks/useRecoil'
 import s from './Item.module.scss'
 
 type Props = {
@@ -14,7 +13,7 @@ type Props = {
 export const Item: FC<Props> = ({ item, focused }) => {
   const { id, images, title, variants } = item
   const ref = useRef<HTMLButtonElement | null>(null)
-  const setfocusItemState = useSetRecoilState(focusItemAtom)
+  const { setFocusItemState } = useRecoil()
 
   useEffect(() => {
     if (ref.current && focused) {
@@ -29,7 +28,7 @@ export const Item: FC<Props> = ({ item, focused }) => {
           <button
             ref={ref}
             tabIndex={-1}
-            onClick={() => setfocusItemState(id as string)}
+            onClick={() => setFocusItemState(id as string)}
             aria-label={`${title}のページを表示する`}
             className={s.item__mainLink}
           >
