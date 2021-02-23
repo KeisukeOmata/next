@@ -1,0 +1,7 @@
+.dark {
+  @apply bg-white text-black flex p-1 rounded-md justify-between overflow-hidden cursor-pointer;
+}
+
+.light {
+  @apply bg-black text-white flex p-1 rounded-md justify-between overflow-hidden cursor-pointer;
+}
