@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { toast } from 'react-toastify'
 import { Button, Slider, Toast } from 'components/ui'
 import { TypeItem } from 'lib/Type'
