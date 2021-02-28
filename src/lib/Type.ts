@@ -11,6 +11,7 @@ export type SelectedOption = {
 }
 
 export type Sku = {
+  id: string
   selectedOptions: SelectedOption[]
   image: {
     altText?: string | null
@@ -23,6 +24,7 @@ export type Sku = {
 export type Option = SdkOption
 
 export type TypeItem = {
+  id: string
   productType: string | null
   descriptionHtml: string
 } & SdkProduct
