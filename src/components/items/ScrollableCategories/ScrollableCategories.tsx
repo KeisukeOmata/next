@@ -19,7 +19,7 @@ export const ScrollableCategories: FC = () => {
                 s.scrollableCategory__name,
                 categoryState == category.name ? s.chosen : s.notChoose
               )}
-              onClick={() => setCategoryState(category.name as string)}
+              onClick={() => setCategoryState(category.name)}
             >
               {category.name}
             </button>

@@ -28,7 +28,7 @@ export const Item: FC<Props> = ({ item, focused }) => {
           <button
             ref={ref}
             tabIndex={-1}
-            onClick={() => setFocusItemState(id as string)}
+            onClick={() => setFocusItemState(id)}
             aria-label={`${title}のページを表示する`}
             className={s.item__mainLink}
           >
