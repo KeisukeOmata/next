@@ -11,9 +11,9 @@ type Props = {
 export const ItemsByCategory: FC<Props> = ({ items }) => {
   const [count, setCount] = useState(0)
   const ref = useRef<HTMLHeadingElement | null>(null)
-  const { getCategoryState, getfocusItemState } = useRecoil()
+  const { getCategoryState, getFocusItemState } = useRecoil()
   const categoryState = getCategoryState()
-  const focusItemState = getfocusItemState()
+  const focusItemState = getFocusItemState()
 
   useEffect(() => {
     if (count == 0) {
