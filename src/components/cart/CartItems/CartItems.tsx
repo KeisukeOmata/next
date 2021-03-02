@@ -4,16 +4,16 @@ import Link from 'next/link'
 import { FC } from 'react'
 import { Button } from 'components/ui'
 import { useCart } from 'lib/hooks/useCart'
-import { resetCheckoutId } from 'lib/helpers'
+import { resetCheckoutId, getColorAndSize } from 'lib/helpers'
 import { Cart } from 'lib/Type'
 import s from './CartItems.module.scss'
 
 export const CartItems: FC = () => {
   const { cart, changeQuantity, removeItem } = useCart()
-  // Shopify画面へ遷移
   const moveToShopify = (cart: Cart): void => {
+    // Move to Shopify
     window.open(cart.webUrl)
-    // ローカルストレージのcheckoutIdを削除
+    // Delete checkoutId from local storage
     resetCheckoutId()
   }
 
@@ -47,20 +47,14 @@ export const CartItems: FC = () => {
                 <div className={s.item}>
                   <div className={s.item__detail}>
                     <p>{item.title}</p>
-                    {/* <div>
-                      カラー:{' '}
-                      {getValueByMatchedNameSelectedOptions(
-                        item.variant.selectedOptions,
-                        'Color'
-                      )}
+                    <div>
+                      {/* Color:{' '} */}
+                      {getColorAndSize(item.variant.selectedOptions, 'Color')}
                     </div>
                     <div>
-                      サイズ:{' '}
-                      {getValueByMatchedNameSelectedOptions(
-                        item.variant.selectedOptions,
-                        'Size'
-                      )}
-                    </div> */}
+                      {/* Size:{' '} */}
+                      {getColorAndSize(item.variant.selectedOptions, 'Size')}
+                    </div>
                   </div>
                   <div className={s.item__detail}>
                     <p>¥{item.variant.price}</p>
