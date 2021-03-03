@@ -55,6 +55,7 @@ export const ItemDetail: FC<Props> = ({ detail }) => {
             }}
           />
           <Button
+            shape="square"
             type="button"
             aria-label="BAGに入れる"
             onClick={() => addToCart(detail.variants[0].id)}
