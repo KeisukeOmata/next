@@ -1,17 +1,21 @@
-.button {
+.square {
   @apply bg-secondary text-accents-1 cursor-pointer inline-flex px-10 rounded-sm leading-6  transition ease-in-out duration-150 shadow-sm font-semibold text-center justify-center uppercase py-2 border border-transparent items-center;
 }
 
 @screen md {
-  .button:hover {
+  .square:hover {
     @apply bg-accents-0 text-primary border border-secondary outline-black;
   }
 }
 
-.button:active {
+.square:active {
   @apply bg-accents-0 text-primary border border-secondary outline-black;
 }
 
-.button[data-active] {
+.square[data-active] {
   @apply bg-gray-600;
+}
+
+.circle {
+  @apply bg-secondary text-white font-bold py-2 px-4 rounded-full;
 }
