@@ -14,7 +14,7 @@ export default function Custom404() {
           <h1 className={s.error__message}>Page not found...</h1>
           <nav className={s.error__actions}>
             <Link href="/" passHref>
-              <Button type="button" aria-label="Topページに戻る">
+              <Button shape="square" type="button" aria-label="Topページに戻る">
                 Topへ
               </Button>
             </Link>
