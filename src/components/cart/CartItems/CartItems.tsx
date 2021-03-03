@@ -84,6 +84,7 @@ export const CartItems: FC = () => {
                   <br></br>
                   <div className={s.item__detail}>
                     <Button
+                      shape="square"
                       type="button"
                       aria-label="カートから商品を削除する"
                       onClick={() => removeItem(item.id)}
@@ -100,6 +101,7 @@ export const CartItems: FC = () => {
             <div className={s.item}>
               <Link href={`/`}>
                 <Button
+                  shape="square"
                   type="button"
                   aria-label="お会計に進む"
                   onClick={() => moveToShopify(cart)}
