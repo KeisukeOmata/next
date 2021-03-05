@@ -24,9 +24,6 @@
     ]
   },
   "dependencies": {
-    "@graphql-codegen/cli": "^1.20.1",
-    "@graphql-codegen/schema-ast": "^1.18.1",
-    "@graphql-codegen/typescript": "^1.21.0",
     "@types/recoil": "^0.0.1",
     "@types/shopify-buy": "^2.10.3",
     "@typescript-eslint/eslint-plugin": "^4.9.0",
@@ -60,7 +57,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
-    "@graphql-codegen/typescript-operations": "^1.17.14",
     "@storybook/react": "^6.1.11",
     "@tailwindcss/ui": "^0.7.2",
     "@types/classnames": "^2.2.11",
