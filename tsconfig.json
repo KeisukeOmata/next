@@ -16,6 +16,10 @@
     "noUnusedLocals": true,
     // 利用されていない関数のパラメータについてエラー
     "noUnusedParameters": true,
+    /* Report error when not all code paths in function return a value. */
+    "noImplicitReturns": true,
+    /* Include 'undefined' in index signature results */
+    "noUncheckedIndexedAccess": true,
     "strict": true,
     // 暗黙的なanyを禁止
     // "noImplicitAny": false,
