@@ -33,7 +33,7 @@ export const Item: FC<Props> = ({ item, focused }) => {
             className={s.item__mainLink}
           >
             <Image
-              src={images[0]?.src}
+              src={images[0].src}
               alt={title || 'Item Image'}
               width={500}
               height={500}
