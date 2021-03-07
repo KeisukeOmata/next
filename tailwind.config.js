@@ -45,6 +45,7 @@ module.exports = {
         blue: 'var(--blue)',
         green: 'var(--green)',
         red: 'var(--red)',
+        putty: 'var(--putty)',
       },
       textColor: {
         base: 'var(--text-base)',
