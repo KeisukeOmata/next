@@ -77,7 +77,7 @@
 }
 
 .military {
-  @apply bg-secondary;
+  @apply bg-military;
 }
 
 .greyMarl {
