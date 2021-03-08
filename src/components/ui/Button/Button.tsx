@@ -38,7 +38,7 @@ export const Button: FC<props> = ({ color, shape, ...rest }) => {
       colorClass = s.lightGreyMarl
       break
     case 'Cadet Green':
-      colorClass = s.red
+      colorClass = s.cadetGreen
       break
     case 'Cinder Marl':
       colorClass = s.cinderMarl

@@ -24,6 +24,94 @@
   @apply bg-secondary;
 }
 
+.black {
+  @apply bg-black;
+}
+
+.brown {
+  @apply bg-brown;
+}
+
+.charcoal {
+  @apply bg-charcoal;
+}
+
+.chocolate {
+  @apply bg-chocolate;
+}
+
+.grey {
+  @apply bg-grey;
+}
+
+.lightGrey {
+  @apply bg-lightGrey;
+}
+
+.taupeMarl {
+  @apply bg-taupeMarl;
+}
+
+.ink {
+  @apply bg-ink;
+}
+
+.lightGreyMarl {
+  @apply bg-lightGreyMarl;
+}
+
+.cadetGreen {
+  @apply bg-cadetGreen;
+}
+
+.red {
+  @apply bg-red;
+}
+
+.cinderMarl {
+  @apply bg-cinderMarl;
+}
+
+.taupe {
+  @apply bg-taupe;
+}
+
+.military {
+  @apply bg-secondary;
+}
+
+.greyMarl {
+  @apply bg-greyMarl;
+}
+
+.deepOcean {
+  @apply bg-deepOcean;
+}
+
+.vintageBlack {
+  @apply bg-vintageBlack;
+}
+
+.chalkWhite {
+  @apply bg-chalkWhite;
+}
+
+.nights {
+  @apply bg-nights;
+}
+
+.opticWhite {
+  @apply bg-opticWhite;
+}
+
+.tempestBlue {
+  @apply bg-tempestBlue;
+}
+
+.oliveGreen {
+  @apply bg-oliveGreen;
+}
+
 .putty {
   @apply bg-putty;
 }
