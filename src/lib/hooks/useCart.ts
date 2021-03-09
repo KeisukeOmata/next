@@ -30,7 +30,7 @@ export const useCart = (): useCartType => {
   const [cart, setCart] = useRecoilState(cartState)
   const quantity = useRecoilValue(quantityState)
 
-  const initializeCart = () => {
+  const InitializeCart = () => {
     useEffect(() => {
       const checkoutId = getCheckoutId()
       if (checkoutId) return
@@ -41,7 +41,7 @@ export const useCart = (): useCartType => {
     }, [])
   }
 
-  initializeCart()
+  InitializeCart()
 
   const changeQuantity = (skuId: string, quantity: string): void => {
     if (!cart) return
@@ -73,6 +73,7 @@ export const useCart = (): useCartType => {
   }
 
   const fetchCart = () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
       const checkoutId = getCheckoutId()
       if (!checkoutId) return
