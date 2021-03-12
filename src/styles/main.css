@@ -1,12 +1,16 @@
 @tailwind base;
+
 @import 'styles/base.css';
 
 @tailwind components;
+
 @import 'styles/components.css';
 
 /* Do not show focus on smartphones. */
 @screen sm {
-  main, h2, button:focus {
+  main,
+  h2,
+  button:focus {
     @apply outline-none;
   }
 }
