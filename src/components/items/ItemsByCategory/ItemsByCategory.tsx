@@ -23,7 +23,7 @@ export const ItemsByCategory: FC<Props> = ({ items }) => {
       // Focus on heading element when the child component is rendered.
       ref.current?.focus()
     }
-  }, [categoryState])
+  }, [categoryState, count])
 
   if (categoryState == 'ALL') {
     return (
