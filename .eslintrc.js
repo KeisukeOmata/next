@@ -3,26 +3,25 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
     'plugin:jsx-a11y/strict',
-    'plugin:react-hooks/recommended',
   ],
-  plugins: ['@typescript-eslint', 'react', 'jsx-a11y'],
+  plugins: ['@typescript-eslint', 'react', 'jsx-a11y', 'react-hooks'],
   parser: '@typescript-eslint/parser',
-  env: {
-    browser: true,
-    node: true,
-    es6: true,
-    jest: true,
-  },
   parserOptions: {
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
     },
+  },
+  env: {
+    browser: true,
+    node: true,
+    es6: true,
+    jest: true,
   },
   settings: {
     react: {
@@ -30,9 +29,9 @@ module.exports = {
     },
   },
   rules: {
-    // 必要に応じてルールを追加
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
   },
 }
