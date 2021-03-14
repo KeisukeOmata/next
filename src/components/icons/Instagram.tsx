@@ -2,6 +2,7 @@ import { FC } from 'react'
 
 export const Instagram: FC = () => (
   <svg
+    role="button"
     aria-label="Instagramのアイコン"
     width="24"
     height="24"
