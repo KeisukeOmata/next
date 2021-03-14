@@ -2,6 +2,7 @@ import { FC } from 'react'
 
 export const Moon: FC = () => (
   <svg
+    role="button"
     aria-label="月のアイコン"
     viewBox="0 0 24 24"
     width="24"

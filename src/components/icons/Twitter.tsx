@@ -2,6 +2,7 @@ import { FC } from 'react'
 
 export const Twitter: FC = () => (
   <svg
+    role="button"
     aria-label="Twitterのアイコン"
     width="24"
     height="24"

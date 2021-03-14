@@ -2,6 +2,7 @@ import { FC } from 'react'
 
 export const Github: FC = () => (
   <svg
+    role="button"
     aria-label="Githubのアイコン"
     width="24"
     height="24"
